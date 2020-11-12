@@ -10,7 +10,9 @@ module.exports = {
     app: './src/main.js'
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: ['**/*', '!.git'],
+    }),
     new HtmlWebpackPlugin({
       title: 'Alex\'s Place',
       template: 'index.html',
