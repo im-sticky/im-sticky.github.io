@@ -1,0 +1,89 @@
+@import 'theme/utilities.scss';
+@use 'sass:math';
+
+.about {
+  display: flex;
+  justify-content: center;
+  padding-top: pxToRems(64px);
+  padding-bottom: pxToRems(64px);
+  @include gutters;
+
+  &__title {
+    position: relative;
+  }
+
+  &__title-shape {
+    $size: 80px;
+
+    position: absolute;
+    top: -50%;
+    left: -106px;
+    width: $size;
+    height: $size;
+    background-color: $primary-color;
+    transform: rotate(45deg);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--small {
+      $smallSize: $size * 0.8125;
+
+      left: -86px;
+      width: $smallSize;
+      height: $smallSize;
+    }
+  }
+
+  &__title-icon {
+    transform: rotate(-45deg);
+    color: #ffffff;
+  }
+
+  &__body {
+    max-width: $tablet-width;
+  }
+
+  &__sub-text {
+    display: block;
+    line-height: 1.1;
+    margin-bottom: pxToRems(16px);
+  }
+
+  &__bio {
+    margin-bottom: pxToRems(64px);
+
+    @include tablet-and-up {
+      @include fontSize(18px);
+    }
+  }
+
+  &__social-list {
+    margin: 0 0 pxToRems(24px) 0;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__social-list-item {
+    display: inline-flex;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      width: pxToRems(4px);
+      height: pxToRems(4px);
+      background-color: $font-color;
+      border-radius: 50%;
+      margin: 0 pxToRems(10px);
+    }
+  }
+
+  &__email {
+    margin-bottom: 0;
+    @include fontSize(14px);
+  }
+}

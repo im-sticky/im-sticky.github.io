@@ -1,0 +1,17 @@
+@import 'theme/utilities.scss';
+
+.link {
+  color: $primary-color;
+  text-decoration: none;
+  background-image: linear-gradient(120deg, $primary-color 0%, $primary-color 100%);
+  background-repeat: no-repeat;
+  background-size: 0 pxToRems(2px);
+  background-position: 0 100%;
+  transition: background-size $transition-time-normal $transition-ease-out-expo;
+
+  &:not(.link--no-underline) {
+    @include focusStates {
+      background-size: 100% pxToRems(2px);
+    }
+  }
+}

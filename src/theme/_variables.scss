@@ -1,0 +1,17 @@
+// sizes
+$baseFontSize: 16px;
+
+$phone-width: 512px;
+$tablet-width: 768px;
+$laptop-width: 1024px;
+$desktop-width: 1280px;
+
+// colours
+$primary-color: #4f00ec;
+$font-color: #333;
+$background-color: #fafafa;
+
+// animations
+$transition-time-fast: 160ms;
+$transition-time-normal: 220ms;
+$transition-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
