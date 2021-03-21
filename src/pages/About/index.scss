@@ -11,35 +11,6 @@
     position: relative;
   }
 
-  &__title-shape {
-    $size: 80px;
-
-    position: absolute;
-    top: -50%;
-    left: -106px;
-    width: $size;
-    height: $size;
-    background-color: $primary-color;
-    transform: rotate(45deg);
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &--small {
-      $smallSize: $size * 0.8125;
-
-      left: -86px;
-      width: $smallSize;
-      height: $smallSize;
-    }
-  }
-
-  &__title-icon {
-    transform: rotate(-45deg);
-    color: #ffffff;
-  }
-
   &__body {
     max-width: $tablet-width;
   }

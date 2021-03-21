@@ -4,15 +4,16 @@ import classNames from 'classnames';
 
 import styles from './index.scss';
 
-export const Link = ({href, children, className, noUnderline = false, ...props}) =>
-  <a {...props} href={href} className={classNames('link', className, {
+export const Link = ({href, to, children, className, noUnderline = false, ...props}) =>
+  <a {...props} href={to ? `/#${to}` : href} className={classNames('link', className, {
     'link--no-underline': noUnderline,
   })}>
     {children}
   </a>;
 
 Link.propTypes = {
-  href: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  to: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.any.isRequired,
   noUnderline: PropTypes.bool,

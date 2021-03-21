@@ -1,9 +1,9 @@
 import React from 'react';
-import classNames from 'classnames';
 import {Section} from 'components/Section';
 import {Container} from 'components/Container';
+import {Link} from 'components/Link';
 import {ExternalLink} from 'components/ExternalLink';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {TitleShape} from 'components/TitleShape';
 import {faTerminal, faUserFriends} from '@fortawesome/free-solid-svg-icons';
 
 import styles from './index.scss';
@@ -33,6 +33,9 @@ export const About = ({}) => {
       <small className='about__sub-text'>You can find me on any of these platforms</small>
 
       <ul className='about__social-list'>
+        <li className='about__social-list-item'>
+          <Link to='/blog'>Blog</Link>
+        </li>
         <SocialLink href='https://github.com/im-sticky' name='GitHub' />
         <SocialLink href='https://www.linkedin.com/in/alex-craig-57427069/' name='LinkedIn' />
         <SocialLink href='https://twitter.com/im_sticky' name='Twitter' />
@@ -49,11 +52,4 @@ function SocialLink({href, name}) {
   return <li className='about__social-list-item'>
     <ExternalLink href={href} noIcon>{name}</ExternalLink>
   </li>;
-}
-
-
-function TitleShape({icon, alt, small = false}) {
-  return <div className={classNames('about__title-shape', {'about__title-shape--small': small})}>
-    <FontAwesomeIcon icon={icon} alt={alt} className='about__title-icon' />
-  </div>;
 }

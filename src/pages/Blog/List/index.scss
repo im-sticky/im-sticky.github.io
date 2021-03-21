@@ -1,0 +1,11 @@
+@import 'theme/utilities.scss';
+
+.blog-list {
+  padding-top: pxToRems(64px);
+  padding-bottom: pxToRems(64px);
+  @include gutters;
+
+  &__title {
+    position: relative;
+  }
+}

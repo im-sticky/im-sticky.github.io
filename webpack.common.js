@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const markdownPlugin = require('markdown-html-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
@@ -12,6 +13,11 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/*', '!.git'],
+    }),
+    new markdownPlugin({
+      filePath: '../src-blog/',
+      exportPath: '../dist/',
+      isEncodeName: false,
     }),
     new HtmlWebpackPlugin({
       title: 'Alex\'s Place',
