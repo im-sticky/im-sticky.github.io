@@ -9,6 +9,6 @@ export const NotFound = ({}) => <Section grow id='NotFound' className='not-found
   <Container>
     <h1 className='not-found__title'>404</h1>
     <p className='not-found__text'>This page does not exist</p>
-    <Link to='/' className='not-found__back'>Go Back</Link>
+    <Link to='/' className='not-found__back'>Home</Link>
   </Container>
 </Section>

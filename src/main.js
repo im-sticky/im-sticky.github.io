@@ -25,7 +25,7 @@ const Main = ({}) => {
   return <Router>
     <Switch>
       <Route exact path='/blog/:slug'>
-        
+
         <Footer />
       </Route>
 
@@ -33,7 +33,7 @@ const Main = ({}) => {
         <BlogList />
         <Footer />
       </Route>
-      
+
       <Route exact path='/'>
         <About />
         <Footer />

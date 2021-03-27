@@ -8,4 +8,20 @@
   &__title {
     position: relative;
   }
+
+  .blog-post {
+    margin-top: pxToRems(24px);
+
+    &:first-of-type {
+      margin-top: pxToRems(40px);
+    }
+
+    &__descriptor {
+      margin-bottom: pxToRems(2px);
+
+      &--small {
+        @include fontSize(12px);
+      }
+    }
+  }
 }
