@@ -11,10 +11,7 @@ import styles from './index.scss';
 export const About = ({}) => {
   return <Section grow id='About' className='about'>
     <Container className='about__body'>
-      <h1 className='about__title'>
-        Alex Craig
-        <TitleShape icon={faTerminal} alt='terminal icon' />
-      </h1>
+      <TitleShape icon={faTerminal} alt='terminal icon'>Alex Craig</TitleShape>
       <small className='about__sub-text'>A front end developer living in a full stack world</small>
 
       <div className='about__bio'>
@@ -22,14 +19,11 @@ export const About = ({}) => {
           I am a Toronto based full stack web developer currently working for <ExternalLink href='https://www.konrad.com/'>Konrad Group</ExternalLink> as a permanent fixture on the <ExternalLink href='https://brainstation.io/'>BrainStation</ExternalLink> technology team.
         </p>
         <p>
-          I like making visual and interactive web based projects. Some of my other hobbies include: Magic The Gathering, competitive Smash Bros., baking, and collecting old&nbsp;vinyl.
+          I like making visual and interactive web based projects. Some of my other hobbies include: Magic The Gathering, competitive Smash Bros., baking, and collecting various old games and&nbsp;vinyl.
         </p>
       </div>
 
-      <h2 className='about__title'>
-        Socials
-        <TitleShape small icon={faUserFriends} alt='social icon' />
-      </h2>
+      <TitleShape small level={2} icon={faUserFriends} alt='social icon'>Socials</TitleShape>
       <small className='about__sub-text'>You can find me on any of these platforms</small>
 
       <ul className='about__social-list'>

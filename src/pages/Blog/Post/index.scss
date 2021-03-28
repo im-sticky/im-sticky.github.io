@@ -1,0 +1,35 @@
+@import 'theme/utilities.scss';
+
+.blog-post {
+  padding-top: pxToRems(64px);
+  @include gutters;
+
+  &__descriptor {
+    margin-bottom: 0;
+
+    &--small {
+      font-size: 80%;
+      line-height: 1.4;
+    }
+  }
+
+  &__date {
+    display: block;
+  }
+
+  &__content {
+    margin-top: pxToRems(40px);
+    @include readableContent();
+  }
+
+  &__related {
+    font-size: 80%;
+    margin-top: pxToRems(24px);
+    display: flex;
+    justify-content: space-between;
+
+    .next-post {
+      margin-left: auto;
+    }
+  }
+}

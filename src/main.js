@@ -6,10 +6,11 @@ import {
   Route,
 } from 'react-router-dom';
 
+import {Page} from 'components/Page';
 import {About} from 'pages/About';
-import {Footer} from 'pages/Footer';
 import {NotFound} from 'pages/NotFound';
 import {BlogList} from 'pages/Blog/List';
+import {BlogPost} from 'pages/Blog/Post';
 
 import './theme/main.scss';
 
@@ -24,25 +25,25 @@ importAll(require.context('./assets/favicon', false, /\.(png|svg|jpe?g|gif|xml|i
 const Main = ({}) => {
   return <Router>
     <Switch>
-      <Route exact path='/blog/:slug'>
+      <Route exact path='/blog/:slug' render={props =>
+        <Page title='Blog'>
+          <BlogPost />
+        </Page>} />
 
-        <Footer />
-      </Route>
+      <Route exact path='/blog' render={props =>
+        <Page title='Blog'>
+          <BlogList />
+        </Page>} />
 
-      <Route exact path='/blog'>
-        <BlogList />
-        <Footer />
-      </Route>
+      <Route exact path='/' render={props =>
+        <Page title='Home'>
+          <About />
+        </Page>} />
 
-      <Route exact path='/'>
-        <About />
-        <Footer />
-      </Route>
-
-      <Route path='*'>
-        <NotFound />
-        <Footer />
-      </Route>
+      <Route path='*' render={props =>
+        <Page title='Not Found'>
+          <NotFound />
+        </Page>} />
     </Switch>
   </Router>;
 };
