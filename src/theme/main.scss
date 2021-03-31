@@ -33,6 +33,10 @@ h2 {
   @include fontSize(26px);
 }
 
+h3 {
+  @include fontSize(22px);
+}
+
 p {
   margin: 0 0 pxToRems(8px) 0;
 }

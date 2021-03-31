@@ -78,6 +78,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.md$/,
+        loader: 'markdown-with-front-matter-loader',
+      },
     ]
   },
 };

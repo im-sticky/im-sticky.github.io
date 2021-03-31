@@ -28,6 +28,7 @@
   }
 }
 
+// content gutters
 @mixin gutters() {
   padding-left: pxToRems(16px);
   padding-right: pxToRems(16px);
@@ -35,6 +36,19 @@
   @include phone-and-up {
     padding-left: pxToRems(24px);
     padding-right: pxToRems(24px);
+  }
+}
+
+// reading text
+@mixin readableContent() {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: pxToRems(32px);
+    margin-bottom: pxToRems(16px);
+  }
+
+  p {
+    margin-bottom: pxToRems(16px);
+    line-height: 1.71;
   }
 }
 
