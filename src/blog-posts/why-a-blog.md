@@ -1,5 +1,5 @@
 ---
-title: Why I am starting a blog
+title: Why I'm starting a blog
 description: A brief discussion on why I have decided to create and maintain a blog in this day and age.
 slug: why-a-blog
 date: 2021-03-30
