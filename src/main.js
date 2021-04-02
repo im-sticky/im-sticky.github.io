@@ -6,6 +6,7 @@ import {
   Route,
 } from 'react-router-dom';
 
+import {ScrollToTop} from 'components/ScrollToTop';
 import {Page} from 'components/Page';
 import {About} from 'pages/About';
 import {NotFound} from 'pages/NotFound';
@@ -14,37 +15,40 @@ import {BlogPost} from 'pages/Blog/Post';
 
 import './theme/main.scss';
 
-// load all favicon related assets so files are processed by webpack
+// load all image assets so files are processed by webpack
 function importAll(r) {
   return r.keys().map(r);
 }
 
 importAll(require.context('./assets/favicon', false, /\.(png|svg|jpe?g|gif|xml|ico|webmanifest)$/));
+importAll(require.context('./assets/blog', false, /\.(png|svg|jpe?g|gif)$/));
 
 
 const Main = ({}) => {
   return <Router>
-    <Switch>
-      <Route exact path='/blog/:slug' render={props =>
-        <Page title='Blog'>
-          <BlogPost />
-        </Page>} />
+    <ScrollToTop>
+      <Switch>
+        <Route exact path='/blog/:slug' render={props =>
+          <Page>
+            <BlogPost />
+          </Page>} />
 
-      <Route exact path='/blog' render={props =>
-        <Page title='Blog'>
-          <BlogList />
-        </Page>} />
+        <Route exact path='/blog' render={props =>
+          <Page title='Blog'>
+            <BlogList />
+          </Page>} />
 
-      <Route exact path='/' render={props =>
-        <Page title='Home'>
-          <About />
-        </Page>} />
+        <Route exact path='/' render={props =>
+          <Page title='Home'>
+            <About />
+          </Page>} />
 
-      <Route path='*' render={props =>
-        <Page title='Not Found'>
-          <NotFound />
-        </Page>} />
-    </Switch>
+        <Route path='*' render={props =>
+          <Page title='Not Found'>
+            <NotFound />
+          </Page>} />
+      </Switch>
+    </ScrollToTop>
   </Router>;
 };
 

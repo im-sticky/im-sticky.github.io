@@ -50,6 +50,25 @@
     margin-bottom: pxToRems(16px);
     line-height: 1.71;
   }
+
+  img {
+    max-width: 100%;
+  }
+
+  figure {
+    margin: pxToRems(40px);
+    
+    img {
+      display: block;
+    }
+
+    figcaption {
+      text-align: center;
+      font-style: italic;
+      @include fontSize(13px);
+      margin-top: pxToRems(4px);
+    }
+  }
 }
 
 // media queries

@@ -17,7 +17,7 @@ export const BlogPost = ({}) => {
 
   useEffect(() => {
     const title = !!post ? post.title : 'Not Found';
-
+    
     document.title = `Alex Craig | ${title}`;
   }, [post]);
 

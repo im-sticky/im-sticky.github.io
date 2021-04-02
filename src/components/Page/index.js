@@ -4,7 +4,9 @@ import {Footer} from 'pages/Footer';
 
 export const Page = ({title, children}) => {
   useEffect(() => {
-    document.title = `Alex Craig | ${title}`;
+    if (title) {
+      document.title = `Alex Craig | ${title}`;
+    }
   }, [title]);
 
   return <>
@@ -15,5 +17,5 @@ export const Page = ({title, children}) => {
 
 Page.propTypes = {
   children: PropTypes.any.isRequired,
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 };
