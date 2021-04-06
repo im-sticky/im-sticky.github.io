@@ -7,6 +7,7 @@ import {Link} from 'components/Link';
 import {TitleShape} from 'components/TitleShape';
 import {faQuoteLeft} from '@fortawesome/free-solid-svg-icons';
 import {posts} from 'blog-posts';
+import {ExternalLinkIcon} from 'components/ExternalLink';
 
 import styles from './index.scss';
 
@@ -16,9 +17,36 @@ export const BlogPost = ({}) => {
   const postIndex = posts.findIndex(p => p.slug === slug);
 
   useEffect(() => {
+    const autocard = document.createElement('script');
+  
+    autocard.src = "https://mtgify.org/dist/autocard.js";
+    autocard.async = true;
+  
+    document.body.appendChild(autocard);
+  
+    return () => {
+      document.body.removeChild(autocard);
+    };
+  }, []);
+
+  useEffect(() => {
     const title = !!post ? post.title : 'Not Found';
     
     document.title = `Alex Craig | ${title}`;
+
+    if (post) {
+      const linkIcon = document.getElementById('hidden-icon');
+      const externalLinks = document.querySelector('.blog-post__content').querySelectorAll('.external-link');
+
+      externalLinks.forEach(e => {
+        const clonedIcon = linkIcon.cloneNode(true);
+
+        clonedIcon.classList.remove('hidden');
+        clonedIcon.id = null;
+
+        e.append(clonedIcon);
+      });
+    }
   }, [post]);
 
   if (!post) {
@@ -42,6 +70,8 @@ export const BlogPost = ({}) => {
           <Link to={`/blog/${posts[postIndex - 1].slug}`} className='next-post'>Next post</Link> :
           null}
       </div>
+
+      <ExternalLinkIcon id='hidden-icon' className='hidden' />
     </Container>
   </Section>;
 };

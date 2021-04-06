@@ -7,9 +7,16 @@ import {Link} from 'components/Link';
 
 import styles from './index.scss';
 
+export const ExternalLinkIcon = ({className, ...props}) =>
+  <FontAwesomeIcon {...props} icon={faExternalLinkAlt} className={classNames('external-link__icon', className)} />;
+
+ExternalLinkIcon.propTypes = {
+  className: PropTypes.string,
+};
+
 export const ExternalLink = ({href, children, className, noIcon = false, ...props}) =>
   <Link {...props} target='_blank' rel='nofollow noreferrer noopener' href={href} className={classNames('external-link', className)}>
-    {children} {!noIcon && <FontAwesomeIcon icon={faExternalLinkAlt} className='external-link__icon' />}
+    {children} {!noIcon && <ExternalLinkIcon />}
   </Link>;
 
 ExternalLink.propTypes = {
