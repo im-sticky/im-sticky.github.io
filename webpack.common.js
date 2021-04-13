@@ -69,7 +69,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|svg|jpe?g|gif|xml|ico|webmanifest|woff|woff2|eot|ttf|otf)$/,
+        test: /\.(png|svg|jpe?g|gif|xml|ico|webmanifest|woff|woff2|eot|ttf|otf|dec)$/,
         include: path.resolve(__dirname, 'src/assets'),
         use: {
           loader: 'file-loader',

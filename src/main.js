@@ -21,7 +21,7 @@ function importAll(r) {
 }
 
 importAll(require.context('./assets/favicon', false, /\.(png|svg|jpe?g|gif|xml|ico|webmanifest)$/));
-importAll(require.context('./assets/blog', false, /\.(png|svg|jpe?g|gif)$/));
+importAll(require.context('./assets/blog', false, /\.(png|svg|jpe?g|gif|dec)$/));
 
 
 const Main = ({}) => {

@@ -1,9 +1,9 @@
 import whyBlog from './why-a-blog.md';
-import bubbas from './food-review-bubbas-chicken.md';
 import mtgaMarch2021 from './mtga-march-2021-retrospect.md';
+import historic from './strixhaven-historic-shakeup.md';
 
 export const posts = [
   whyBlog,
   mtgaMarch2021,
-  // bubbas,
+  historic,
 ].sort((a, b) => a.date > b.date ? -1 : 1);

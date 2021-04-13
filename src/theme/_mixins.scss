@@ -69,6 +69,28 @@
       margin-top: pxToRems(4px);
     }
   }
+
+  auto-card-list {
+    margin: pxToRems(40px) 0;
+
+    auto-card-list-name {
+      font-family: 'Sulphur Point', sans-serif;
+      font-weight: 400;
+      line-height: 1.2;
+      @include fontSize(22px);
+      text-decoration: none;
+    }
+  
+    auto-card-list-head,
+    auto-card-list-text-container {
+      padding: pxToRems(8px);
+    }
+  
+    auto-card-list-category-type {
+      font-family: 'Sulphur Point', sans-serif;
+      font-style: normal;
+    }
+  }
 }
 
 // media queries

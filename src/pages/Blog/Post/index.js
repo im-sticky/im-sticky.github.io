@@ -17,19 +17,6 @@ export const BlogPost = ({}) => {
   const postIndex = posts.findIndex(p => p.slug === slug);
 
   useEffect(() => {
-    const autocard = document.createElement('script');
-  
-    autocard.src = "https://mtgify.org/dist/autocard.js";
-    autocard.async = true;
-  
-    document.body.appendChild(autocard);
-  
-    return () => {
-      document.body.removeChild(autocard);
-    };
-  }, []);
-
-  useEffect(() => {
     const title = !!post ? post.title : 'Not Found';
     
     document.title = `Alex Craig | ${title}`;
