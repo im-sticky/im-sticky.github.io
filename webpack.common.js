@@ -2,14 +2,35 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const MarkdownRssPlugin = require('./webpack-plugins/markdownRssPlugin');
 
 const isProd = process.env.NODE_ENV === 'production';
+const siteUrl = isProd ? 'https://im-sticky.github.io' : 'http://localhost:8080';
 
 module.exports = {
   entry: {
     app: './src/main.js'
   },
   plugins: [
+    new MarkdownRssPlugin({
+      title: 'Alex Craig\'s blog',
+      description: 'A collection of my thoughts and anecdotes',
+      id: siteUrl,
+      link: `${siteUrl}/#/blog/`,
+      image: `${siteUrl}/favicon-32x32.png`,
+      favicon: `${siteUrl}/favicon.ico`,
+      copyright: `All rights reserved ${new Date().getFullYear()}, Alex Craig`,
+      feedLinks: {
+        json: `${siteUrl}/feed.json`,
+        atom: `${siteUrl}/feed.atom`,
+        rss: `${siteUrl}/feed.xml`
+      },
+      author: {
+        name: 'Alex Craig',
+        email: 'acraig780@gmail.com',
+        link: siteUrl
+      },
+    }),
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: ['**/*', '!.git'],
     }),
