@@ -29,3 +29,14 @@
     }
   }
 }
+
+.blog-pagination {
+  font-size: 80%;
+  margin-top: pxToRems(24px);
+  display: flex;
+  justify-content: space-between;
+
+  &__previous {
+    margin-left: auto;
+  }
+}

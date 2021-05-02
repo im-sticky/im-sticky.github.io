@@ -18,7 +18,7 @@ export const BlogPost = ({}) => {
 
   useEffect(() => {
     const title = !!post ? post.title : 'Not Found';
-    
+
     document.title = `Alex Craig | ${title}`;
 
     if (post) {
@@ -49,12 +49,12 @@ export const BlogPost = ({}) => {
 
       <div className='blog-post__content' dangerouslySetInnerHTML={{__html: post.__content}}/>
 
-      <div className='blog-post__related'>
-        {postIndex + 1 < posts.length ?
-          <Link to={`/blog/${posts[postIndex + 1].slug}`}>Previous Post</Link> :
-          null}
+      <div className='blog-pagination'>
         {postIndex > 0 ?
-          <Link to={`/blog/${posts[postIndex - 1].slug}`} className='next-post'>Next post</Link> :
+          <Link to={`/blog/${posts[postIndex - 1].slug}`}>Next post</Link> :
+          null}
+        {postIndex + 1 < posts.length ?
+          <Link to={`/blog/${posts[postIndex + 1].slug}`} className='blog-pagination__previous'>Previous post</Link> :
           null}
       </div>
 

@@ -21,15 +21,4 @@
     margin-top: pxToRems(40px);
     @include readableContent();
   }
-
-  &__related {
-    font-size: 80%;
-    margin-top: pxToRems(24px);
-    display: flex;
-    justify-content: space-between;
-
-    .next-post {
-      margin-left: auto;
-    }
-  }
 }

@@ -33,6 +33,11 @@ const Main = ({}) => {
             <BlogPost />
           </Page>} />
 
+        <Route exact path='/blog/page/:page' render={props =>
+          <Page title='Blog'>
+            <BlogList />
+          </Page>} />
+
         <Route exact path='/blog' render={props =>
           <Page title='Blog'>
             <BlogList />

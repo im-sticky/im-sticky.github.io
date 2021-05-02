@@ -19,7 +19,7 @@ export const About = ({}) => {
           I am a Toronto based full stack web developer currently working for <ExternalLink href='https://www.konrad.com/'>Konrad Group</ExternalLink> as a permanent fixture on the <ExternalLink href='https://brainstation.io/'>BrainStation</ExternalLink> technology team.
         </p>
         <p>
-          I like making visual and interactive web based projects. Some of my other hobbies include: Magic The Gathering, competitive Smash Bros., baking, and collecting various old games and&nbsp;vinyl.
+          I like making visual and interactive web based projects. Some of my hobbies include: Magic The Gathering, competitive Smash Bros., baking, and collecting various old games and&nbsp;vinyl.
         </p>
       </div>
 
