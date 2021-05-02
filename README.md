@@ -10,3 +10,5 @@ The base branch to work out of is `develop`, but switching into the `dist/` fold
 > git push origin master
 > cd ..
 ```
+
+To add a `git worktree` from a newly cloned repo, run `git worktree ./dist/ master` from the root of the repository while the `dist` folder does not exist.

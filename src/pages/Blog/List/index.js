@@ -13,7 +13,7 @@ import styles from './index.scss';
 export const BlogList = ({}) => {
   const {page} = useParams();
   const pageState = page ? parseInt(page) : 1;
-  const postsPerPage = 5;
+  const postsPerPage = 6;
   const filteredPosts = posts.slice((pageState - 1) * postsPerPage, pageState * postsPerPage);
 
   if (filteredPosts.length === 0) {
