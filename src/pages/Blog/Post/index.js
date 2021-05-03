@@ -43,27 +43,27 @@ export const BlogPost = ({}) => {
 
   return <Section grow id='BlogPost' className='blog-post'>
     <Container>
-      <TitleShape icon={faQuoteLeft} alt='Sticky note'>{post.title}</TitleShape>
-      <p className='blog-post__descriptor'>{post.description}</p>
-      <p className='blog-post__descriptor blog-post__descriptor--small'>Published: {post.date.split('T')[0]}</p>
       <p className='blog-post__descriptor blog-post__descriptor--small blog-post__descriptor--spaced'>
-        <Link to='/blog'>
+        <Link icon to='/blog'>
           <FontAwesomeIcon icon={faLongArrowAltLeft} alt='Back arrow' className='blog-post__back-icon' />
           Back to posts
         </Link>
       </p>
+      <TitleShape icon={faQuoteLeft} alt='Sticky note'>{post.title}</TitleShape>
+      <p className='blog-post__descriptor'>{post.description}</p>
+      <p className='blog-post__descriptor blog-post__descriptor--small'>Published: {post.date.split('T')[0]}</p>
 
       <div className='blog-post__content' dangerouslySetInnerHTML={{__html: post.__content}}/>
 
       <div className='blog-pagination'>
         {postIndex > 0 ?
-          <Link to={`/blog/${posts[postIndex - 1].slug}`}>
+          <Link icon to={`/blog/${posts[postIndex - 1].slug}`}>
             <FontAwesomeIcon icon={faLongArrowAltLeft} alt='Back arrow' className='blog-post__back-icon' />
             Next post
           </Link> :
           null}
         {postIndex + 1 < posts.length ?
-          <Link to={`/blog/${posts[postIndex + 1].slug}`} className='blog-pagination__previous'>
+          <Link icon to={`/blog/${posts[postIndex + 1].slug}`} className='blog-pagination__previous'>
             Previous post
             <FontAwesomeIcon icon={faLongArrowAltRight} alt='Next arrow' className='blog-post__next-icon' />
           </Link> :

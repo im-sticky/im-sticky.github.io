@@ -15,6 +15,11 @@ auto-card a,
       background-size: 100% pxToRems(2px);
     }
   }
+
+  &--icon {
+    display: inline-flex;
+    align-items: center;
+  }
 }
 
 auto-card a:hover {

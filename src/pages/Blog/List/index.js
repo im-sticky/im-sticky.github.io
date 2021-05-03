@@ -23,15 +23,18 @@ export const BlogList = ({}) => {
 
   return <Section grow id='BlogList' className='blog-list'>
     <Container>
-      <TitleShape icon={faQuoteLeft} alt='Sticky note'>
-        Blog Posts
-        <Link href='/feed.xml' target='_blank' noUnderline><FontAwesomeIcon icon={faRssSquare} alt='RSS feed' className='blog-list__rss' /></Link>
-      </TitleShape>
-      <p className='blog-list__descriptor'>A collection of my thoughts and anecdotes</p>
-      <p className='blog-post__descriptor blog-post__descriptor--small'>
-        <Link to='/'>
+      <p className='blog-post__descriptor blog-post__descriptor--small blog-post__descriptor--spaced'>
+        <Link icon to='/'>
           <FontAwesomeIcon icon={faLongArrowAltLeft} alt='Back arrow' className='blog-post__back-icon' />
           Back to home
+        </Link>
+      </p>
+      <TitleShape icon={faQuoteLeft} alt='Sticky note'>Blog Posts</TitleShape>
+      <p className='blog-list__descriptor'>A collection of my thoughts and anecdotes</p>
+      <p className='blog-post__descriptor'>
+        <Link noUnderline href='/feed.xml' target='_blank'>
+          <FontAwesomeIcon icon={faRssSquare} alt='RSS feed' className='blog-list__rss' />
+          RSS Feed
         </Link>
       </p>
 
@@ -43,13 +46,13 @@ export const BlogList = ({}) => {
 
       <div className='blog-pagination'>
         {pageState > 1 ?
-          <Link to={pageState === 2 ? '/blog' : `/blog/page/${pageState - 1}`}>
+          <Link icon to={pageState === 2 ? '/blog' : `/blog/page/${pageState - 1}`}>
             <FontAwesomeIcon icon={faLongArrowAltLeft} alt='Back arrow' className='blog-post__back-icon' />
             Newer posts
           </Link> :
           null}
         {pageState < Math.ceil(posts.length / postsPerPage) ?
-          <Link to={`/blog/page/${pageState + 1}`} className='blog-pagination__previous'>
+          <Link icon to={`/blog/page/${pageState + 1}`} className='blog-pagination__previous'>
             Older posts
             <FontAwesomeIcon icon={faLongArrowAltRight} alt='Next arrow' className='blog-post__next-icon' />
           </Link> :
