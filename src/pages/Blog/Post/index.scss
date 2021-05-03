@@ -11,6 +11,10 @@
       font-size: 80%;
       line-height: 1.4;
     }
+
+    &--spaced {
+      margin-top: pxToRems(2px);
+    }
   }
 
   &__date {
@@ -20,5 +24,13 @@
   &__content {
     margin-top: pxToRems(40px);
     @include readableContent();
+  }
+
+  &__back-icon {
+    margin-right: pxToRems(4px);
+  }
+
+  &__next-icon {
+    margin-left: pxToRems(4px);
   }
 }

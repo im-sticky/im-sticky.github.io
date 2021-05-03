@@ -5,7 +5,8 @@ import {Section} from 'components/Section';
 import {Container} from 'components/Container';
 import {Link} from 'components/Link';
 import {TitleShape} from 'components/TitleShape';
-import {faQuoteLeft} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faQuoteLeft, faRssSquare, faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
 import {posts} from 'blog-posts';
 import {ExternalLinkIcon} from 'components/ExternalLink';
 
@@ -45,16 +46,27 @@ export const BlogPost = ({}) => {
       <TitleShape icon={faQuoteLeft} alt='Sticky note'>{post.title}</TitleShape>
       <p className='blog-post__descriptor'>{post.description}</p>
       <p className='blog-post__descriptor blog-post__descriptor--small'>Published: {post.date.split('T')[0]}</p>
-      <p className='blog-post__descriptor blog-post__descriptor--small'><Link to='/blog'>Back to posts</Link></p>
+      <p className='blog-post__descriptor blog-post__descriptor--small blog-post__descriptor--spaced'>
+        <Link to='/blog'>
+          <FontAwesomeIcon icon={faLongArrowAltLeft} alt='Back arrow' className='blog-post__back-icon' />
+          Back to posts
+        </Link>
+      </p>
 
       <div className='blog-post__content' dangerouslySetInnerHTML={{__html: post.__content}}/>
 
       <div className='blog-pagination'>
         {postIndex > 0 ?
-          <Link to={`/blog/${posts[postIndex - 1].slug}`}>Next post</Link> :
+          <Link to={`/blog/${posts[postIndex - 1].slug}`}>
+            <FontAwesomeIcon icon={faLongArrowAltLeft} alt='Back arrow' className='blog-post__back-icon' />
+            Next post
+          </Link> :
           null}
         {postIndex + 1 < posts.length ?
-          <Link to={`/blog/${posts[postIndex + 1].slug}`} className='blog-pagination__previous'>Previous post</Link> :
+          <Link to={`/blog/${posts[postIndex + 1].slug}`} className='blog-pagination__previous'>
+            Previous post
+            <FontAwesomeIcon icon={faLongArrowAltRight} alt='Next arrow' className='blog-post__next-icon' />
+          </Link> :
           null}
       </div>
 

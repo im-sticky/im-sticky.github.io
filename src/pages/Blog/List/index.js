@@ -4,7 +4,8 @@ import {Section} from 'components/Section';
 import {Container} from 'components/Container';
 import {Link} from 'components/Link';
 import {TitleShape} from 'components/TitleShape';
-import {faQuoteLeft} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faQuoteLeft, faRssSquare, faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
 import {posts} from 'blog-posts';
 import {NotFound} from 'pages/NotFound';
 
@@ -22,9 +23,17 @@ export const BlogList = ({}) => {
 
   return <Section grow id='BlogList' className='blog-list'>
     <Container>
-      <TitleShape icon={faQuoteLeft} alt='Sticky note'>Blog Posts</TitleShape>
+      <TitleShape icon={faQuoteLeft} alt='Sticky note'>
+        Blog Posts
+        <Link href='/feed.xml' target='_blank' noUnderline><FontAwesomeIcon icon={faRssSquare} alt='RSS feed' className='blog-list__rss' /></Link>
+      </TitleShape>
       <p className='blog-list__descriptor'>A collection of my thoughts and anecdotes</p>
-      <p className='blog-post__descriptor blog-post__descriptor--small'><Link to='/'>Back to home</Link></p>
+      <p className='blog-post__descriptor blog-post__descriptor--small'>
+        <Link to='/'>
+          <FontAwesomeIcon icon={faLongArrowAltLeft} alt='Back arrow' className='blog-post__back-icon' />
+          Back to home
+        </Link>
+      </p>
 
       {filteredPosts.map(post => <div key={`post.${post.slug}`} className='post'>
         <h3><Link to={`/blog/${post.slug}`}>{post.title}</Link></h3>
@@ -34,10 +43,16 @@ export const BlogList = ({}) => {
 
       <div className='blog-pagination'>
         {pageState > 1 ?
-          <Link to={pageState === 2 ? '/blog' : `/blog/page/${pageState - 1}`}>Newer posts</Link> :
+          <Link to={pageState === 2 ? '/blog' : `/blog/page/${pageState - 1}`}>
+            <FontAwesomeIcon icon={faLongArrowAltLeft} alt='Back arrow' className='blog-post__back-icon' />
+            Newer posts
+          </Link> :
           null}
         {pageState < Math.ceil(posts.length / postsPerPage) ?
-          <Link to={`/blog/page/${pageState + 1}`} className='blog-pagination__previous'>Older posts</Link> :
+          <Link to={`/blog/page/${pageState + 1}`} className='blog-pagination__previous'>
+            Older posts
+            <FontAwesomeIcon icon={faLongArrowAltRight} alt='Next arrow' className='blog-post__next-icon' />
+          </Link> :
           null}
       </div>
     </Container>

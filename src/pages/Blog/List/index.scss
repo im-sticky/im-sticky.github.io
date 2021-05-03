@@ -13,6 +13,12 @@
     }
   }
 
+  &__rss {
+    font-size: pxToRems(16px);
+    margin-left: pxToRems(8px);
+    vertical-align: middle;
+  }
+
   .post {
     margin-top: pxToRems(24px);
 
