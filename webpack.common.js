@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MarkdownRssPlugin = require('./webpack-plugins/markdownRssPlugin');
 
 const isProd = process.env.NODE_ENV === 'production';
-const siteUrl = isProd ? 'https://im-sticky.github.io' : 'http://localhost:8080';
+const siteUrl = 'https://im-sticky.github.io';
 
 module.exports = {
   entry: {
