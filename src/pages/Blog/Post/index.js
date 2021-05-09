@@ -1,14 +1,16 @@
 import React, {useEffect} from 'react';
 import {useParams} from 'react-router-dom';
+import classNames from 'classnames';
 import {NotFound} from 'pages/NotFound';
 import {Section} from 'components/Section';
 import {Container} from 'components/Container';
 import {Link} from 'components/Link';
 import {TitleShape} from 'components/TitleShape';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faQuoteLeft, faRssSquare, faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
+import {faQuoteLeft, faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
 import {posts} from 'blog-posts';
 import {ExternalLinkIcon} from 'components/ExternalLink';
+import {formatDate} from 'helpers/formatDate';
 
 import styles from './index.scss';
 
@@ -51,7 +53,14 @@ export const BlogPost = ({}) => {
       </p>
       <TitleShape icon={faQuoteLeft} alt='Sticky note'>{post.title}</TitleShape>
       <p className='blog-post__descriptor'>{post.description}</p>
-      <p className='blog-post__descriptor blog-post__descriptor--small'>Published: {post.date.split('T')[0]}</p>
+      <p className={classNames('blog-post__descriptor blog-post__descriptor--small blog-post__descriptor--italic', {
+        'blog-post__descriptor--spaced': post.edited,
+      })}>
+        {formatDate(post.date)}
+      </p>
+      {post.edited ? <p className='blog-post__descriptor blog-post__descriptor--small blog-post__descriptor--italic'>
+        This post was edited on {formatDate(post.edited)}
+      </p> : null}
 
       <div className='blog-post__content' dangerouslySetInnerHTML={{__html: post.__content}}/>
 
