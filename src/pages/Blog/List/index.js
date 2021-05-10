@@ -32,7 +32,7 @@ export const BlogList = ({}) => {
       </p>
       <TitleShape icon={faQuoteLeft} alt='Sticky note'>Blog Posts</TitleShape>
       <p className='blog-list__descriptor'>A collection of my thoughts and anecdotes</p>
-      <p className='blog-post__descriptor'>
+      <p className='blog-post__descriptor blog-post__descriptor--small'>
         <Link noUnderline href='/feed.xml' target='_blank'>
           <FontAwesomeIcon icon={faRssSquare} alt='RSS feed' className='blog-list__rss' />
           RSS Feed
