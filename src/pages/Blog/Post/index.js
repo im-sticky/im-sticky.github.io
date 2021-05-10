@@ -1,14 +1,16 @@
 import React, {useEffect} from 'react';
 import {useParams} from 'react-router-dom';
+import classNames from 'classnames';
 import {NotFound} from 'pages/NotFound';
 import {Section} from 'components/Section';
 import {Container} from 'components/Container';
 import {Link} from 'components/Link';
 import {TitleShape} from 'components/TitleShape';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faQuoteLeft, faRssSquare, faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
+import {faQuoteLeft, faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
 import {posts} from 'blog-posts';
 import {ExternalLinkIcon} from 'components/ExternalLink';
+import {formatDate} from 'helpers/formatDate';
 
 import styles from './index.scss';
 
@@ -41,7 +43,13 @@ export const BlogPost = ({}) => {
     return <NotFound />;
   }
 
-  return <Section grow id='BlogPost' className='blog-post'>
+  return <Section grow id='BlogPost' className={classNames('blog-post', {'blog-post--has-hero': post.hero})}>
+    {post.hero ?
+      <>
+        <img className='blog-post__hero' src={`/${post.hero}`} role='presentation' />
+        <div className='blog-post__hero-screen' />
+      </> : null}
+
     <Container>
       <p className='blog-post__descriptor blog-post__descriptor--small blog-post__descriptor--spaced'>
         <Link icon to='/blog'>
@@ -49,9 +57,17 @@ export const BlogPost = ({}) => {
           Back to posts
         </Link>
       </p>
-      <TitleShape icon={faQuoteLeft} alt='Sticky note'>{post.title}</TitleShape>
+      <TitleShape className='blog-post__title' icon={faQuoteLeft} alt='Sticky note'>{post.title}</TitleShape>
       <p className='blog-post__descriptor'>{post.description}</p>
-      <p className='blog-post__descriptor blog-post__descriptor--small'>Published: {post.date.split('T')[0]}</p>
+      <p className={classNames('blog-post__descriptor blog-post__descriptor--small blog-post__descriptor--italic', {
+        'blog-post__descriptor--spaced': post.edited,
+      })}>
+        {formatDate(post.date)}
+      </p>
+      {post.edited ?
+        <p className='blog-post__descriptor blog-post__descriptor--small blog-post__descriptor--italic'>
+          This post was edited on {formatDate(post.edited)}
+        </p> : null}
 
       <div className='blog-post__content' dangerouslySetInnerHTML={{__html: post.__content}}/>
 

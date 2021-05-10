@@ -8,6 +8,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faQuoteLeft, faRssSquare, faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
 import {posts} from 'blog-posts';
 import {NotFound} from 'pages/NotFound';
+import {formatDate} from 'helpers/formatDate';
 
 import styles from './index.scss';
 
@@ -31,7 +32,7 @@ export const BlogList = ({}) => {
       </p>
       <TitleShape icon={faQuoteLeft} alt='Sticky note'>Blog Posts</TitleShape>
       <p className='blog-list__descriptor'>A collection of my thoughts and anecdotes</p>
-      <p className='blog-post__descriptor'>
+      <p className='blog-post__descriptor blog-post__descriptor--small'>
         <Link noUnderline href='/feed.xml' target='_blank'>
           <FontAwesomeIcon icon={faRssSquare} alt='RSS feed' className='blog-list__rss' />
           RSS Feed
@@ -41,7 +42,7 @@ export const BlogList = ({}) => {
       {filteredPosts.map(post => <div key={`post.${post.slug}`} className='post'>
         <h3><Link to={`/blog/${post.slug}`}>{post.title}</Link></h3>
         <p className='post__description'>{post.description}</p>
-        <small className='post__date'>Published: {post.date.split('T')[0]}</small>
+        <small className='post__date'>{formatDate(post.date)}</small>
       </div>)}
 
       <div className='blog-pagination'>

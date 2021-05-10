@@ -14,7 +14,7 @@
   }
 
   &__rss {
-    margin-right: pxToRems(8px);
+    margin-right: pxToRems(4px);
   }
 
   .post {
@@ -30,6 +30,7 @@
 
     &__date {
       display: block;
+      font-style: italic;
     }
   }
 }

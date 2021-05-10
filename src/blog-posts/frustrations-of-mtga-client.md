@@ -5,7 +5,7 @@ slug: frustrations-of-mtga-client
 date: 2021-05-02
 ---
 
-I recently lost a match on arena while playing a <auto-card name='Tainted Pact'>Tainted</auto-card> <auto-card name="Thassa's Oracle">Oracle</auto-card> combo deck. Not because my opponent beat me in a fair game of Magic, but because I didn't understand how Arena would treat me playing <auto-card>Thassa's Oracle</auto-card> and then pushing my hotkey for full-control. 
+I recently lost a match on arena while playing a <auto-card name='Tainted Pact'>Tainted</auto-card> <auto-card name="Thassa's Oracle">Oracle</auto-card> combo deck. Not because my opponent beat me in a fair game of Magic, but because I didn't understand how Arena would treat me playing <auto-card>Thassa's Oracle</auto-card> and then pushing my hotkey for full-control.
 
 How the deck works is that basically you play <auto-card>Tainted Pact</auto-card> in a near-singleton deck and exile your whole library allowing you to then play a <auto-card>Thassa's Oracle</auto-card> to win the game on the spot. Because <auto-card>Tainted Pact</auto-card> is an instant, there are a few variations of how you can go about winning with the combo. One such variation is playing <auto-card>Thassa's Oracle</auto-card> first, and with its trigger on the stack you cast <auto-card>Tainted Pact</auto-card>. It seems like the order you do this is irrelevant, but there is a caveat that makes this order something you __have__ to do.
 

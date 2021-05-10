@@ -57,7 +57,7 @@
 
   figure {
     margin: pxToRems(40px);
-    
+
     img {
       display: block;
     }
@@ -70,6 +70,38 @@
     }
   }
 
+  // hack for aligning inline images
+  p {
+    display: flow-root;
+
+    img[alt$=">"],
+    img[alt$="<"] {
+      margin: pxToRems(16px) 0;
+
+      @include tablet-and-up {
+        margin: pxToRems(16px);
+        max-width: pxToRems(440px);
+      }
+    }
+
+    img[alt$=">"] {
+      float: right;
+
+      @include laptop-and-up {
+        margin-right: pxToRems(-160px);
+      }
+    }
+
+    img[alt$="<"] {
+      float: left;
+
+      @include laptop-and-up {
+        margin-left: pxToRems(-160px);
+      }
+    }
+  }
+
+
   auto-card-list {
     margin: pxToRems(40px) 0;
 
@@ -80,12 +112,12 @@
       @include fontSize(22px);
       text-decoration: none;
     }
-  
+
     auto-card-list-head,
     auto-card-list-text-container {
       padding: pxToRems(8px);
     }
-  
+
     auto-card-list-category-type {
       font-family: 'Sulphur Point', sans-serif;
       font-style: normal;

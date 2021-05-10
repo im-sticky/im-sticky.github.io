@@ -9,7 +9,7 @@ export function TitleShape({icon, alt, children, level = 1, small = false, class
   return createElement(
     `h${level}`,
     {
-      className: classNames('title-shape-heading'),
+      className: classNames('title-shape-heading', className),
     },
     <>
       {children}
