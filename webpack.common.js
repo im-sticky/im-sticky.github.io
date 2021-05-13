@@ -3,6 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MarkdownRssFeedPlugin = require('markdown-rss-feed-plugin');
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
+const RobotsTxtPlugin = require('robotstxt-webpack-plugin');
+const blogSlugs = require('./src/blog-posts/slugs');
 
 const isProd = process.env.NODE_ENV === 'production';
 const siteUrl = 'https://im-sticky.github.io';
@@ -49,6 +52,25 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css'
     }),
+    new SitemapPlugin({
+      base: siteUrl,
+      paths: [
+        '/#/blog',
+      ].concat(blogSlugs.map(slug => `/#/blog/${slug}`)),
+      options: {
+        changefreq: 'monthly',
+        skipgzip: true,
+      },
+    }),
+    new RobotsTxtPlugin({
+      sitemap: `${siteUrl}/sitemap.xml`,
+      policy: [
+        {
+          userAgent: '*',
+          allow: '/',
+        }
+      ]
+    })
   ],
   resolve: {
     modules: [
