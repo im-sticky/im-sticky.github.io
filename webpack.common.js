@@ -55,6 +55,7 @@ module.exports = {
     new SitemapPlugin({
       base: siteUrl,
       paths: [
+        '/',
         '/#/blog',
       ].concat(blogSlugs.map(slug => `/#/blog/${slug}`)),
       options: {
