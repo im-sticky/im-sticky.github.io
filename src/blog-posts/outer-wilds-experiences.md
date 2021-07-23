@@ -2,11 +2,17 @@
 title: You have to play Outer Wilds
 description: Thoughts on Outer Wilds as a game and my experiences playing it.
 slug: outer-wilds-experiences
-date: 2021-07-18
+date: 2021-07-30
 hero: outer-wilds-hero.jpg
 ---
 
-_Note: This post is very spoiler heavy and if you have not played the game I encourage you to do so first. This is written for people who have played the game._
+_Note: This post is very spoiler heavy and is intended for those who have played the game. I have a short spoiler free review [here](/blog/outer-wilds-review)_
+
+### Preface
+
+I spent a lot of time writing this and it turned out much larger than I anticipated. It went through a couple re-writes/re-works since the way I originally had tackled writing it was that of the perspective of a game review for everyone, when in reality I was writing it because I enjoyed the game so much. My real target audience was friends and myself. Both so that I could share what I had experienced while playing the game, as well as articulating what I appreciate about the game itself. It will also be nice to be able to read my own gameplay stories and re-live those moments. If you are a total stranger that somehow found your way here, just know that I appreciate you reading this.
+
+## Venture into the Outer Wilds
 
 Outer Wilds is easily the best video game I have played in the past few years. I heard about outer wilds a short while after it came out in 2019 from a co-worker. He was talking about how he had recently started playing it and that it played kind of like a sci-fi version of Majora's Mask. I was pretty sold on trying it out after that. At the time it was exclusive ot the Epic store, and around winter time there was a promo for a $10 off coupon, and decided to buy it. And thats where it sat for nearly 2 years, until this July.
 
@@ -39,11 +45,11 @@ That said, the puzzle solving felt extremely intuitive. It was never frustrating
 
 This sort of parallel time based puzzle solving is extremely cool and not something I have experienced before in a video game. One thing that I really want to praise is just how variable the gameplay experience seems like it can be. There really isn't a first location to go to. Based on where you decide to explore first and how you explore will make how the game unfolds to each person a completely unique experience. I believe that is something truly special, and allows for friends to share and be excited about each others individual stories about the game.
 
-I do want to be transparent in that there were a couple times where I had to look up a hint of what I needed to do. It wasn't that I was stuck, I had connected the dots from the information given each time and I understood what the end result of the puzzle was going to be. However, it wasn't exactly obvious what the game was expecting me to do on a mechanical level exactly. I don't think this is a fault of the game per se. It made sense after I figured it out, it just wasn't exactly intuitive to try.
+I do want to be transparent in that there were a couple times where I had to look up a hint of what I needed to do. It wasn't that I was stuck on trying to solve the puzzles. I had figured out what the result of each puzzle was supposed to be, but it wasn't exactly obvious what the game wanted me to do in the game to solve them.
 
-- explain what they were
-  - going inside the jellyfish
-  - interlopers crack (I swear I did this before looking it up) 
+One of them was getting into the core of Giant's Deep. I had all the information that the jellyfish were insulated and that I could use them somehow to get inside. My issue was that I had try touching them with my ship, which damaged it, and I had try shooting my scout at them which just bounces off of them. This made me believe that if I were to touch them in only my suit they also would've been dangerous. I probably could have just tried myself to see, but up to that point the scout was quite trustworthy. I feel like they probably could have made the scout not just get deflected off of them.
+
+The other puzzle that I had to look up was getting inside of the Interloper. I went to the Interloper pretty early on in the game and found the icy Nomai ship. Eventually I found the gravity cannon to recall it, and learned about the crack on the surface. Some time in the future I go back, find the crack, skate around on the ice, and never get inside. To get inside you have to be by the crack when it gets close to the sun so the ice melts. It makes sense, hot sun melts ice and reveals entrance that you have read about. My issue was that when I went back to the Interloper after those previous times, I thought that I had already tried that. I even remembered specifically being on the Interloper and having it go around the sun and not having anything happen. I must have combined 2 separate memories or something because when I got annoyed and eventually looked it up, I got confused swearing I had already tried that. Regardless, that was the solution.
 
 
 ### The depth of exploration
@@ -67,8 +73,6 @@ Something I have to gas up in this game is the world building. It is **so incred
 
 The first thing I want to talk about is the Nomai and their language. I absolutely love the Nomai's way of writing. When I first say it I immediately thought of the way the aliens in <a href="https://www.imdb.com/title/tt2543164/" target="_blank" rel="nofollow noreferrer noopener" class="link external-link">Arrival</a> (highly recommend) have their written language. It's very cool how it sprawls outward from an initial Nomai's speech. If you look close at it you can see a variety of patterns within the spiral which I guess would be their alphabet. It also is very conversational. There aren't too many instances of finding text that is just the thoughts of an individual. Finding scrolls and putting them into the Rosetta Stone-esque walls to read recorded conversations always made me smile, it was like a scavenger hunt each time. Based on the amount of those scroll walls and there generally being multiple scroll racks around them, it felt like the Nomai valued archiving their knowledge. One of my favourite moments was seeing why there is so much written stuff all over the place. Finding Solanum on the Quantum Moon and interacting with her to see that she uses one of those stick things which are scattered about various Nomai Ruins to write onto the environment was incredibly cool to me. It actually gave context to why there is so much writing everywhere and why so much of it is conversational. It made the idea of discovering and reading those scrawlings less of a "for video games sake of progression" and more of something that actually would have happened in the universe of the game.
 
-It's very impressive how despite there being very little life in the entirety of the solar system, the game manages to make the different areas feel alive. Especially considering that what goes on in the solar system is in a fixed time loop. Looking back on the game, it seems like they managed to achieve this a few different ways. When the loop initially starts, all of the different celestial bodies in the solar system start from the exact same position. However, all the different rotations, weather, how satellites are orbiting, they are all random. This is noticeable after a handful of death's in the game, as the initial explosion of the Orbital Probe Cannon will be in slightly different locations on your screen and explode in a different direction each time. The tornados on Giant's Deep move in seemingly unpredictable ways. The same appears to be true for how brittle hollow will break apart. You also can't rely on past trips in Dark Bramble for where to go. It gives the game an extra little edge in making it feel even more dynamic.
-
 
 
 - projections pools are very cool
@@ -78,22 +82,40 @@ It's very impressive how despite there being very little life in the entirety of
 
 - one cool thing is that the map is actually updated live with how the solar system is changing
 
+## Cosmic horror and fear of the unknown
 
 ## Favourite thing
 
 - quantum moon storyline
+- solanum being dead on the 5 non-Eye locations due to the rule of quantum entanglement is incredible attention to detail 
 
-### Religion
+### The theology of the Eye
 
-- big fan of religion (usually christianity) in media
-- it's never explicitly stated that the Nomai have religious beliefs when it comes to quantum mechanics, the Quantum Moon, or the Eye of the Universe, but the way it's written and presented it seems like that is an intended conclusion for the audience to draw. Between the Quantum towers, the Eye Shrine District in the Hanging City, and the writing in the Tower of Quantum knowledge explaining that "those who are making the pilgrimage to the Quantum Moon are taking part in a tradition of curiosity and exploration by following in the footsteps of everyone before them who sought the Quantum Moon" (find exact text in game, got this from wiki, there's definitely text about it being "deep and meaningful") it's hard not to get the feel of the basis of a religion. The journey to the quantum moon draws parallels to the journey to Mecca that many Muslim make.
-- I'm a big fan of how it is all based around something scientific, but also magical. Something that can be observed and follows rules, but can't be explained. The writings surrounding the Quantum Moon and the Eye of the Universe and how some of the Nomai viewed and thought about them gives me a deep appreciation[?]. Religion (or whatever you want to call it) in this game perfectly encapsulates why I have my own beliefs. It isn't necessarily about a set of guidelines on how you should live your life and how to treat your fellow man, but about being introspective and learning how to look inward and ask questions that are bigger than you and world around you.
+I'm not really certain why, but I'm actually a big fan of religious themes in the media I consume. Not in like a VeggieTales way, but in a way where the people, stories, and concepts are used in the plot or theming. Games like Castlevania and Binding of Isaac are really cool to me, and Chrono Crusade is one of my favourite animes. Maybe it has to do with growing up Roman Catholic and not really taking to it. Either way, the whole theology around the Eye of the Universe in Outer Wilds was something that I enjoyed a lot. 
 
-[NEED TO VERIFY]
-[FOUND TEXT, CHECK DOWNLOADS]
-- There's one particular dialogue in the Hanging City that I believe is just the thoughts of one person. It goes something along the lines of "Why did they eye try to contact us. Why were we chosen? Was it even trying to contact us? Did we just happen to hear it? Maybe it doesn't want to be found." It's this kind of thinking that speaks to me. It's questioning the Nomais' entire purpose as a race and civilization that was built in a location that they went to based on a signal they had believed was calling out to them. I think the fact that this dialogue tree is in the Eye Shrine District is very intentional. Questioning the proverbial[correct word?] "god" in a shrine dedicated to it.
+It's never explicitly stated that the Nomai have religious beliefs when it comes to the Eye of the Universe and the quantum mechanics around it. The way it's written and presented in the game makes it seem like that is an intended conclusion the audience could draw. Between the Quantum towers, the Eye Shrine District in the Hanging City, and Solanum telling you that the pilgrimage to the Quantum Moon is a tradition that all of her people make in their lifetime. I find it hard to believe it isn't supposed to evoke the feeling that it is the basis of a religion or some sort of theology. [DO I WANT THIS?]The journey to the quantum moon draws parallels to the journey to Mecca that many Muslim make.
+
+I find it very cool how it is all based around something scientific, but also in a way magical. Something that can be observed and follows rules, but can't be explained. The theology (or whatever you want to call it) and many of the writings in the Eye Shrine District do a good job of encapsulating why I have my own beliefs. It isn't necessarily about a set of guidelines on how you should live your life and how to treat your fellow man, but about being introspective and learning how to look inward and ask questions that are bigger than you and world around you.
+
+There's one particular dialogue tree in the Hanging City that are just the thoughts of Solanum. The transcription of the dialogue is as follows:
+
+- SOLANUM: I no longer believe, as I did as a child on **Ember Twin**, that the **Eye of the universe** (the source of the signal) wishes to harm us. But it may not want to be found, either.
+  - SOLANUM: In fact, the **Eye** may not have wishes at all. We have no evidence supporting this.
+- SOLANUM: The terrible circumstances of our arrival here were almost certainly exactly that: circumstance.
+- SOLANUM: I suspect imagining we are special to the **Eye** in some way is wishful thinking. The **Eye** might have called out to any sentient species.
+- SOLANUM: Or it might not have been calling out at all, and that my ancestors heard the **Eye**'s signal holds no great, deep meaning.
+- SOLANUM: This wouldn't be so bad, I think.
+
+I love this dialogue. Posing questions around the Nomais' theology while still participating in it speaks to me as human. The final line of being ok with not being special, but actually still uncertain if your ok with that truth makes me feel emotional in a way. I've spent a lot of time thinking about similar aspects of life. I believe the fact that this monologue is in the Eye Shrine District is very intentional. Questioning the proverbial[correct word?] "god" in a shrine dedicated to it.
 
 ## The solar system
+
+Despite there being very little life in the entirety of the solar system, the game manages to make everything feel so alive. This is so impressive to me considering that what goes on in the solar system repeats in the same manner every loop.
+
+[REWRITE]
+Looking back on the game, it seems like they managed to achieve this a few different ways. When the loop initially starts, all of the different celestial bodies in the solar system start from the exact same position. However, all the different rotations, weather, how satellites are orbiting, they are all random. This is noticeable after a handful of death's in the game, as the initial explosion of the Orbital Probe Cannon will be in slightly different locations on your screen and explode in a different direction each time. The tornados on Giant's Deep move in seemingly unpredictable ways. The same appears to be true for how brittle hollow will break apart. You also can't rely on past trips in Dark Bramble for where to go. It gives the game an extra little edge in making it feel even more dynamic.
+
+The minimap of the solar system is also very cool, as it is really just a tiny living model of it. The planets and all the objects around them are on the minimap and reflect where they physically are at that time. Time continues while viewing it so you can watch the solar system change as time moves on.
 
 ### Timberhearth
 
@@ -107,6 +129,7 @@ It's very impressive how despite there being very little life in the entirety of
 ### Hourglass twins
 
 - sand flows between them like an hourglass :exploding_head:
+- a neat trick to see how close you are to the end of a loop, the sand stops flowing shortly before the supernova, so you can look at the minimap and see how much sand is left on the Ash Twin (like an hourglass running out :exploding_head:)
 
 ### Brittle Hollow
 
