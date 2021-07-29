@@ -6,6 +6,6 @@ import styles from './index.scss';
 
 export const Footer = ({}) => <Section id='Footer' className='footer'>
   <small>
-    Hosted and maintained with <ExternalLink href='https://pages.github.com/'>GitHub Pages</ExternalLink> &copy;&nbsp;{new Date().getFullYear()}
+    Hosted with <ExternalLink href='https://pages.github.com/'>GitHub Pages</ExternalLink> &copy;&nbsp;{new Date().getFullYear()}
   </small>
 </Section>;

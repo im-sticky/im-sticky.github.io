@@ -46,7 +46,10 @@ export const BlogPost = ({}) => {
   return <Section grow id='BlogPost' className={classNames('blog-post', {'blog-post--has-hero': post.hero})}>
     {post.hero ?
       <>
-        <img className='blog-post__hero' src={`/${post.hero}`} role='presentation' />
+        <img className={classNames('blog-post__hero', {
+          'blog-post__hero--top': post.heroPosition === 'top',
+          'blog-post__hero--bottom': post.heroPosition === 'bottom',
+        })} src={`/${post.hero}`} role='presentation' />
         <div className='blog-post__hero-screen' />
       </> : null}
 

@@ -5,5 +5,6 @@ module.exports = [
   'strixhaven-historic-shakeup',
   'mtg-deck-archive-2021-04-14',
   'frustrations-of-mtga-client',
-  'everhood-review',
+  'deaths-door-review',
+  // 'mtga-july-2021-retrospect',
 ];
