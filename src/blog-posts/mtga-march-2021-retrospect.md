@@ -46,4 +46,4 @@ After spending the past week or two playing primarily in best of 3, I have been 
   <figcaption>Overall win rate and highest rank achieved of games played on the ladder</figcaption>
 </figure>
 
-Thanks for reading
+Thanks for reading!

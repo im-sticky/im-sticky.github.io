@@ -36,4 +36,4 @@ At the end of it all, I was very tilted and just played random whatever decks on
   <figcaption>Overall win rate and highest rank achieved of games played on the ladder</figcaption>
 </figure>
 
-Thanks for reading
+Thanks for reading!
