@@ -39,4 +39,4 @@ The rest of the list all seem like cards that will slot fairly well into control
 
 All of these cards are simply amongst the **additional** cards in Strixhaven. I haven't even really looked through much of the normal card spoilers, which I'm certain there are plenty of that will see play and shake up the meta in Historic. One of the things I notice for the Mystical Archive cards, is that none really look like they just slot into and immediately improve any top tier decks. The blue cards I talked about are probably the only ones that seem like they may be jammed into control decks. The numbers will definitely vary, and there may even be rifts in how control decks in certain colour combinations will be built. I have to hand it to WoTC, they gave us a very good list of cards.
 
-Thanks for reading
+Thanks for reading!
