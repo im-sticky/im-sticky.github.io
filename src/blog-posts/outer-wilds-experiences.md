@@ -2,8 +2,9 @@
 title: You have to play Outer Wilds
 description: Thoughts on Outer Wilds as a game and my experiences playing it.
 slug: outer-wilds-experiences
-date: 2021-07-30
+date: 2021-08-02
 hero: outer-wilds-hero.jpg
+heroPosition: bottom
 ---
 
 _Note: This post is very spoiler heavy and is intended for those who have played the game. I have a short spoiler free review [here](/blog/outer-wilds-review)_

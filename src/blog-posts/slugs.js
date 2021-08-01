@@ -7,5 +7,5 @@ module.exports = [
   'frustrations-of-mtga-client',
   'deaths-door-review',
   'mtga-july-2021-retrospect',
-  // 'outer-wilds-experiences',
+  'outer-wilds-experiences',
 ];
