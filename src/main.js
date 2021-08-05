@@ -5,6 +5,7 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import 'mtg-card-seer';
 
 import {ScrollToTop} from 'components/ScrollToTop';
 import {Page} from 'components/Page';
