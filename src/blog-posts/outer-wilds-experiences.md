@@ -1,5 +1,5 @@
 ---
-title: You have to play Outer Wilds
+title: Outer Wilds is a beautiful game
 description: Thoughts on Outer Wilds as a game and my experiences playing it.
 slug: outer-wilds-experiences
 date: 2021-08-02
@@ -35,7 +35,7 @@ One of the reasons I think this game is so cool is that you are not gated from a
 **Slice down the verbosity and approach writing this for people who have played the game**
 I've done a lot of talking up to this point without really explaining what the game is at all, or what you do. The basic premise of the game is that you are exploring a solar system that your people inhabit a planet of, looking to discover new things about an ancient alien race known to you as the Nomai. You can travel between planets via a small space ship, and can freely wander around on the planets that you land on. However, your travels are not met without peril. You can die. And this introduces the basic gimmick of the game, where a strange occurrence you have with a Nomai artifact in the observatory on your home planet keeps you in a time loop from your death back to the moment from when you first woke up. You as character in the game (and as a player I hope) recollect what happens on your previous iterations. Any new key information that you learn is summarized and nicely organized for you in your ships log so you don't have to remember every detail between play sessions.
 
-And this ties back into the content being gated by knowledge as I previously mentioned. 
+And this ties back into the content being gated by knowledge as I previously mentioned.
 
 
 ### Puzzle solving
@@ -88,24 +88,26 @@ The first thing I want to talk about is the Nomai and their language. I absolute
 ## Favourite thing
 
 - quantum moon storyline
-- solanum being dead on the 5 non-Eye locations due to the rule of quantum entanglement is incredible attention to detail 
+- solanum being dead on the 5 non-Eye locations due to the rule of quantum entanglement is incredible attention to detail
 
 ### The theology of the Eye
 
-I'm not really certain why, but I'm actually a big fan of religious themes in the media I consume. Not in like a VeggieTales way, but in a way where the people, stories, and concepts are used in the plot or theming. Games like Castlevania and Binding of Isaac are really cool to me, and Chrono Crusade is one of my favourite animes. Maybe it has to do with growing up Roman Catholic and not really taking to it. Either way, the whole theology around the Eye of the Universe in Outer Wilds was something that I enjoyed a lot. 
+I'm not really certain why, but I'm actually a big fan of religious themes in the media I consume. Not in like a VeggieTales way, but in a way where the people, stories, and concepts are used in the plot or theming. Games like Castlevania and Binding of Isaac are really cool to me, and Chrono Crusade is one of my favourite animes. Maybe it has to do with growing up Roman Catholic and not really taking to it. Either way, the whole theology around the Eye of the Universe in Outer Wilds was something that I enjoyed a lot.
 
-It's never explicitly stated that the Nomai have religious beliefs when it comes to the Eye of the Universe and the quantum mechanics around it. The way it's written and presented in the game makes it seem like that is an intended conclusion the audience could draw. Between the Quantum towers, the Eye Shrine District in the Hanging City, and Solanum telling you that the pilgrimage to the Quantum Moon is a tradition that all of her people make in their lifetime. I find it hard to believe it isn't supposed to evoke the feeling that it is the basis of a religion or some sort of theology. [DO I WANT THIS?]The journey to the quantum moon draws parallels to the journey to Mecca that many Muslim make.
+It's never explicitly stated that the Nomai have religious beliefs when it comes to the Eye of the Universe and the quantum mechanics around it. The way it's written and presented in the game makes it seem like that is an intended conclusion the audience could draw. Between the Quantum towers, the Eye Shrine District in the Hanging City, and Solanum telling you that the pilgrimage to the Quantum Moon is a tradition that all of her people make in their lifetime. I find it hard to believe it isn't supposed to evoke the feeling that it is the basis of a religion or some sort of theology.
 
 I find it very cool how it is all based around something scientific, but also in a way magical. Something that can be observed and follows rules, but can't be explained. The theology (or whatever you want to call it) and many of the writings in the Eye Shrine District do a good job of encapsulating why I have my own beliefs. It isn't necessarily about a set of guidelines on how you should live your life and how to treat your fellow man, but about being introspective and learning how to look inward and ask questions that are bigger than you and world around you.
 
 There's one particular dialogue tree in the Hanging City that are just the thoughts of Solanum. The transcription of the dialogue is as follows:
 
+```
 - SOLANUM: I no longer believe, as I did as a child on **Ember Twin**, that the **Eye of the universe** (the source of the signal) wishes to harm us. But it may not want to be found, either.
   - SOLANUM: In fact, the **Eye** may not have wishes at all. We have no evidence supporting this.
 - SOLANUM: The terrible circumstances of our arrival here were almost certainly exactly that: circumstance.
 - SOLANUM: I suspect imagining we are special to the **Eye** in some way is wishful thinking. The **Eye** might have called out to any sentient species.
 - SOLANUM: Or it might not have been calling out at all, and that my ancestors heard the **Eye**'s signal holds no great, deep meaning.
 - SOLANUM: This wouldn't be so bad, I think.
+```
 
 I love this dialogue. Posing questions around the Nomais' theology while still participating in it speaks to me as human. The final line of being ok with not being special, but actually still uncertain if your ok with that truth makes me feel emotional in a way. I've spent a lot of time thinking about similar aspects of life. I believe the fact that this monologue is in the Eye Shrine District is very intentional. Questioning the proverbial[correct word?] "god" in a shrine dedicated to it.
 
@@ -168,7 +170,7 @@ Dying in this game is something that happens very often and something you get us
 
 I had landed on an asteroid and was walking around the surface just kinda blindly exploring. I Felt a weird bump that kinda made me jump into the air and start floating, but I used my thrusters to get back down onto the asteroid. As I was looking around, I noticed the marker for the distance to my space ship was slowly getting progressively further away. I walk over the horizon of the asteroid and see my ship floating away in space. The bump I experienced had knocked my ship off the asteroid and sent it flying away. I could not believe that had just happened and I was stranded on this asteroid now left alone to die.
 
-This one is a slightly longer story that took place over a few time cycles. 
+This one is a slightly longer story involving multiple deaths over a few time cycles.
 
 - On Brittle Hollow and jumping down a cavern and falling into space having no idea what happened, saw a white orb and light around me was bending so my only assumption was a black hole
 
@@ -189,7 +191,7 @@ I was flying around Giant's Deep and crashed into something damaging my ship. I 
     - quantum tower on brittle hollow falling through the black hole and being in zero G
     - the caves on ember twin getting covered with sand
     - a portion of the statue lab under an island on Giant's Deep being inaccessible until a tornado throws you into space
-    
+
 
 - I happened to launch my ship and see what I assume was the quantum moon. It just so happened to be orbiting Hearthhome on that death cycle. I tried landing on it but it just vanished, it was still in my downward view and it kinda misted away. IDK, was mad weird
 
