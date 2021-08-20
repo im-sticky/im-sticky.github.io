@@ -27,13 +27,10 @@ export const About = ({}) => {
       <small className='about__sub-text'>You can find me on any of these platforms</small>
 
       <ul className='about__social-list'>
-        <li className='about__social-list-item'>
-          <Link to='/blog'>Blog</Link>
-        </li>
+        <DeepLink href='/blog' name='Blog' />
         <SocialLink href='https://github.com/im-sticky' name='GitHub' />
         <SocialLink href='https://www.linkedin.com/in/alex-craig-57427069/' name='LinkedIn' />
         <SocialLink href='https://twitter.com/im_sticky' name='Twitter' />
-        <SocialLink href='https://www.instagram.com/alex_is_sticky/' name='Instagram' />
       </ul>
 
       <p className='about__email'>Want to get in touch with me directly? Feel free to email me at <ExternalLink href='mailto:acraig780@gmail.com'>acraig780@gmail.com</ExternalLink>.</p>
@@ -45,5 +42,11 @@ export const About = ({}) => {
 function SocialLink({href, name}) {
   return <li className='about__social-list-item'>
     <ExternalLink href={href} noIcon>{name}</ExternalLink>
+  </li>;
+}
+
+function DeepLink({href, name}) {
+  return <li className='about__social-list-item'>
+    <Link to={href}>{name}</Link>
   </li>;
 }

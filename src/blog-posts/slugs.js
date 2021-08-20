@@ -8,4 +8,5 @@ module.exports = [
   'deaths-door-review',
   'mtga-july-2021-retrospect',
   'mtg-card-seer',
+  'writing-is-hard',
 ];
