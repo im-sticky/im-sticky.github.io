@@ -7,5 +7,7 @@ module.exports = [
   'frustrations-of-mtga-client',
   'deaths-door-review',
   'mtga-july-2021-retrospect',
+  'mtg-card-seer',
+  'writing-is-hard',
   'outer-wilds-experiences',
 ];

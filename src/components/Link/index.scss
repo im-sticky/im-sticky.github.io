@@ -1,7 +1,6 @@
 @import 'theme/utilities.scss';
 
-auto-card a,
-.link {
+@mixin linkStyles() {
   color: $primary-color;
   text-decoration: none;
   background-image: linear-gradient(120deg, $primary-color 0%, $primary-color 100%);
@@ -9,6 +8,12 @@ auto-card a,
   background-size: 0 pxToRems(2px);
   background-position: 0 100%;
   transition: background-size $transition-time-normal $transition-ease-out-expo;
+}
+
+
+auto-card a,
+.link {
+  @include linkStyles;
 
   &:not(.link--no-underline) {
     @include focusStates {
@@ -19,6 +24,14 @@ auto-card a,
   &--icon {
     display: inline-flex;
     align-items: center;
+  }
+}
+
+// doesn't work when in the list of styles above for some reason
+card-link::part(link) {
+  @include linkStyles;
+  @include focusStates {
+    background-size: 100% pxToRems(2px);
   }
 }
 
