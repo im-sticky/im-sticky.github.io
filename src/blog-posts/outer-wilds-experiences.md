@@ -11,7 +11,7 @@ _Note: This post is very spoiler heavy and is intended for those who have played
 
 ### Preface
 
-I spent a lot of time writing this and it turned out much larger than I anticipated. It went through a couple re-writes/re-works since the way I originally had tackled writing it was that of the perspective of a game review for everyone, when in reality I was writing it because I enjoyed the game so much. My real target audience was friends and myself. Both so that I could share what I had experienced while playing the game, as well as articulating what I appreciate about the game itself. It will also be nice to be able to read my own gameplay stories and re-live those moments. If you are a total stranger that somehow found your way here, just know that I appreciate you reading this.
+I spent a lot of time writing this and it turned out much larger than I anticipated. It went through a couple re-writes/re-works since the way I originally had tackled writing it was that of the perspective of a game review for everyone, when in reality I was writing it because I enjoyed the game so much. My real target audience was friends and myself. Both so that I could share what I had experienced while playing the game, as well as articulating what I appreciate about the game itself. It will also be nice to be able to read my own gameplay stories and re-live those moments. If you are a total stranger that somehow found your way here, welcome! I appreciate you taking the time to read this.
 
 ## Venture into the Outer Wilds
 
@@ -72,18 +72,25 @@ The other puzzle that I had to look up was getting inside of the Interloper. I w
 
 Something I have to gas up in this game is the world building. It is **so incredibly good**. The environments of the planets, the ruins and artifacts of the Nomai, reading the conversations of them, these all individually are very cool and well made, but put together really make for an incredibly immersive and enjoyable experience.
 
-The first thing I want to talk about is the Nomai and their language. I absolutely love the Nomai's way of writing. When I first say it I immediately thought of the way the aliens in <a href="https://www.imdb.com/title/tt2543164/" target="_blank" rel="nofollow noreferrer noopener" class="link external-link">Arrival</a> (highly recommend) have their written language. It's very cool how it sprawls outward from an initial Nomai's speech. If you look close at it you can see a variety of patterns within the spiral which I guess would be their alphabet. It also is very conversational. There aren't too many instances of finding text that is just the thoughts of an individual. Finding scrolls and putting them into the Rosetta Stone-esque walls to read recorded conversations always made me smile, it was like a scavenger hunt each time. Based on the amount of those scroll walls and there generally being multiple scroll racks around them, it felt like the Nomai valued archiving their knowledge. One of my favourite moments was seeing why there is so much written stuff all over the place. Finding Solanum on the Quantum Moon and interacting with her to see that she uses one of those stick things which are scattered about various Nomai Ruins to write onto the environment was incredibly cool to me. It actually gave context to why there is so much writing everywhere and why so much of it is conversational. It made the idea of discovering and reading those scrawlings less of a "for video games sake of progression" and more of something that actually would have happened in the universe of the game.
+The way the game is set up and presented to you is done incredibly well. When you wake up for the very first time
+
+- your initial exploration of the camp in timberhearth has many things you'll encounter on other planets
+
+I want to talk about is the Nomai and their language. I absolutely love the Nomai's way of writing. When I first say it I immediately thought of the way the aliens in <a href="https://www.imdb.com/title/tt2543164/" target="_blank" rel="nofollow noreferrer noopener" class="link external-link">Arrival</a> (highly recommend) have their written language. It's very cool how it sprawls outward from an initial Nomai's speech. If you look close at it you can see a variety of patterns within the spiral which I guess would be their alphabet. It also is very conversational. There aren't too many instances of finding text that is just the thoughts of an individual. Finding scrolls and putting them into the Rosetta Stone-esque walls to read recorded conversations always made me smile, it was like a scavenger hunt each time. Based on the amount of those scroll walls and there generally being multiple scroll racks around them, it felt like the Nomai valued archiving their knowledge. One of my favourite moments was seeing why there is so much written stuff all over the place. Finding Solanum on the Quantum Moon and interacting with her to see that she uses one of those stick things which are scattered about various Nomai Ruins to write onto the environment was incredibly cool to me. It actually gave context to why there is so much writing everywhere and why so much of it is conversational. It made the idea of discovering and reading those scrawlings less of a "for video games sake of progression" and more of something that actually would have happened in the universe of the game.
 
 
 
 - projections pools are very cool
   - the eventual realization that those are real world locations and feeling "oh man I have to find where that is" is awesome
 
-- your initial exploration of the camp in timberhearth has many things you'll encounter on other planets
-
 - one cool thing is that the map is actually updated live with how the solar system is changing
 
 ## Cosmic horror and fear of the unknown
+
+I'm a fan of horror as a genre in film and will seek it out, but I've never really been a big fan playing horror games. To me, a large part of what makes horror enjoyable is that you are watching the events play out to other people and have no agency in the actions that are taken by them. That being said, I do enjoy watching other people play horror games (usually let's plays).
+
+At face value it feels very weird to call this a horror game, but it really is.
+
 
 ## Favourite thing
 
@@ -109,7 +116,7 @@ There's one particular dialogue tree in the Hanging City that are just the thoug
 - SOLANUM: This wouldn't be so bad, I think.
 ```
 
-I love this dialogue. Posing questions around the Nomais' theology while still participating in it speaks to me as human. The final line of being ok with not being special, but actually still uncertain if your ok with that truth makes me feel emotional in a way. I've spent a lot of time thinking about similar aspects of life. I believe the fact that this monologue is in the Eye Shrine District is very intentional. Questioning the proverbial[correct word?] "god" in a shrine dedicated to it.
+I love this dialogue. Posing questions around the Nomai's theology while still participating in it speaks to me as human. The final line of being ok with not being special, but actually still uncertain if your ok with that truth makes me feel emotional in a way. I've spent a lot of time thinking about similar aspects of life. I believe the fact that this monologue is in the Eye Shrine District is very intentional. Questioning the proverbial[correct word?] "god" in a shrine dedicated to it.
 
 ## The solar system
 
@@ -129,7 +136,7 @@ The minimap of the solar system is also very cool, as it is really just a tiny l
 - It's nice that there's a dialogue tree explaining that there were primitive Hearthians on the planet at the same time as the Nomai in the planets crust.
   - also the dialogue in Hollow's Lantern explaining how the rock on Timberhearth is extra strong gives a reasonable explanation as to why those creatures could have lived through the ghost matter explosion that presumably killed the Nomai
 
-### Hourglass twins
+### Hourglass Twins
 
 - sand flows between them like an hourglass :exploding_head:
 - a neat trick to see how close you are to the end of a loop, the sand stops flowing shortly before the supernova, so you can look at the minimap and see how much sand is left on the Ash Twin (like an hourglass running out :exploding_head:)
@@ -172,7 +179,11 @@ Dying in this game is something that happens very often and something you get us
 
 I had landed on an asteroid and was walking around the surface just kinda blindly exploring. I Felt a weird bump that kinda made me jump into the air and start floating, but I used my thrusters to get back down onto the asteroid. As I was looking around, I noticed the marker for the distance to my space ship was slowly getting progressively further away. I walk over the horizon of the asteroid and see my ship floating away in space. The bump I experienced had knocked my ship off the asteroid and sent it flying away. I could not believe that had just happened and I was stranded on this asteroid now left alone to die.
 
-#### Fear of the unknown
+#### A case of unfortunate timing
+
+I was flying around Giant's Deep and of all things that could happen an island that had been tossed up from one the water tornados was falling back down and landed on top of me. It was extremely jarring but it didn't kill me outright. I didn't care to get out and repair my ship at the time since I wanted to land somewhere specific on the planet. As I was flying to where I wanted to go, I started to lose all momentum and fall into the ocean below. Confused, I kept trying to fly but my thrusters were showing no signs of movement at all. It wasn't until I looked at what was damaged in the little screen that I realized what was going on. What was damaged was the fuel supply on my ship. And up until that point I didn't realize that damaging different parts of the ship actually had an affect on the functionality of the ship. So I go out into the water, looking to fix the fuel tank. But of course, the fuel tank is on the top side of the ship and the gravity on Giant's Deep is to great for my to actually thrust high enough to fix it. So there I sat, in the water, unable to go anywhere. All I could do was die and start over.
+
+#### Falling into the unknown
 
 This journey starts with me venturing to Brittle Hollow. Notably, this would be the first time I had gone to the planet. I fly around the planet and see a big hole in the surface and decide to check it out. Looking down below into the cracked surface, I see one of those blue gravity elevators, and that it leads to what seems like a ledge I could stand on. It didn't look to far, so I decide to jump down to it. I horribly misjudge and completely miss, and am falling towards the centre of the planet. It's important to note that up until this point I have not looked completely downward to see the giant black hole at the centre of the planet, and am looking up as I fall so I have no idea what was in store for me. I was fully expecting to just die. But, I fall into the black hole, warp and am in complete shock because I have no idea what just happened. I'm now in space floating with chunks of rock around me. I look around to see a white ball that was bending light as I look towards it, so I assume that I fell through a black hole. With no where to go, I manually reset the cycle.
 
@@ -181,10 +192,6 @@ After that happened, I go back to Brittle Hollow but this time with the intentio
 Thus begins the third and final time cycle of this saga. I run to my ship, set course for Brittle Hollow, and blast off. I don't make it far though since I hadn't gone high enough to escape Timberhearth's gravitational pull, so I immediately crash back down into the planet. I crashed beside the observatory and when I got out to repair my ship, I figured I may as well go in and look around since I haven't gone back to anywhere on Timberhearth since I had died for the first time. Now, my first time getting the launch codes I admittedly did not explore the encampment or talk to many people. I was trying to just got on with the actual gameplay to see if I would like the actual game without knowing that looking at and reading stuff was such a big part of the game. But I digress, most of the museum-y stuff in the observatory was new to me. This is where I saw a tiny angler fish in a tank and read that it is life found on Dark Bramble. Neat. Back to my ship and back to Brittle Hollow. This time however, I have a plan. This time I find the opening in the surface and navigate my ship through it and take my ship through the black hole. I did not have a plan after that though, so it was very uneventful. I do see a planet in the distance pretty close by and decide I may as well go there to explore. It's Dark Bramble.
 
 As I get closer I realize there isn't really any surface to land on, nor is there and real gravitational pull. There was however what seemed like a solid mass at the centre of the planet with bright lights coming out of various spots, so I go to investigate. The holes were big enough for me to fit and of course I decide to fly straight into one. It was at this moment that what seemed like fog had cleared from my screen and the music shifted from the usual space theme into an eerie melody. I was also in what seemed like water now. Alright, kinda weird, but I came here to explore so that I shall do. I take out my signal scope and look around and lock onto a distress beacon about a kilometre away. Again, weird, since the outside of this did not look that large. I start my way towards it and not long after I start moving I notice a bright light coming from the left of me. I turn to see what it is and my jaw literally drops. It's an angler fish, the very same I had witnessed not minutes ago, only this time 4 to 5 times larger my my ship. An immense wave of dread comes over me and I sit there floating, completely frozen in fear for what feels like minutes, but couldn't have been longer than maybe a few seconds. Eventually I gather myself, turn my ship around back towards the distress beacon, and fucking BLAST the engines. I hear a blood boiling shriek come from behind me as I start moving. It was at this moment it was clear it was coming after me. The distance of the signal is getting closer and closer. 600 metres, 500 metres. As I'm racing towards the screeching noise of the distress beacon I see the light of the angler fish come into view above me. It's right behind me. 400 metres, 300 metres. I see what looks like a small cavernous rock in the distance fade into view. The beacon was inside. 200 metres. I was so close. Surely I would be safe if I reach it. Nearing the small rocky formation I see teeth begin to form at the top of my viewport. It was going to eat me. 150 metres. My body tenses up as I prepare to enter the unknown or die trying. 130 metres. The teeth are filling up more of my viewport and closing in around me. 115 metres. Darkness. I watch with my eyes wider than they have ever been as the Nomai mask retells me of my horrifying demise in reverse. It's at this point that I stand up from the computer and go to the bathroom to splash cold water on my face and wipe actual sweat from my brow. Never have I experienced a feeling of terror that genuine from a video game. And I am positive I never will again.
-
-#### A case of unfortunate timing
-
-I was flying around Giant's Deep and of all things that could happen an island that had been tossed up from one the water tornados was falling back down and landed on top of me. It was extremely jarring but it didn't kill me outright. I didn't care to get out and repair my ship at the time since I wanted to land somewhere specific on the planet. As I was flying to where I wanted to go, I started to lose all momentum and fall into the ocean below. Confused, I kept trying to fly but my thrusters were showing no signs of movement at all. It wasn't until I looked at what was damaged in the little screen that I realized what was going on. What was damaged was the fuel supply on my ship. And up until that point I didn't realize that damaging different parts of the ship actually had an affect on the functionality of the ship. So I go out into the water, looking to fix the fuel tank. But of course, the fuel tank is on the top side of the ship and the gravity on Giant's Deep is to great for my to actually thrust high enough to fix it. So there I sat, in the water, unable to go anywhere. All I could do was die and start over.
 
 
 ---
@@ -205,7 +212,7 @@ I was flying around Giant's Deep and of all things that could happen an island t
 
 - accidentally warped using the planet warps and I freaked out because I had no idea what happened, I hadn't learned how to warp at the White Hole station yet. I wandered out of the warp and back in without knowing and it warped me back. I figured it was some weird time and place thing.
 
-- launching your spaceship going into the map and then setting auto pilot just to have you crash back into Herathome just because you didn't quite escape its orbit its always a funny experience.
+- launching your spaceship going into the map and then setting auto pilot just to have you crash back into Timberhearth just because you didn't quite escape its orbit its always a funny experience.
 
 - arriving at the sun station and opening the hatch having it fall away and the music start to swell was really cool. Jumping out into zero G and believing I was just gonna float to the other side was very scary
 
