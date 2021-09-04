@@ -77,6 +77,10 @@ deck-list {
     border-top: 1px solid $font-color;
   }
 
+  &::part(flip-preview) {
+    text-transform: uppercase;
+  }
+
   &::part(export) {
     background: $primary-color;
 
@@ -85,7 +89,7 @@ deck-list {
     }
   }
 
-  &::part(loader-item) {
-    background: $primary-color;
+  &::part(export-notification) {
+    padding: pxToRems(4px) 0;
   }
 }

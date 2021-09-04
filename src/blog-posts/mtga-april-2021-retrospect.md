@@ -18,10 +18,7 @@ Before the release of Strixhaven on the 15th, I played primarily Jund Sac. That 
 
 Strixhaven was released and I immediately built an Izzet Phoenix deck featuring <card-link>Faithless Looting</card-link> and <card-link>Brainstorm</card-link>. My win rate went through the roof, and I hit Mythic maybe about 60% of the way through April. The deck was performing extremely well for me, and I got to Mythic early enough in the season that I figured I could probably reach top 1200 at the end of the season and qualify for the Mythic Invitational Qualifier. For this reason, I stuck with playing phoenix throughout the entire season. After a few days and a few iterations, this is the list I landed on and played most of my games with:
 
-<figure>
-  ![Izzet Phoenix Deck](/april-2021-phoenix.jpg "Izzet Phoenix Deck")
-  <figcaption>Deck list for my Izzet Pheonix build</figcaption>
-</figure>
+<deck-list heading="Historic Izzet Phoenix" src="april-2021-phoenix.dec"></deck-list>
 
 ## The highs and lows of Mythic
 
