@@ -17,9 +17,7 @@ As a long time Legacy player, I am a very big fan of <card-link>Brainstorm</card
 
 The first deck I am going to try out after Strixhaven releases will be Izzet Phoenix. The deck relies an a bunch of cheap draw and burn spells to power out early <card-link name="Arclight Phoenix">Arclight Phoenixes</card-link> and <card-link name='Stormwing Entity'>Stormwing Entities</card-link>. It was one of the best decks in Modern before <card-link>Faithless Looting</card-link> was banned. Conveniently, <card-link>Faithless Looting</card-link> is also being printed in the Mystical Archive as well. I believe that some version of Izzet Phoenix will become a fairly popular deck in the format. Here's a version I made that I will be playing with on launch day:
 
-<div>
-  <auto-card-list preview name="Izzet Phoenix" src="izzet_phoenix.dec"></auto-card-list>
-</div>
+<deck-list heading="Izzet Phoenix" src="/izzet_phoenix.dec"></deck-list>
 
 Another deck that I'm looking forward to playing with is a <card-link>Thassa's Oracle</card-link> / <card-link>Tainted Pact</card-link> combo deck. The basic idea is that you play an entirely one-of deck (barring multiple <card-link name='Tainted Pact'>Tainted Pacts</card-link>) so that you can always get <card-link>Thassa's Oracle</card-link> with your first <card-link>Tainted Pact</card-link>, and then name a card not in your deck with your second <card-link>Tainted Pact</card-link> to empty your library and win on the spot with <card-link>oracle</card-link>. I like the idea of a clunky EDH like combo deck that can win out of no where. I don't think it will be very good, but I think it will be very fun.
 

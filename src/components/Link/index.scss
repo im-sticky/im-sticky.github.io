@@ -1,7 +1,7 @@
 @import 'theme/utilities.scss';
 
-@mixin linkStyles() {
-  color: $primary-color;
+@mixin linkStyles($color: $primary-color) {
+  color: $color;
   text-decoration: none;
   background-image: linear-gradient(120deg, $primary-color 0%, $primary-color 100%);
   background-repeat: no-repeat;
@@ -11,7 +11,6 @@
 }
 
 
-auto-card a,
 .link {
   @include linkStyles;
 
@@ -35,6 +34,9 @@ card-link::part(link) {
   }
 }
 
-auto-card a:hover {
-  text-decoration: none !important;
+deck-list::part(link) {
+  @include linkStyles($font-color);
+  @include focusStates {
+    background-size: 100% pxToRems(2px);
+  }
 }

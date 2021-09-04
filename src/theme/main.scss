@@ -50,3 +50,26 @@ p {
 .hidden {
   display: none !important;
 }
+
+deck-list {
+  &::part(container) {
+    margin: pxToRems(40px) 0;
+    max-width: 100%;
+    padding: 0 pxToRems(8px);
+  }
+
+  &::part(header) {
+    margin-bottom: pxToRems(8px);
+  }
+
+  &::part(heading) {
+    font-family: 'Sulphur Point', sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    @include fontSize(22px);
+  }
+
+  &::part(section-title) {
+    font-family: 'Sulphur Point', sans-serif;
+  }
+}

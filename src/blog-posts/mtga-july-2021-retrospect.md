@@ -22,10 +22,7 @@ That being said, my season went fairly well I think. I had a pretty decent win p
 
 Here's the decklist I ended the season with:
 
-<div>
-  <auto-card-list preview name="Yorion, Doom Foretold" src="yorion_foretold.dec"></auto-card-list>
-  <auto-card-list preview name="Sideboard" src="yorion_foretold_sideboard.dec"></auto-card-list>
-</div>
+<deck-list heading="Yorion, Doom Foretold" src="doom-companion.dec"></deck-list>
 
 I've been playing and messing around with different <card-link>Doom Foretold</card-link> decks for a while now, both in Historic and Standard. I had never fully invested into playing one on the ladder before. It is very fun, and very satisfying. I've tried a bunch of different color combos, without <card-link name="Yorion, Sky Nomad">Yorion</card-link> as a companion, and using cards like <card-link>Dance of the Manse</card-link> as a win condition. I'm not gonna say that this is the best way to build a <card-link>Doom Foretold</card-link> deck, but it certainly has gone through a lot of iteration and trials. This version is very competitive and I find it rarely stumbles. Prior to the release of Amonkhet Remastered I would say that having another color (usually blue) to fill some gaps was almost necessary, but that is no longer the case.
 
