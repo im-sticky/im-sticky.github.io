@@ -72,4 +72,20 @@ deck-list {
   &::part(section-title) {
     font-family: 'Sulphur Point', sans-serif;
   }
+
+  &::part(separator) {
+    border-top: 1px solid $font-color;
+  }
+
+  &::part(export) {
+    background: $primary-color;
+
+    &:hover {
+      background: $font-color;
+    }
+  }
+
+  &::part(loader-item) {
+    background: $primary-color;
+  }
 }
