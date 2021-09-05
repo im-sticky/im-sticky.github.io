@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useLocation} from 'react-router-dom';
 import classNames from 'classnames';
 import {NotFound} from 'pages/NotFound';
 import {Section} from 'components/Section';
@@ -11,6 +11,7 @@ import {faQuoteLeft, faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome
 import {posts} from 'blog-posts';
 import {ExternalLinkIcon} from 'components/ExternalLink';
 import {formatDate} from 'helpers/formatDate';
+import {useTitle, useDescription, useShareImage, usePathname} from 'hooks/metadata';
 
 import styles from './index.scss';
 
@@ -18,12 +19,9 @@ export const BlogPost = ({}) => {
   const {slug} = useParams();
   const post = posts.find(p => p.slug === slug);
   const postIndex = posts.findIndex(p => p.slug === slug);
+  const {pathname} = useLocation();
 
   useEffect(() => {
-    const title = !!post ? post.title : 'Not Found';
-
-    document.title = `Alex Craig | ${title}`;
-
     if (post) {
       const linkIcon = document.getElementById('hidden-icon');
       const externalLinks = document.querySelector('.blog-post__content').querySelectorAll('.external-link');
@@ -38,6 +36,12 @@ export const BlogPost = ({}) => {
       });
     }
   }, [post]);
+
+  useTitle(post?.title ?? 'Not Found');
+  useDescription(post?.description ?? '404 This page does not exist.');
+  useShareImage(post?.shareImage);
+  usePathname(pathname);
+
 
   if (!post) {
     return <NotFound />;

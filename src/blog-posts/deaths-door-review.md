@@ -1,5 +1,5 @@
 ---
-title: "The good, the bad and the ugly: Death's Door"
+title: "Death's Door - The good, the bad and the ugly"
 description: A brief spoiler free review of the game Death's Door.
 slug: deaths-door-review
 date: 2021-07-29
