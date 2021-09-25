@@ -5,29 +5,11 @@ slug: mtg-deck-archive-2021-04-14
 date: 2021-04-14
 ---
 
-## Historic - Big Sacrifice
+<deck-list heading="Big Sacrifice" src="2021-04-14-historic-jund-sac.dec"></deck-list>
+_Overall record: 21-9_
 
-Overall record: 21-9
+<deck-list heading="CoCo Sacrifice" src="2021-04-14-historic-coco-sacrifice.dec"></deck-list>
+_Overall record: 35-18_
 
-<figure>
-  ![Big Sacrifice](/2021-04-14-historic-jund-sac.jpg "Big Sacrifice")
-  <figcaption>Deck list for Big Sacrifice. Click [here](/2021-04-14-historic-jund-sac.jpg) for larger image.</figcaption>
-</figure>
-
-## Historic - CoCo Sacrifice
-
-Overall record: 35-18
-
-<figure>
-  ![CoCo Sacrifice](/2021-04-14-historic-coco-sacrifice.jpg "CoCo Sacrifice")
-  <figcaption>Deck list for CoCo Big Sacrifice. Click [here](/2021-04-14-historic-coco-sacrifice.jpg) for larger image.</figcaption>
-</figure>
-
-## Historic - Rakdos Arcanist
-
-Overall record: 24-17
-
-<figure>
-  ![Rakdos Arcanist](/2021-04-14-historic-arcanist.jpg "Rakdos Arcanist")
-  <figcaption>Deck list for Rakdos Arcanist. Click [here](/2021-04-14-historic-arcanist.jpg) for larger image.</figcaption>
-</figure>
+<deck-list heading="Rakdos Arcanist" src="2021-04-14-historic-arcanist.dec"></deck-list>
+_Overall record: 24-17_

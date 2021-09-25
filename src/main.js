@@ -35,22 +35,22 @@ const Main = ({}) => {
           </Page>} />
 
         <Route exact path='/blog/page/:page' render={props =>
-          <Page title='Blog'>
+          <Page title='Blog' description="List page for all of Alex's blog posts.">
             <BlogList />
           </Page>} />
 
         <Route exact path='/blog' render={props =>
-          <Page title='Blog'>
+          <Page title='Blog' description="List page for all of Alex's blog posts.">
             <BlogList />
           </Page>} />
 
         <Route exact path='/' render={props =>
-          <Page title='Home'>
+          <Page title='Home' description="Portfolio website of Alex Craig.">
             <About />
           </Page>} />
 
         <Route path='*' render={props =>
-          <Page title='Not Found'>
+          <Page title='Not Found' description="404 This page does not exist.">
             <NotFound />
           </Page>} />
       </Switch>

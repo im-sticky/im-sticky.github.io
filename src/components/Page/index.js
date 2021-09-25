@@ -1,13 +1,16 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import {useLocation} from 'react-router-dom';
 import {Footer} from 'pages/Footer';
+import {useTitle, useDescription, useShareImage, usePathname} from 'hooks/metadata';
 
-export const Page = ({title, children}) => {
-  useEffect(() => {
-    if (title) {
-      document.title = `Alex Craig | ${title}`;
-    }
-  }, [title]);
+export const Page = ({title, description, shareImage, children}) => {
+  const {pathname} = useLocation();
+
+  useTitle(title);
+  useDescription(description);
+  useShareImage(shareImage);
+  usePathname(pathname);
 
   return <>
     {children}
@@ -17,5 +20,7 @@ export const Page = ({title, children}) => {
 
 Page.propTypes = {
   children: PropTypes.any.isRequired,
+  description: PropTypes.string,
+  shareImage: PropTypes.string,
   title: PropTypes.string,
 };
