@@ -7,7 +7,7 @@ hero: outer-wilds-hero.jpg
 heroPosition: bottom
 ---
 
-_Note: This post is very spoiler heavy and is intended for those who have played the game. I have a short spoiler free review [here](/blog/outer-wilds-review)_
+_Note: This post is very spoiler heavy and is intended for those who have played through the entire game._
 
 ### Preface
 
@@ -160,7 +160,10 @@ The minimap of the solar system is also very cool, as it is really just a tiny l
 
 - overall very good
 - has a couple bangers
-- the song that plays after you leave the Ash Twin Project with the warp core gave me shivers, it's such a good touch since most people doing that probably know that they are going to the Eye of the Universe
+- audio fingerprint (banjo)
+- the planets all have atmospheric tracks where as songs that are triggered and play at specific events have more involved tracks
+- the timing of when songs start to fade in and play for events are very well done
+  - the song that plays after you leave the Ash Twin Project (final voyage) with the warp core gave me shivers, it's such a good touch since most people doing that probably know that they are going to the Eye of the Universe
 
 
 ## The thrill of death
@@ -194,6 +197,7 @@ Thus begins the third and final time cycle of this saga. I run to my ship, set c
 As I get closer I realize there isn't really any surface to land on, nor is there and real gravitational pull. There was however what seemed like a solid mass at the centre of the planet with bright lights coming out of various spots, so I go to investigate. The holes were big enough for me to fit and of course I decide to fly straight into one. It was at this moment that what seemed like fog had cleared from my screen and the music shifted from the usual space theme into an eerie melody. I was also in what seemed like water now. Alright, kinda weird, but I came here to explore so that I shall do. I take out my signal scope and look around and lock onto a distress beacon about a kilometre away. Again, weird, since the outside of this did not look that large. I start my way towards it and not long after I start moving I notice a bright light coming from the left of me. I turn to see what it is and my jaw literally drops. It's an angler fish, the very same I had witnessed not minutes ago, only this time 4 to 5 times larger my my ship. An immense wave of dread comes over me and I sit there floating, completely frozen in fear for what feels like minutes, but couldn't have been longer than maybe a few seconds. Eventually I gather myself, turn my ship around back towards the distress beacon, and fucking BLAST the engines. I hear a blood boiling shriek come from behind me as I start moving. It was at this moment it was clear it was coming after me. The distance of the signal is getting closer and closer. 600 metres, 500 metres. As I'm racing towards the screeching noise of the distress beacon I see the light of the angler fish come into view above me. It's right behind me. 400 metres, 300 metres. I see what looks like a small cavernous rock in the distance fade into view. The beacon was inside. 200 metres. I was so close. Surely I would be safe if I reach it. Nearing the small rocky formation I see teeth begin to form at the top of my viewport. It was going to eat me. 150 metres. My body tenses up as I prepare to enter the unknown or die trying. 130 metres. The teeth are filling up more of my viewport and closing in around me. 115 metres. Darkness. I watch with my eyes wider than they have ever been as the Nomai mask retells me of my horrifying demise in reverse. It's at this point that I stand up from the computer and go to the bathroom to splash cold water on my face and wipe actual sweat from my brow. Never have I experienced a feeling of terror that genuine from a video game. And I am positive I never will again.
 
 
+# TODO
 ---
 
 - It's a very good game to watch someone play (having played it)
