@@ -9,4 +9,5 @@ module.exports = [
   'mtga-july-2021-retrospect',
   'mtg-card-seer',
   'writing-is-hard',
+  'tunic-review',
 ];
