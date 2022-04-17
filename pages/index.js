@@ -61,7 +61,7 @@ export default function Home() {
           </small>
 
           <ul className={styles['about__social-list']}>
-            <DeepLink href="blog" name="Blog" />
+            <DeepLink href="/blog" name="Blog" />
             <SocialLink href="https://github.com/im-sticky" name="GitHub" />
             <SocialLink href="https://www.linkedin.com/in/alex-craig-57427069/" name="LinkedIn" />
             <SocialLink href="https://twitter.com/im_sticky" name="Twitter" />
