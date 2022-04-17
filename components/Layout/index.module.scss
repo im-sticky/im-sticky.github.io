@@ -1,0 +1,12 @@
+@import 'styles/utilities.scss';
+
+.footer {
+  text-align: center;
+  padding-top: pxToRems(32px);
+  padding-bottom: pxToRems(32px);
+  @include gutters;
+
+  .external-link__icon {
+    @include fontSize(8px);
+  }
+}

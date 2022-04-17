@@ -1,0 +1,152 @@
+/**
+ * Convert font-size from px to rem with px fallback
+ *
+ * @param $size - the value in pixel you want to convert
+ *
+ * e.g. p {@include fontSize(12px);}
+ *
+ */
+
+// Function for converting a px based font-size to rem.
+@function pxToRems($size) {
+  $remSize: $size / $baseFontSize;
+  //Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+  font-size: pxToRems($size);
+}
+
+// hover state mixins
+@mixin focusStates() {
+  &:hover,
+  &:focus,
+  &:active {
+    @content;
+  }
+}
+
+@mixin linkStyles($color: $primary-color) {
+  color: $color;
+  text-decoration: none;
+  background-image: linear-gradient(120deg, $primary-color 0%, $primary-color 100%);
+  background-repeat: no-repeat;
+  background-size: 0 pxToRems(2px);
+  background-position: 0 100%;
+  transition: background-size $transition-time-normal $transition-ease-out-expo;
+}
+
+// content gutters
+@mixin gutters() {
+  padding-left: pxToRems(16px);
+  padding-right: pxToRems(16px);
+
+  @include phone-and-up {
+    padding-left: pxToRems(24px);
+    padding-right: pxToRems(24px);
+  }
+}
+
+// reading text
+@mixin readableContent() {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: pxToRems(32px);
+    margin-bottom: pxToRems(16px);
+  }
+
+  p {
+    margin-bottom: pxToRems(16px);
+    line-height: 1.71;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  // hack for aligning inline images
+  p {
+    display: flow-root;
+
+    img[alt$='>'],
+    img[alt$='<'] {
+      margin: pxToRems(16px) 0;
+
+      @include tablet-and-up {
+        margin: pxToRems(16px);
+        max-width: pxToRems(440px);
+      }
+    }
+
+    img[alt$='>'] {
+      float: right;
+
+      @include laptop-and-up {
+        margin-right: pxToRems(-160px);
+      }
+    }
+
+    img[alt$='<'] {
+      float: left;
+
+      @include laptop-and-up {
+        margin-left: pxToRems(-160px);
+      }
+    }
+  }
+}
+
+// media queries
+@mixin phone {
+  @media (max-width: #{$phone-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin large-phone {
+  @media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin phone-and-up {
+  @media (min-width: #{$phone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$laptop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-and-up {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: #{$laptop-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin laptop-and-up {
+  @media (min-width: #{$laptop-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

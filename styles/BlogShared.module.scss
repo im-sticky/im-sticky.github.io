@@ -1,0 +1,43 @@
+@import 'styles/utilities.scss';
+
+.blog-post {
+  &__descriptor {
+    margin-bottom: 0;
+
+    @include tablet-and-up {
+      @include fontSize(18px);
+    }
+
+    &--small {
+      font-size: 80%;
+      line-height: 1.4;
+    }
+
+    &--italic {
+      font-style: italic;
+    }
+
+    &--spaced {
+      margin-bottom: pxToRems(8px);
+    }
+  }
+
+  &__back-icon {
+    margin-right: pxToRems(4px);
+  }
+
+  &__next-icon {
+    margin-left: pxToRems(4px);
+  }
+}
+
+.blog-pagination {
+  font-size: 80%;
+  margin-top: pxToRems(24px);
+  display: flex;
+  justify-content: space-between;
+
+  &__previous {
+    margin-left: auto;
+  }
+}

@@ -1,0 +1,51 @@
+@import 'styles/utilities.scss';
+
+.about {
+  display: flex;
+  justify-content: center;
+  padding-top: pxToRems(64px);
+  padding-bottom: pxToRems(64px);
+  @include gutters;
+
+  &__sub-text {
+    display: block;
+    line-height: 1.1;
+    margin-bottom: pxToRems(16px);
+  }
+
+  &__bio {
+    margin-bottom: pxToRems(64px);
+
+    @include tablet-and-up {
+      @include fontSize(18px);
+    }
+  }
+
+  &__social-list {
+    margin: 0 0 pxToRems(24px) 0;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__social-list-item {
+    display: inline-flex;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      width: pxToRems(4px);
+      height: pxToRems(4px);
+      background-color: $font-color;
+      border-radius: 50%;
+      margin: 0 pxToRems(10px);
+    }
+  }
+
+  &__email {
+    margin-bottom: 0;
+    @include fontSize(14px);
+  }
+}
