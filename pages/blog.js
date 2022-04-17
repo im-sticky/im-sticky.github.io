@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import {useRouter} from 'next/router';
 import clsx from 'clsx';
-import {getAllPosts} from 'helpers/mdxUtils';
+import {getAllPosts} from 'helpers/mdxUtils.mjs';
 import {Section} from 'components/Section';
 import {Container} from 'components/Container';
 import {InternalLink} from 'components/Link';

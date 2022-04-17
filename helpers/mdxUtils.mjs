@@ -1,8 +1,6 @@
 import matter from 'gray-matter';
 import {join} from 'path';
 import fs from 'fs';
-import {remark} from 'remark';
-import html from 'remark-html';
 
 // path to our list of available posts
 const POSTS_PATH = join(process.cwd(), '_posts');
