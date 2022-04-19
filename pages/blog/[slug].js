@@ -14,7 +14,7 @@ import {
   faLongArrowAltLeft,
   faLongArrowAltRight,
 } from '@fortawesome/free-solid-svg-icons';
-import {ExternalLink} from 'components/ExternalLink';
+import {ExternalLink} from 'components/Link';
 import {Figure} from 'components/Figure';
 import {formatDate} from 'helpers/formatDate';
 import {SITE_URL} from 'helpers/constants';

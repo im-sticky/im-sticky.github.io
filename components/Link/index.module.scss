@@ -14,3 +14,13 @@
     align-items: center;
   }
 }
+
+.external-link {
+  display: inline-flex;
+  align-items: center;
+
+  &__icon {
+    @include fontSize(10px);
+    margin-left: pxToRems(4px);
+  }
+}
