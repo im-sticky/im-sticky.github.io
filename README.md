@@ -1,14 +1,19 @@
+## Local dev
+
+The website is built using [Next.js](https://nextjs.org/). To run local development server:
+
+```
+npm install
+npm run dev
+```
+
 ## Deploying
 
-The base branch to work out of is `develop`, but switching into the `out/` folder will automatically switch the working branch to `master` with a different set of commited files. The `out/` folder is set as a `git worktree` for the `master branch`. To deploy a new version of the site run the following commands:
+Deploying is managed through a single `npm` command that builds a static version of the site and deploys as a subtree to the `gh-pages` branch.
 
 ```
-> npm run build
-> cd out
-> git add -A
-> git commit -m "new site build"
-> git push origin master
-> cd ..
+git checkout develop
+npm run deploy
 ```
 
-To add a `git worktree` from a newly cloned repo, run `git worktree ./out/ master` from the root of the repository while the `out` folder does not exist.
+This has the side effect of creating a new commit on the develop branch that will also need to be pushed.
