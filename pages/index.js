@@ -1,7 +1,7 @@
 import {Section} from 'components/Section';
 import {Container} from 'components/Container';
 import {InternalLink} from 'components/Link';
-import {ExternalLink} from 'components/ExternalLink';
+import {ExternalLink} from 'components/Link';
 import {TitleShape} from 'components/TitleShape';
 import {faTerminal, faUserFriends} from '@fortawesome/free-solid-svg-icons';
 import {SITE_URL} from 'helpers/constants';

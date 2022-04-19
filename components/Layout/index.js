@@ -1,6 +1,6 @@
 import React from 'react';
 import {Section} from 'components/Section';
-import {ExternalLink} from 'components/ExternalLink';
+import {ExternalLink} from 'components/Link';
 
 import styles from './index.module.scss';
 
