@@ -1,0 +1,65 @@
+@import 'styles/utilities.scss';
+
+.blog-post {
+  $hero-height: 55vh;
+
+  padding-top: pxToRems(64px);
+  @include gutters;
+
+  &--has-hero {
+    padding-top: calc(#{$hero-height} - 60px);
+
+    @include tablet-and-up {
+      .blog-post__title {
+        @include fontSize(48px);
+
+        .title-shape {
+          @include fontSize(32px);
+        }
+      }
+    }
+  }
+
+  &__hero,
+  &__hero-screen {
+    position: absolute;
+    top: 0;
+    height: $hero-height;
+    left: 0;
+    right: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  &__hero {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+
+    &--top {
+      object-position: top center;
+    }
+
+    &--bottom {
+      object-position: bottom center;
+    }
+  }
+
+  &__hero-screen {
+    background: linear-gradient(
+      to top,
+      rgba(250, 250, 250, 1),
+      rgba(250, 250, 250, 0.4) 50%,
+      rgba(250, 250, 250, 0)
+    );
+  }
+
+  &__date {
+    display: block;
+  }
+
+  &__content {
+    margin-top: pxToRems(40px);
+    @include readableContent();
+  }
+}

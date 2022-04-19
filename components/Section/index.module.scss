@@ -1,0 +1,11 @@
+@import 'styles/utilities.scss';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &--grow {
+    flex-grow: 2;
+  }
+}

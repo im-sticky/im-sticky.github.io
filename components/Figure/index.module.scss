@@ -1,0 +1,16 @@
+@import 'styles/utilities.scss';
+
+.figure {
+  margin: pxToRems(40px);
+
+  .image {
+    display: block;
+  }
+
+  .caption {
+    text-align: center;
+    font-style: italic;
+    @include fontSize(13px);
+    margin-top: pxToRems(4px);
+  }
+}
