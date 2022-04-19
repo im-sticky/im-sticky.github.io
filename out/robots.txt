@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://im-sticky.github.io
+
+# Sitemaps
+Sitemap: https://im-sticky.github.io/sitemap.xml
