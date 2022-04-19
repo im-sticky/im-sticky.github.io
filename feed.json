@@ -1,0 +1,102 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Alex Craig's blog",
+    "home_page_url": "https://im-sticky.github.io/blog",
+    "feed_url": "https://im-sticky.github.io/feed.json",
+    "description": "A collection of my thoughts and anecdotes",
+    "icon": "https://im-sticky.github.io/mstile-144x144.png",
+    "author": {
+        "name": "Alex Craig",
+        "url": "https://im-sticky.github.io"
+    },
+    "items": [
+        {
+            "id": "tunic-review",
+            "url": "https://im-sticky.github.io/blog/tunic-review",
+            "title": "Tunic - A glimpse into the past",
+            "summary": "A brief spoiler free review of the game Tunic.",
+            "date_modified": "2022-03-26T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "writing-is-hard",
+            "url": "https://im-sticky.github.io/blog/writing-is-hard",
+            "title": "Writing is hard",
+            "summary": "Some musings about my difficulties with learning to write as a hobby.",
+            "date_modified": "2021-08-20T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "mtg-card-seer",
+            "url": "https://im-sticky.github.io/blog/mtg-card-seer",
+            "title": "First release of MTG Card Seer",
+            "summary": "A new JavaScript library I'm developing for MTG card image previewing on the web.",
+            "date_modified": "2021-08-04T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "mtga-july-2021-retrospect",
+            "url": "https://im-sticky.github.io/blog/mtga-july-2021-retrospect",
+            "title": "MTG Arena July 2021 season in review",
+            "summary": "A brief review of the past Magic the Gathering Arena monthly ladder season exclusively playing a Historic Yorion Doom Foretold homebrew.",
+            "date_modified": "2021-07-31T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "deaths-door-review",
+            "url": "https://im-sticky.github.io/blog/deaths-door-review",
+            "title": "Death's Door - The good, the bad and the ugly",
+            "summary": "A brief spoiler free review of the game Death's Door.",
+            "date_modified": "2021-07-29T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "frustrations-of-mtga-client",
+            "url": "https://im-sticky.github.io/blog/frustrations-of-mtga-client",
+            "title": "Frustrations with the MTG Arena client",
+            "summary": "The MTG Arena client is both a godsend and awful at the same time for game play.",
+            "date_modified": "2021-05-02T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "mtga-april-2021-retrospect",
+            "url": "https://im-sticky.github.io/blog/mtga-april-2021-retrospect",
+            "title": "MTG Arena April 2021 season in review",
+            "summary": "A brief review of the past Magic the Gathering Arena monthly ladder season for historic.",
+            "date_modified": "2021-05-01T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "mtg-deck-archive-2021-04-14",
+            "url": "https://im-sticky.github.io/blog/mtg-deck-archive-2021-04-14",
+            "title": "MTG deck archive: Strixhaven release",
+            "summary": "A snapshot of the decks that I was playing with in Historic prior to the release of Strixhaven.",
+            "date_modified": "2021-04-14T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "strixhaven-historic-shakeup",
+            "url": "https://im-sticky.github.io/blog/strixhaven-historic-shakeup",
+            "title": "Strixhaven & the Historic shakeup",
+            "summary": "What I'm looking forward to in Historic with the release of Strixhaven.",
+            "date_modified": "2021-04-12T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "mtga-march-2021-retrospect",
+            "url": "https://im-sticky.github.io/blog/mtga-march-2021-retrospect",
+            "title": "MTG Arena March 2021 season in review",
+            "summary": "A brief review of the past Magic the Gathering Arena monthly ladder season for both standard and historic.",
+            "date_modified": "2021-04-01T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "why-a-blog",
+            "url": "https://im-sticky.github.io/blog/why-a-blog",
+            "title": "Why I'm starting a blog",
+            "summary": "A brief discussion on why I have decided to create and maintain a blog in this day and age.",
+            "date_modified": "2021-03-30T00:00:00.000Z",
+            "author": {}
+        }
+    ]
+}

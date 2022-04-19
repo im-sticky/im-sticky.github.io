@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Alex Craig's blog</title>
+        <link>https://im-sticky.github.io/blog</link>
+        <description>A collection of my thoughts and anecdotes</description>
+        <lastBuildDate>Sun, 17 Apr 2022 20:15:34 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>Feed for node.js</generator>
+        <language>en</language>
+        <image>
+            <title>Alex Craig's blog</title>
+            <url>https://im-sticky.github.io/mstile-144x144.png</url>
+            <link>https://im-sticky.github.io/blog</link>
+        </image>
+        <copyright>All rights reserved 2022, Alex Craig</copyright>
+        <atom:link href="https://im-sticky.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Tunic - A glimpse into the past]]></title>
+            <link>https://im-sticky.github.io/blog/tunic-review</link>
+            <guid>tunic-review</guid>
+            <pubDate>Sat, 26 Mar 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[A brief spoiler free review of the game Tunic.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Writing is hard]]></title>
+            <link>https://im-sticky.github.io/blog/writing-is-hard</link>
+            <guid>writing-is-hard</guid>
+            <pubDate>Fri, 20 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[Some musings about my difficulties with learning to write as a hobby.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[First release of MTG Card Seer]]></title>
+            <link>https://im-sticky.github.io/blog/mtg-card-seer</link>
+            <guid>mtg-card-seer</guid>
+            <pubDate>Wed, 04 Aug 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[A new JavaScript library I'm developing for MTG card image previewing on the web.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[MTG Arena July 2021 season in review]]></title>
+            <link>https://im-sticky.github.io/blog/mtga-july-2021-retrospect</link>
+            <guid>mtga-july-2021-retrospect</guid>
+            <pubDate>Sat, 31 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[A brief review of the past Magic the Gathering Arena monthly ladder season exclusively playing a Historic Yorion Doom Foretold homebrew.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Death's Door - The good, the bad and the ugly]]></title>
+            <link>https://im-sticky.github.io/blog/deaths-door-review</link>
+            <guid>deaths-door-review</guid>
+            <pubDate>Thu, 29 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[A brief spoiler free review of the game Death's Door.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Frustrations with the MTG Arena client]]></title>
+            <link>https://im-sticky.github.io/blog/frustrations-of-mtga-client</link>
+            <guid>frustrations-of-mtga-client</guid>
+            <pubDate>Sun, 02 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[The MTG Arena client is both a godsend and awful at the same time for game play.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[MTG Arena April 2021 season in review]]></title>
+            <link>https://im-sticky.github.io/blog/mtga-april-2021-retrospect</link>
+            <guid>mtga-april-2021-retrospect</guid>
+            <pubDate>Sat, 01 May 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[A brief review of the past Magic the Gathering Arena monthly ladder season for historic.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[MTG deck archive: Strixhaven release]]></title>
+            <link>https://im-sticky.github.io/blog/mtg-deck-archive-2021-04-14</link>
+            <guid>mtg-deck-archive-2021-04-14</guid>
+            <pubDate>Wed, 14 Apr 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[A snapshot of the decks that I was playing with in Historic prior to the release of Strixhaven.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Strixhaven & the Historic shakeup]]></title>
+            <link>https://im-sticky.github.io/blog/strixhaven-historic-shakeup</link>
+            <guid>strixhaven-historic-shakeup</guid>
+            <pubDate>Mon, 12 Apr 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[What I'm looking forward to in Historic with the release of Strixhaven.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[MTG Arena March 2021 season in review]]></title>
+            <link>https://im-sticky.github.io/blog/mtga-march-2021-retrospect</link>
+            <guid>mtga-march-2021-retrospect</guid>
+            <pubDate>Thu, 01 Apr 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[A brief review of the past Magic the Gathering Arena monthly ladder season for both standard and historic.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Why I'm starting a blog]]></title>
+            <link>https://im-sticky.github.io/blog/why-a-blog</link>
+            <guid>why-a-blog</guid>
+            <pubDate>Tue, 30 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[A brief discussion on why I have decided to create and maintain a blog in this day and age.]]></description>
+        </item>
+    </channel>
+</rss>
