@@ -4,7 +4,7 @@
         <title>Alex Craig's blog</title>
         <link>https://im-sticky.github.io/blog</link>
         <description>A collection of my thoughts and anecdotes</description>
-        <lastBuildDate>Sun, 17 Apr 2022 20:15:34 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 19 Apr 2022 22:43:24 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for node.js</generator>
         <language>en</language>
@@ -16,7 +16,7 @@
         <copyright>All rights reserved 2022, Alex Craig</copyright>
         <atom:link href="https://im-sticky.github.io/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Tunic - A glimpse into the past]]></title>
+            <title><![CDATA[Tunic - A glimpse to the past]]></title>
             <link>https://im-sticky.github.io/blog/tunic-review</link>
             <guid>tunic-review</guid>
             <pubDate>Sat, 26 Mar 2022 00:00:00 GMT</pubDate>
