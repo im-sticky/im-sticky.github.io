@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import {serialize} from 'next-mdx-remote/serialize';
 import {MDXRemote} from 'next-mdx-remote';
-import {getAllPosts, getPost} from 'helpers/mdxUtils.mjs';
+import {getAllPosts, getPost} from 'helpers/postUtils.mjs';
 import clsx from 'clsx';
 import {Section} from 'components/Section';
 import {Container} from 'components/Container';
