@@ -208,3 +208,49 @@ $screen-background: #121010;
   visibility: hidden;
   pointer-events: none;
 }
+
+.volume-overlay {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: flex-end;
+  pointer-events: none;
+  display: none;
+
+  &--active {
+    display: flex;
+  }
+
+  &::after,
+  &::before {
+    color: #00ff00;
+    text-shadow: 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
+    align-self: center;
+    font-size: 30px;
+  }
+
+  &::after {
+    content: '+';
+    margin-left: 4px;
+  }
+
+  &::before {
+    content: '-';
+    margin-right: 4px;
+  }
+
+  .volume-bar {
+    background-color: #00ff00;
+    border: 2px solid black;
+    margin: 0 7px;
+    width: 10px;
+    height: 10px;
+
+    &--active {
+      margin: 0 2px;
+      width: 20px;
+      height: 48px;
+    }
+  }
+}
