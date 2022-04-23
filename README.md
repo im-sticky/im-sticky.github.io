@@ -9,11 +9,4 @@ npm run dev
 
 ## Deploying
 
-Deploying is managed through a single `npm` command that builds a static version of the site and deploys as a subtree to the `gh-pages` branch.
-
-```
-git checkout develop
-npm run deploy
-```
-
-This has the side effect of creating a new commit on the develop branch that will also need to be pushed.
+Deploying is managed through GitHub actions. It is setup from [this blog post](https://gregrickaby.blog/article/nextjs-github-pages) and the deploy action can be found [here](/.github/workflows/deploy.yml).
