@@ -16,7 +16,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {formatDate} from 'helpers/formatDate';
 import {SITE_URL} from 'helpers/constants';
-import sharedStyles from 'styles/BlogShared.module.scss';
+import sharedStyles from 'styles/Shared.module.scss';
 import styles from 'styles/Blog.module.scss';
 
 export default function Blog({posts}) {
@@ -50,38 +50,31 @@ export default function Blog({posts}) {
         <Container>
           <p
             className={clsx(
-              sharedStyles['blog-post__descriptor'],
-              sharedStyles['blog-post__descriptor--small'],
-              sharedStyles['blog-post__descriptor--spaced']
+              sharedStyles['page__descriptor'],
+              sharedStyles['page__descriptor--small'],
+              sharedStyles['page__descriptor--spaced']
             )}
           >
             <InternalLink icon to="/">
               <FontAwesomeIcon
                 icon={faLongArrowAltLeft}
-                alt="Back arrow"
-                className={sharedStyles['blog-post__back-icon']}
+                className={sharedStyles['page__back-icon']}
               />
               Back to home
             </InternalLink>
           </p>
-          <TitleShape icon={faQuoteLeft} alt="Sticky note">
-            Blog Posts
-          </TitleShape>
-          <p className={sharedStyles['blog-list__descriptor']}>
+          <TitleShape icon={faQuoteLeft}>Blog Posts</TitleShape>
+          <p className={sharedStyles['page__descriptor']}>
             A collection of my thoughts and anecdotes
           </p>
           <p
             className={clsx(
-              sharedStyles['blog-post__descriptor'],
-              sharedStyles['blog-post__descriptor--small']
+              sharedStyles['page__descriptor'],
+              sharedStyles['page__descriptor--small']
             )}
           >
             <InternalLink noUnderline to="/feed.xml" target="_blank">
-              <FontAwesomeIcon
-                icon={faRssSquare}
-                alt="RSS feed"
-                className={styles['blog-list__rss']}
-              />
+              <FontAwesomeIcon icon={faRssSquare} className={styles['blog-list__rss']} />
               RSS Feed
             </InternalLink>
           </p>
@@ -96,13 +89,12 @@ export default function Blog({posts}) {
             </div>
           ))}
 
-          <div className={sharedStyles['blog-pagination']}>
+          <div className={sharedStyles['pagination']}>
             {pageState > 1 ? (
               <InternalLink icon to={pageState === 2 ? '/blog' : `/blog?page=${pageState - 1}`}>
                 <FontAwesomeIcon
                   icon={faLongArrowAltLeft}
-                  alt="Back arrow"
-                  className={sharedStyles['blog-post__back-icon']}
+                  className={sharedStyles['page__back-icon']}
                 />
                 Newer posts
               </InternalLink>
@@ -112,13 +104,12 @@ export default function Blog({posts}) {
               <InternalLink
                 icon
                 to={`/blog?page=${pageState + 1}`}
-                className={sharedStyles['blog-pagination__previous']}
+                className={sharedStyles['pagination__previous']}
               >
                 Older posts
                 <FontAwesomeIcon
                   icon={faLongArrowAltRight}
-                  alt="Next arrow"
-                  className={sharedStyles['blog-post__next-icon']}
+                  className={sharedStyles['page__next-icon']}
                 />
               </InternalLink>
             ) : null}

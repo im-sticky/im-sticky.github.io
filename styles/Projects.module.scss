@@ -1,0 +1,47 @@
+@import 'styles/utilities.scss';
+
+.projects {
+  padding-top: pxToRems(64px);
+  @include gutters;
+
+  &__list {
+    margin-top: pxToRems(40px);
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.project-item {
+  width: 100%;
+  display: block;
+  border: 1px solid $font-color;
+  border-radius: 6px;
+  padding: pxToRems(16px);
+  margin-bottom: pxToRems(16px);
+  text-decoration: none;
+  color: $font-color;
+  transition: all $transition-time-normal $transition-ease-out-expo;
+
+  @include focusStates {
+    color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  @include tablet-and-up {
+    width: calc(50% - #{pxToRems(8px)});
+
+    &:nth-child(odd) {
+      margin-right: pxToRems(8px);
+    }
+
+    &:nth-child(even) {
+      margin-left: pxToRems(8px);
+    }
+  }
+
+  &__title {
+  }
+
+  &__description {
+  }
+}
