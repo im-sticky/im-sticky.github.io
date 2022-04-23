@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "postbuild": "next-sitemap --config next-sitemap.config.js && node generate-rss.mjs",
     "start": "next start",
     "lint": "next lint"
