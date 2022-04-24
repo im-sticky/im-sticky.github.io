@@ -31,9 +31,7 @@ export default function Home() {
 
       <Section grow id="About" className={styles.about}>
         <Container className={styles.about__body}>
-          <TitleShape icon={faTerminal} alt="terminal icon">
-            Alex Craig
-          </TitleShape>
+          <TitleShape icon={faTerminal}>Alex Craig</TitleShape>
           <small className={styles['about__sub-text']}>
             A front end developer living in a full stack world
           </small>
@@ -53,7 +51,7 @@ export default function Home() {
             </p>
           </div>
 
-          <TitleShape small level={2} icon={faUserFriends} alt="social icon">
+          <TitleShape small level={2} icon={faUserFriends}>
             Socials
           </TitleShape>
           <small className={styles['about__sub-text']}>
@@ -61,6 +59,7 @@ export default function Home() {
           </small>
 
           <ul className={styles['about__social-list']}>
+            <DeepLink href="/projects" name="Projects" />
             <DeepLink href="/blog" name="Blog" />
             <SocialLink href="https://github.com/im-sticky" name="GitHub" />
             <SocialLink href="https://www.linkedin.com/in/alex-craig-57427069/" name="LinkedIn" />

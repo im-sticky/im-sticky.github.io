@@ -21,7 +21,7 @@ export function TitleShape({icon, alt, children, level = 1, small = false, class
 }
 
 TitleShape.propTypes = {
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
   children: PropTypes.any.isRequired,
   className: PropTypes.string,
   icon: PropTypes.instanceOf(Object).isRequired,
