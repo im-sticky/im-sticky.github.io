@@ -1,10 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import clsx from 'clsx';
-import Link from 'next/link';
 import {Section} from 'components/Section';
 import {Container} from 'components/Container';
-import {InternalLink} from 'components/Link';
+import {InternalLink, ExternalLink} from 'components/Link';
 import {TitleShape} from 'components/TitleShape';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faLongArrowAltLeft, faCodeBranch} from '@fortawesome/free-solid-svg-icons';
@@ -68,12 +67,19 @@ export default function Projects({projects}) {
                 : {};
 
               return (
-                <Link key={project.link} href={project.link} passHref={project.external}>
-                  <a {...additional} className={styles['project-item']}>
-                    <h3 className={styles['project-item__title']}>{project.title}</h3>
-                    <p className={styles['project-item__title']}>{project.description}</p>
-                  </a>
-                </Link>
+                <div key={project.link} className={styles.project}>
+                  <img src={project.image} className={styles.project__image} alt="" />
+                  <div className={styles.project__content}>
+                    <h3 className={styles.project__title}>
+                      {project.external ? (
+                        <ExternalLink href={project.link}>{project.title}</ExternalLink>
+                      ) : (
+                        <InternalLink to={project.link}>{project.title}</InternalLink>
+                      )}
+                    </h3>
+                    <p className={styles.project__description}>{project.description}</p>
+                  </div>
+                </div>
               );
             })}
           </div>
@@ -86,27 +92,33 @@ export default function Projects({projects}) {
 export const getStaticProps = async () => {
   const projects = [
     new Project({
+      title: 'CRT.tv',
+      description:
+        'An interactable CRT television that displays some of my game clips on different channels.',
+      link: '/crt',
+      image: '/projects/gamerater.jpg',
+    }),
+    new Project({
+      title: 'Game Rater',
+      description:
+        'A small website for creating bite-sized video game ratings to share online with friends and followers.',
+      link: 'https://gamerater.vercel.app/',
+      external: true,
+      image: '/projects/gamerater.jpg',
+    }),
+    new Project({
       title: 'MTG Card Seer',
       description: 'Web Components for previewing MTG card images and deck lists automatically.',
       link: 'https://github.com/im-sticky/mtg-card-seer#readme',
       external: true,
+      image: '/projects/cardseer.jpg',
     }),
     new Project({
       title: 'React Music Visualizer',
       description: 'Flexible React component for displaying waveform audio visualizations.',
       link: 'https://github.com/im-sticky/react-music-visualizer#readme',
       external: true,
-    }),
-    new Project({
-      title: 'Test Project',
-      description:
-        "This is a sentence for testing purposes. I'm going to add lots of text so its multiple lines okay?",
-      link: '/blog',
-    }),
-    new Project({
-      title: 'Test Project',
-      description: 'A little text.',
-      link: '/',
+      image: '/projects/visualizer.jpg',
     }),
   ].map((x) => x.toJSON());
 
