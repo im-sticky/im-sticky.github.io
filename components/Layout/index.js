@@ -4,16 +4,18 @@ import {ExternalLink} from 'components/Link';
 
 import styles from './index.module.scss';
 
-export function Layout({children}) {
+export function Layout({children, includeFooter = true}) {
   return (
     <>
       {children}
-      <Section id="Footer" className={styles.footer}>
-        <small>
-          Hosted with <ExternalLink href="https://pages.github.com/">GitHub Pages</ExternalLink>{' '}
-          &copy;&nbsp;{new Date().getFullYear()}
-        </small>
-      </Section>
+      {includeFooter ? (
+        <Section id="Footer" className={styles.footer}>
+          <small>
+            Hosted with <ExternalLink href="https://pages.github.com/">GitHub Pages</ExternalLink>{' '}
+            &copy;&nbsp;{new Date().getFullYear()}
+          </small>
+        </Section>
+      ) : null}
     </>
   );
 }

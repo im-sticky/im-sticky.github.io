@@ -92,13 +92,6 @@ export default function Projects({projects}) {
 export const getStaticProps = async () => {
   const projects = [
     new Project({
-      title: 'CRT.tv',
-      description:
-        'An interactable CRT television that displays some of my game clips on different channels.',
-      link: '/crt',
-      image: '/projects/gamerater.jpg',
-    }),
-    new Project({
       title: 'Game Rater',
       description:
         'A small website for creating bite-sized video game ratings to share online with friends and followers.',
@@ -112,6 +105,13 @@ export const getStaticProps = async () => {
       link: 'https://github.com/im-sticky/mtg-card-seer#readme',
       external: true,
       image: '/projects/cardseer.jpg',
+    }),
+    new Project({
+      title: 'CRT.tv',
+      description:
+        'An interactable CRT television that displays some of my game clips on different channels.',
+      link: '/crt',
+      image: '/projects/crt.jpg',
     }),
     new Project({
       title: 'React Music Visualizer',

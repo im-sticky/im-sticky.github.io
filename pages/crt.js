@@ -142,55 +142,31 @@ export default function Crt({clips}) {
           </div>
         </div>
 
-        <img src="/crt/crt.png" className={styles.image} alt="" useMap="#controls" />
+        <video autoPlay loop muted className={styles.video__overlay}>
+          <source src="/crt/transparent-screen-crt.webm" type="video/webm" />
+        </video>
 
-        <map name="controls">
-          {/* power */}
-          <area
-            coords="401,726,13"
-            shape="circle"
-            href="#"
-            onClick={controlAction(() => setCrtOn(!crtOn), true)}
-          />
-          {/* channel up */}
-          <area
-            coords="704,723,10"
-            shape="circle"
-            href="#"
-            onClick={controlAction(changeChannel(1))}
-          />
-          {/* channel down */}
-          <area
-            coords="676,724,12"
-            shape="circle"
-            href="#"
-            onClick={controlAction(changeChannel(-1))}
-          />
-          {/* stop */}
-          <area coords="434,726,10" shape="circle" />
-          {/* record */}
-          <area coords="464,726,9" shape="circle" />
-          {/* rewind */}
-          <area coords="494,726,11" shape="circle" />
-          {/* play/pause */}
-          <area coords="524,726,14" shape="circle" />
-          {/* fast forward */}
-          <area coords="554,726,11" shape="circle" />
-          {/* vol - */}
-          <area
-            coords="616,726,10"
-            shape="circle"
-            href="#"
-            onClick={controlAction(adjustVolume(-volumeIncrement))}
-          />
-          {/* vol + */}
-          <area
-            coords="647,726,11"
-            shape="circle"
-            href="#"
-            onClick={controlAction(adjustVolume(volumeIncrement))}
-          />
-        </map>
+        <svg
+          viewBox="0 0 1920 1080"
+          preserveAspectRatio="xMidYMid slice"
+          className={styles['controls-map']}
+        >
+          <a href="#power" onClick={controlAction(() => setCrtOn(!crtOn), true)}>
+            <rect x="745" y="911" fill="#fff" opacity="0" width="35" height="35"></rect>
+          </a>
+          <a href="#voldown" onClick={controlAction(adjustVolume(-volumeIncrement))}>
+            <rect x="1020" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
+          </a>
+          <a href="#volup" onClick={controlAction(adjustVolume(volumeIncrement))}>
+            <rect x="1058" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
+          </a>
+          <a href="#chandown" onClick={controlAction(changeChannel(-1))}>
+            <rect x="1096" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
+          </a>
+          <a href="#chanup" onClick={controlAction(changeChannel(1))}>
+            <rect x="1134" y="916" fill="#fff" opacity="0" width="25" height="25"></rect>
+          </a>
+        </svg>
       </div>
     </Section>
   );
@@ -199,5 +175,5 @@ export default function Crt({clips}) {
 export const getStaticProps = async () => {
   const clips = getAllCrtClips();
 
-  return {props: {clips}};
+  return {props: {clips, includeFooter: false}};
 };
