@@ -39,6 +39,26 @@ export default function Crt({clips}) {
   const [volumeActive, setVolumeActive] = useState(false);
   const [crtOn, setCrtOn] = useState(false);
   const videoRef = useRef();
+  const videoPositionRef = useRef();
+  const containerRef = useRef();
+
+  const resizeCrtVideo = () => {
+    if (videoPositionRef.current && containerRef.current) {
+      const pos = videoPositionRef.current.getBoundingClientRect();
+
+      containerRef.current.style.top = `${pos.y}px`;
+      containerRef.current.style.left = `${pos.x}px`;
+      containerRef.current.style.width = `${pos.width * (4 / 3)}px`;
+    }
+  };
+
+  // handle window resize
+  useEffect(() => {
+    resizeCrtVideo();
+    window.addEventListener('resize', resizeCrtVideo);
+
+    return () => window.removeEventListener('resize', resizeCrtVideo);
+  }, []);
 
   // on clip change
   useEffect(() => {
@@ -121,7 +141,7 @@ export default function Crt({clips}) {
   return (
     <Section grow id="crt">
       <div className={styles.background}>
-        <div className={styles.container}>
+        <div className={styles.container} ref={containerRef}>
           <div className={clsx(styles.crt, {[styles['crt--on']]: crtOn})}>
             <div className={styles.screen}>
               <video loop className={styles.video} ref={videoRef}>
@@ -151,6 +171,15 @@ export default function Crt({clips}) {
           preserveAspectRatio="xMidYMid slice"
           className={styles['controls-map']}
         >
+          <rect
+            ref={videoPositionRef}
+            x="589"
+            y="141"
+            fill="#fff"
+            opacity="0"
+            width="704"
+            height="530"
+          ></rect>
           <a href="#power" onClick={controlAction(() => setCrtOn(!crtOn), true)}>
             <rect x="745" y="911" fill="#fff" opacity="0" width="35" height="35"></rect>
           </a>

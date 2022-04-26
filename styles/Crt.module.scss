@@ -40,9 +40,13 @@
 .container {
   display: flex;
   position: absolute;
-  top: 90px;
-  left: 50%;
-  transform: translateX(-50%);
+  transform: scaleX(0.75);
+  transform-origin: 0;
+  // top: 7.5%;
+  // left: 50%;
+  // width: 49%;
+  // transform: translateX(-50%);
+  // margin-left: -20px;
 }
 
 // crt effect credit: https://codepen.io/lbebber/pen/XJRdrV
@@ -62,11 +66,8 @@ $screen-background: #121010;
 }
 
 .crt {
-  width: 760px;
-
   .video {
     max-width: 100%;
-    transform: scaleX(0.75);
   }
 
   display: flex;
@@ -222,7 +223,7 @@ $screen-background: #121010;
   color: #00ff00;
   position: absolute;
   top: 20px;
-  left: 120px;
+  left: 5%;
   font-size: 60px;
   text-shadow: 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
   visibility: hidden;
@@ -263,13 +264,13 @@ $screen-background: #121010;
   .volume-bar {
     background-color: #00ff00;
     border: 2px solid black;
-    margin: 0 7px;
-    width: 10px;
+    margin: 0 8px;
+    width: 12px;
     height: 10px;
 
     &--active {
       margin: 0 2px;
-      width: 20px;
+      width: 24px;
       height: 48px;
     }
   }
