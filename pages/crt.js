@@ -3,6 +3,7 @@ import Head from 'next/head';
 import clsx from 'clsx';
 import {Section} from 'components/Section';
 import {getAllCrtClips} from 'helpers/postUtils.mjs';
+import {SITE_URL} from 'helpers/constants';
 
 import styles from 'styles/Crt.module.scss';
 
@@ -39,6 +40,7 @@ export default function Crt({clips}) {
   const [currentVolume, setCurrentVolume] = useState(100);
   const [volumeActive, setVolumeActive] = useState(false);
   const [crtOn, setCrtOn] = useState(false);
+  const [audioEffects, setAudioEffects] = useState();
   const videoRef = useRef();
   const videoPositionRef = useRef();
   const containerRef = useRef();
@@ -55,6 +57,15 @@ export default function Crt({clips}) {
 
   // handle window resize
   useEffect(() => {
+    setAudioEffects({
+      power: {
+        on: new Audio('/crt/power_on.mp3'),
+        off: new Audio('/crt/power_off.mp3'),
+      },
+      channel: new Audio('/crt/channel_change.mp3'),
+      volume: new Audio('/crt/volume_change.mp3'),
+    });
+
     resizeCrtVideo();
     window.addEventListener('resize', resizeCrtVideo);
 
@@ -105,13 +116,15 @@ export default function Crt({clips}) {
   }, [currentVolume]);
 
   // helpers
-  const controlAction = (action, alwaysAllow = false) => {
+  const controlAction = (action, sound, alwaysAllow = false) => {
     return (e) => {
       e.preventDefault();
 
       if (crtOn || alwaysAllow) {
         action();
       }
+
+      sound.play();
     };
   };
 
@@ -204,19 +217,32 @@ export default function Crt({clips}) {
               width="704"
               height="530"
             ></rect>
-            <a href="#power" onClick={controlAction(() => setCrtOn(!crtOn), true)}>
+            <a
+              href="#power"
+              onClick={controlAction(
+                () => setCrtOn(!crtOn),
+                crtOn ? audioEffects?.power.off : audioEffects?.power.on,
+                true
+              )}
+            >
               <rect x="745" y="911" fill="#fff" opacity="0" width="35" height="35"></rect>
             </a>
-            <a href="#voldown" onClick={controlAction(adjustVolume(-volumeIncrement))}>
+            <a
+              href="#voldown"
+              onClick={controlAction(adjustVolume(-volumeIncrement), audioEffects?.volume)}
+            >
               <rect x="1020" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
             </a>
-            <a href="#volup" onClick={controlAction(adjustVolume(volumeIncrement))}>
+            <a
+              href="#volup"
+              onClick={controlAction(adjustVolume(volumeIncrement), audioEffects?.volume)}
+            >
               <rect x="1058" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
             </a>
-            <a href="#chandown" onClick={controlAction(changeChannel(-1))}>
+            <a href="#chandown" onClick={controlAction(changeChannel(-1), audioEffects?.channel)}>
               <rect x="1096" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
             </a>
-            <a href="#chanup" onClick={controlAction(changeChannel(1))}>
+            <a href="#chanup" onClick={controlAction(changeChannel(1), audioEffects?.channel)}>
               <rect x="1134" y="916" fill="#fff" opacity="0" width="25" height="25"></rect>
             </a>
           </svg>
