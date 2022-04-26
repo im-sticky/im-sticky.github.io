@@ -1,4 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
+import Head from 'next/head';
 import clsx from 'clsx';
 import {Section} from 'components/Section';
 import {getAllCrtClips} from 'helpers/postUtils.mjs';
@@ -139,65 +140,89 @@ export default function Crt({clips}) {
 
   // render
   return (
-    <Section grow id="crt">
-      <div className={styles.background}>
-        <div className={styles.container} ref={containerRef}>
-          <div className={clsx(styles.crt, {[styles['crt--on']]: crtOn})}>
-            <div className={styles.screen}>
-              <video loop className={styles.video} ref={videoRef}>
-                <source
-                  src={`/crt/clips/${currentClip?.slug}.${currentClip?.mimetype}`}
-                  type={`video/${currentClip?.mimetype}`}
-                />
-              </video>
-            </div>
-            <div className={styles['channel-overlay']}>AV-1</div>
-            <div
-              className={clsx(styles['volume-overlay'], {
-                [styles['volume-overlay--active']]: volumeActive,
-              })}
-            >
-              {makeVolumeBars(currentVolume)}
+    <>
+      <Head>
+        <title>Alex Craig | CRT.tv</title>
+
+        <meta property="og:site_name" content="Alex Craig's Portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`${SITE_URL}/crt`} />
+        <meta property="og:title" content="CRT.tv" />
+        <meta
+          property="og:description"
+          content="A CRT that displays game clips on different channels"
+        />
+        <meta property="og:image" content="/mstile-144x144.png" />
+
+        <meta name="twitter:site" content="@im_sticky" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content={`${SITE_URL}/crt`} />
+        <meta name="twitter:title" content="CRT.tv" />
+        <meta
+          name="twitter:description"
+          content="A CRT that displays game clips on different channels"
+        />
+        <meta name="twitter:image" content="/mstile-144x144.png" />
+      </Head>
+
+      <Section grow id="crt">
+        <div className={styles.background}>
+          <div className={styles.container} ref={containerRef}>
+            <div className={clsx(styles.crt, {[styles['crt--on']]: crtOn})}>
+              <div className={styles.screen}>
+                <video loop className={styles.video} ref={videoRef}>
+                  <source
+                    src={`/crt/clips/${currentClip?.slug}.${currentClip?.mimetype}`}
+                    type={`video/${currentClip?.mimetype}`}
+                  />
+                </video>
+              </div>
+              <div className={styles['channel-overlay']}>AV-1</div>
+              <div
+                className={clsx(styles['volume-overlay'], {
+                  [styles['volume-overlay--active']]: volumeActive,
+                })}
+              >
+                {makeVolumeBars(currentVolume)}
+              </div>
             </div>
           </div>
+          <video autoPlay loop muted className={styles.video__overlay}>
+            <source src="/crt/transparent-screen-crt.webm" type="video/webm" />
+          </video>
+          <svg
+            viewBox="0 0 1920 1080"
+            preserveAspectRatio="xMidYMid slice"
+            className={styles['controls-map']}
+          >
+            <rect
+              ref={videoPositionRef}
+              x="589"
+              y="141"
+              fill="#fff"
+              opacity="0"
+              width="704"
+              height="530"
+            ></rect>
+            <a href="#power" onClick={controlAction(() => setCrtOn(!crtOn), true)}>
+              <rect x="745" y="911" fill="#fff" opacity="0" width="35" height="35"></rect>
+            </a>
+            <a href="#voldown" onClick={controlAction(adjustVolume(-volumeIncrement))}>
+              <rect x="1020" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
+            </a>
+            <a href="#volup" onClick={controlAction(adjustVolume(volumeIncrement))}>
+              <rect x="1058" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
+            </a>
+            <a href="#chandown" onClick={controlAction(changeChannel(-1))}>
+              <rect x="1096" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
+            </a>
+            <a href="#chanup" onClick={controlAction(changeChannel(1))}>
+              <rect x="1134" y="916" fill="#fff" opacity="0" width="25" height="25"></rect>
+            </a>
+          </svg>
         </div>
-
-        <video autoPlay loop muted className={styles.video__overlay}>
-          <source src="/crt/transparent-screen-crt.webm" type="video/webm" />
-        </video>
-
-        <svg
-          viewBox="0 0 1920 1080"
-          preserveAspectRatio="xMidYMid slice"
-          className={styles['controls-map']}
-        >
-          <rect
-            ref={videoPositionRef}
-            x="589"
-            y="141"
-            fill="#fff"
-            opacity="0"
-            width="704"
-            height="530"
-          ></rect>
-          <a href="#power" onClick={controlAction(() => setCrtOn(!crtOn), true)}>
-            <rect x="745" y="911" fill="#fff" opacity="0" width="35" height="35"></rect>
-          </a>
-          <a href="#voldown" onClick={controlAction(adjustVolume(-volumeIncrement))}>
-            <rect x="1020" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
-          </a>
-          <a href="#volup" onClick={controlAction(adjustVolume(volumeIncrement))}>
-            <rect x="1058" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
-          </a>
-          <a href="#chandown" onClick={controlAction(changeChannel(-1))}>
-            <rect x="1096" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
-          </a>
-          <a href="#chanup" onClick={controlAction(changeChannel(1))}>
-            <rect x="1134" y="916" fill="#fff" opacity="0" width="25" height="25"></rect>
-          </a>
-        </svg>
-      </div>
-    </Section>
+      </Section>
+    </>
   );
 }
 

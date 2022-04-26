@@ -18,7 +18,7 @@ export default function Projects({projects}) {
       <Head>
         <title>Alex Craig | Projects</title>
 
-        <meta property="og:site_name" content="Alex Craig's Projects" />
+        <meta property="og:site_name" content="Alex Craig's Portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${SITE_URL}/projects`} />
         <meta property="og:title" content="Projects" />
@@ -108,8 +108,7 @@ export const getStaticProps = async () => {
     }),
     new Project({
       title: 'CRT.tv',
-      description:
-        'An interactable CRT television that displays some of my game clips on different channels.',
+      description: 'An interactable CRT that displays some of my game clips on different channels.',
       link: '/crt',
       image: '/projects/crt.jpg',
     }),

@@ -31,7 +31,7 @@ export default function Post({source, frontMatter, posts, slug}) {
       <Head>
         <title>Alex Craig | {frontMatter.title}</title>
 
-        <meta property="og:site_name" content={frontMatter.title} />
+        <meta property="og:site_name" content="Alex Craig's Portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${SITE_URL}/${slug}`} />
         <meta property="og:title" content={frontMatter.title} />

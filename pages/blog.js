@@ -31,7 +31,7 @@ export default function Blog({posts}) {
       <Head>
         <title>Alex Craig | Blog</title>
 
-        <meta property="og:site_name" content="Alex Craig's Blog" />
+        <meta property="og:site_name" content="Alex Craig's Portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${SITE_URL}/blog`} />
         <meta property="og:title" content="Blog" />
