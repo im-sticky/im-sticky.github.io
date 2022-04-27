@@ -34,8 +34,8 @@ function makeVolumeBars(volume) {
 }
 
 export default function Crt({clips}) {
-  const [shuffledClips, _] = useState(shuffle(clips));
-  const [currentClip, setCurrentClip] = useState(shuffledClips[0]);
+  const [shuffledClips, setShuffledClips] = useState();
+  const [currentClip, setCurrentClip] = useState();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentVolume, setCurrentVolume] = useState(100);
   const [volumeActive, setVolumeActive] = useState(false);
@@ -68,6 +68,11 @@ export default function Crt({clips}) {
       volume: new Audio('/crt/volume_change.mp3'),
     });
 
+    const shuffled = shuffle(clips);
+
+    setShuffledClips(shuffled);
+    setCurrentClip(shuffled[currentIndex]);
+
     resizeCrtVideo();
     window.addEventListener('resize', resizeCrtVideo);
 
@@ -87,7 +92,9 @@ export default function Crt({clips}) {
 
   // on change channel
   useEffect(() => {
-    setCurrentClip(shuffledClips[currentIndex]);
+    if (shuffledClips) {
+      setCurrentClip(shuffledClips[currentIndex]);
+    }
   }, [currentIndex]);
 
   // on power on/off
