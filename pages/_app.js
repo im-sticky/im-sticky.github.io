@@ -8,7 +8,7 @@ const CardSeerImport = dynamic(() => import('../components/CardSeer'), {ssr: fal
 
 function PortfolioApp({Component, pageProps}) {
   return (
-    <Layout>
+    <Layout includeFooter={pageProps.includeFooter}>
       <Component {...pageProps} />
       <CardSeerImport />
     </Layout>

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import {join} from 'path';
 import {Feed} from 'feed';
-import {getAllPosts} from './helpers/mdxUtils.mjs';
+import {getAllPosts} from './helpers/postUtils.mjs';
 
 const SITE_URL = 'https://im-sticky.github.io';
 

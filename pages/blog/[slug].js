@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import {serialize} from 'next-mdx-remote/serialize';
 import {MDXRemote} from 'next-mdx-remote';
-import {getAllPosts, getPost} from 'helpers/mdxUtils.mjs';
+import {getAllPosts, getPost} from 'helpers/postUtils.mjs';
 import clsx from 'clsx';
 import {Section} from 'components/Section';
 import {Container} from 'components/Container';
@@ -19,7 +19,7 @@ import {Figure} from 'components/Figure';
 import {formatDate} from 'helpers/formatDate';
 import {SITE_URL} from 'helpers/constants';
 import styles from 'styles/BlogPost.module.scss';
-import sharedStyles from 'styles/BlogShared.module.scss';
+import sharedStyles from 'styles/Shared.module.scss';
 
 const mdxComponents = {ExternalLink, Figure};
 
@@ -31,7 +31,7 @@ export default function Post({source, frontMatter, posts, slug}) {
       <Head>
         <title>Alex Craig | {frontMatter.title}</title>
 
-        <meta property="og:site_name" content={frontMatter.title} />
+        <meta property="og:site_name" content="Alex Craig's Portfolio" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`${SITE_URL}/${slug}`} />
         <meta property="og:title" content={frontMatter.title} />
@@ -74,31 +74,30 @@ export default function Post({source, frontMatter, posts, slug}) {
         <Container>
           <p
             className={clsx(
-              sharedStyles['blog-post__descriptor'],
-              sharedStyles['blog-post__descriptor--small'],
-              sharedStyles['blog-post__descriptor--spaced']
+              sharedStyles['page__descriptor'],
+              sharedStyles['page__descriptor--small'],
+              sharedStyles['page__descriptor--spaced']
             )}
           >
             <InternalLink icon to="/blog">
               <FontAwesomeIcon
                 icon={faLongArrowAltLeft}
-                alt="Back arrow"
-                className={sharedStyles['blog-post__back-icon']}
+                className={sharedStyles['page__back-icon']}
               />
               Back to posts
             </InternalLink>
           </p>
-          <TitleShape className={styles['blog-post__title']} icon={faQuoteLeft} alt="Sticky note">
+          <TitleShape className={styles['blog-post__title']} icon={faQuoteLeft}>
             {frontMatter.title}
           </TitleShape>
-          <p className={sharedStyles['blog-post__descriptor']}>{frontMatter.description}</p>
+          <p className={sharedStyles['page__descriptor']}>{frontMatter.description}</p>
           <p
             className={clsx(
-              sharedStyles['blog-post__descriptor'],
-              sharedStyles['blog-post__descriptor--small'],
-              sharedStyles['blog-post__descriptor--italic'],
+              sharedStyles['page__descriptor'],
+              sharedStyles['page__descriptor--small'],
+              sharedStyles['page__descriptor--italic'],
               {
-                [sharedStyles['blog-post__descriptor--spaced']]: frontMatter.edited,
+                [sharedStyles['page__descriptor--spaced']]: frontMatter.edited,
               }
             )}
           >
@@ -106,11 +105,11 @@ export default function Post({source, frontMatter, posts, slug}) {
           </p>
           {frontMatter.edited ? (
             <p
-              className={
-                (sharedStyles['blog-post__descriptor'],
-                sharedStyles['blog-post__descriptor--small'],
-                sharedStyles['blog-post__descriptor--italic'])
-              }
+              className={clsx(
+                sharedStyles['page__descriptor'],
+                sharedStyles['page__descriptor--small'],
+                sharedStyles['page__descriptor--italic']
+              )}
             >
               This post was edited on {formatDate(frontMatter.edited)}
             </p>
@@ -120,13 +119,12 @@ export default function Post({source, frontMatter, posts, slug}) {
             <MDXRemote {...source} components={mdxComponents} />
           </article>
 
-          <div className={sharedStyles['blog-pagination']}>
+          <div className={sharedStyles['pagination']}>
             {postIndex > 0 ? (
               <InternalLink icon to={`/blog/${posts[postIndex - 1].slug}`}>
                 <FontAwesomeIcon
                   icon={faLongArrowAltLeft}
-                  alt="Back arrow"
-                  className={sharedStyles['blog-post__back-icon']}
+                  className={sharedStyles['page__back-icon']}
                 />
                 Next post
               </InternalLink>
@@ -136,13 +134,12 @@ export default function Post({source, frontMatter, posts, slug}) {
               <InternalLink
                 icon
                 to={`/blog/${posts[postIndex + 1].slug}`}
-                className={sharedStyles['blog-pagination__previous']}
+                className={sharedStyles['pagination__previous']}
               >
                 Previous post
                 <FontAwesomeIcon
                   icon={faLongArrowAltRight}
-                  alt="Next arrow"
-                  className={sharedStyles['blog-post__next-icon']}
+                  className={sharedStyles['page__next-icon']}
                 />
               </InternalLink>
             ) : null}
