@@ -1,5 +1,9 @@
 @import 'styles/utilities.scss';
 
+.section {
+  overflow: hidden;
+}
+
 .background {
   position: relative;
   height: 100vh;
@@ -49,14 +53,14 @@ $screen-background: #121010;
 }
 
 .crt {
-  .video {
-    max-width: 100%;
-  }
-
   display: flex;
   background: $screen-background;
   position: relative;
   overflow: hidden;
+
+  .video {
+    max-width: 100%;
+  }
 
   // flicker
   &::after {

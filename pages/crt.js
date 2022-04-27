@@ -41,17 +41,19 @@ export default function Crt({clips}) {
   const [volumeActive, setVolumeActive] = useState(false);
   const [crtOn, setCrtOn] = useState(false);
   const [audioEffects, setAudioEffects] = useState();
-  const videoRef = useRef();
   const videoPositionRef = useRef();
   const containerRef = useRef();
+  const screenRef = useRef();
+  const videoRef = useRef();
 
   const resizeCrtVideo = () => {
-    if (videoPositionRef.current && containerRef.current) {
+    if (videoPositionRef.current && containerRef.current && screenRef.current) {
       const pos = videoPositionRef.current.getBoundingClientRect();
 
       containerRef.current.style.top = `${pos.y}px`;
       containerRef.current.style.left = `${pos.x}px`;
-      containerRef.current.style.width = `${pos.width * (4 / 3)}px`;
+      screenRef.current.style.width = `${pos.width * (4 / 3)}px`;
+      screenRef.current.style.height = `${pos.height}px`;
     }
   };
 
@@ -178,10 +180,10 @@ export default function Crt({clips}) {
         <meta name="twitter:image" content="/mstile-144x144.png" />
       </Head>
 
-      <Section grow id="crt">
+      <Section grow id="crt" className={styles.section}>
         <div className={styles.background}>
           <div className={styles.container} ref={containerRef}>
-            <div className={clsx(styles.crt, {[styles['crt--on']]: crtOn})}>
+            <div className={clsx(styles.crt, {[styles['crt--on']]: crtOn})} ref={screenRef}>
               <div className={styles.screen}>
                 <video loop className={styles.video} ref={videoRef}>
                   <source
