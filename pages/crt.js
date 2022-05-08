@@ -39,6 +39,8 @@ export default function Crt({clips}) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentVolume, setCurrentVolume] = useState(100);
   const [volumeActive, setVolumeActive] = useState(false);
+  const [playbackRate, setPlaybackRate] = useState(0);
+  const [pauseVideo, setPauseVideo] = useState(false);
   const [crtOn, setCrtOn] = useState(false);
   const [audioEffects, setAudioEffects] = useState();
   const videoPositionRef = useRef();
@@ -66,6 +68,10 @@ export default function Crt({clips}) {
       },
       channel: new Audio('/crt/channel_change.mp3'),
       volume: new Audio('/crt/volume_change.mp3'),
+      play: new Audio('/crt/play_pause.mp3'),
+      fastforward: new Audio('/crt/fast_forward.mp3'),
+      rewind: new Audio('/crt/rewind.mp3'),
+      stop: new Audio('/crt/stop.mp3'),
     });
 
     const shuffled = shuffle(clips);
@@ -123,6 +129,32 @@ export default function Crt({clips}) {
 
     return () => clearTimeout(timeout);
   }, [currentVolume]);
+
+  // on playback change
+  useEffect(() => {
+    if (playbackRate === 0) {
+      if (crtOn) {
+        // videoRef.current.play();
+      }
+
+      return;
+    }
+
+    // videoRef.current.pause();
+
+    if (playbackRate > 0) {
+      videoRef.current.playbackRate = 2;
+    }
+  }, [playbackRate]);
+
+  // on play/pause change
+  useEffect(() => {
+    if (!crtOn) {
+      return;
+    }
+
+    pauseVideo ? videoRef.current.pause() : videoRef.current.play();
+  }, [pauseVideo]);
 
   // helpers
   const controlAction = (action, sound, alwaysAllow = false) => {
@@ -235,6 +267,24 @@ export default function Crt({clips}) {
               )}
             >
               <rect x="745" y="911" fill="#fff" opacity="0" width="35" height="35"></rect>
+            </a>
+            <a
+              href="#rewind"
+              onClick={controlAction(() => setPlaybackRate(-2), audioEffects?.rewind)}
+            >
+              <rect x="868" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
+            </a>
+            <a
+              href="#playpause"
+              onClick={controlAction(() => setPauseVideo(!pauseVideo), audioEffects?.play)}
+            >
+              <rect x="901" y="912" fill="#fff" opacity="0" width="35" height="35"></rect>
+            </a>
+            <a
+              href="#fastforward"
+              onClick={controlAction(() => setPlaybackRate(2), audioEffects?.fastforward)}
+            >
+              <rect x="943" y="917" fill="#fff" opacity="0" width="25" height="25"></rect>
             </a>
             <a
               href="#voldown"
