@@ -209,9 +209,10 @@ export default function Crt({clips}) {
               </div>
             </div>
           </div>
-          <video autoPlay loop muted className={styles.video__overlay}>
+          {/* <video autoPlay loop muted className={styles.video__overlay}>
             <source src="/crt/transparent-screen-crt.webm" type="video/webm" />
-          </video>
+          </video> */}
+          <img src="/crt/transparent-crt.png" className={styles.video__overlay} />
           <svg
             viewBox="0 0 1920 1080"
             preserveAspectRatio="xMidYMid slice"
