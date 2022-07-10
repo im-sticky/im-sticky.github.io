@@ -21,6 +21,7 @@
     "mtg-card-seer": "^2.0.2",
     "next": "12.1.4",
     "next-mdx-remote": "^4.0.2",
+    "nextjs-google-analytics": "^1.2.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.8.1",
     "react": "17.0.2",
