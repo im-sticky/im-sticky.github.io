@@ -45,9 +45,9 @@ export default function Home() {
               team.
             </p>
             <p>
-              I like making visual and interactive web based projects. Some of my hobbies include:
-              Magic The Gathering, competitive Smash Bros., baking, and collecting various old games
-              and&nbsp;vinyl.
+              I enjoy creating visual, interactive, and mixed media web based projects. A few of my
+              hobbies include Magic The Gathering, competitive Smash Bros., as well as collecting
+              old video games and&nbsp;vinyl.
             </p>
           </div>
 
