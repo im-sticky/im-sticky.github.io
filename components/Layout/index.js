@@ -1,6 +1,6 @@
 import React from 'react';
 import {Section} from 'components/Section';
-import {ExternalLink} from 'components/Link';
+import {InternalLink} from 'components/Link';
 
 import styles from './index.module.scss';
 
@@ -10,10 +10,15 @@ export function Layout({children, includeFooter = true}) {
       {children}
       {includeFooter ? (
         <Section id="Footer" className={styles.footer}>
-          <small>
-            Hosted with <ExternalLink href="https://pages.github.com/">GitHub Pages</ExternalLink>{' '}
-            &copy;&nbsp;{new Date().getFullYear()}
-          </small>
+          <ul className={styles.footer__list}>
+            <li className={styles['footer__list-item']}>
+              <InternalLink to="/projects">Projects</InternalLink>
+            </li>
+            <li className={styles['footer__list-item']}>
+              <InternalLink to="/blog">Blog</InternalLink>
+            </li>
+            <li className={styles['footer__list-item']}>&copy;&nbsp;{new Date().getFullYear()}</li>
+          </ul>
         </Section>
       ) : null}
     </>

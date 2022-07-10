@@ -1,12 +1,31 @@
 @import 'styles/utilities.scss';
 
 .footer {
-  text-align: center;
   padding-top: pxToRems(32px);
   padding-bottom: pxToRems(32px);
   @include gutters;
 
-  .external-link__icon {
-    @include fontSize(8px);
+  &__list {
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    font-size: pxToRems(13px);
+  }
+
+  &__list-item {
+    display: inline-flex;
+    align-items: center;
+
+    &:not(:last-child)::after {
+      content: '';
+      display: block;
+      width: pxToRems(3px);
+      height: pxToRems(3px);
+      background-color: $font-color;
+      border-radius: 50%;
+      margin: 0 pxToRems(8px);
+    }
   }
 }
