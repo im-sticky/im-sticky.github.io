@@ -1,7 +1,7 @@
 @import 'styles/utilities.scss';
 
 .blog-list {
-  padding-top: pxToRems(64px);
+  @include pagePadding;
   @include gutters;
 
   &__descriptor {

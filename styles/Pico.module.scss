@@ -1,0 +1,23 @@
+@import 'styles/utilities.scss';
+
+.carts {
+  @include pagePadding;
+  @include gutters;
+
+  &__list {
+    margin-top: pxToRems(40px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: pxToRems(24px);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
