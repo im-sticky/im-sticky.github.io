@@ -113,6 +113,12 @@ export const getStaticProps = async () => {
       image: '/projects/crt.jpg',
     }),
     new Project({
+      title: 'PICO-8 Carts',
+      description: 'A collection of PICO-8 games and concept carts I have made.',
+      link: '/pico-8',
+      image: '/projects/pico-8.jpg',
+    }),
+    new Project({
       title: 'React Music Visualizer',
       description: 'Flexible React component for displaying waveform audio visualizations.',
       link: 'https://github.com/im-sticky/react-music-visualizer#readme',

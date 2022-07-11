@@ -48,13 +48,16 @@ export function ExternalLink({href, children, className, noIcon = false, ...prop
       to={href}
       className={clsx(styles.link, styles['external-link'], className)}
     >
-      {children}{' '}
+      {children}
       {!noIcon && (
-        <FontAwesomeIcon
-          {...props}
-          icon={faExternalLinkAlt}
-          className={clsx(styles['external-link__icon'], className)}
-        />
+        <>
+          {' '}
+          <FontAwesomeIcon
+            {...props}
+            icon={faExternalLinkAlt}
+            className={clsx(styles['external-link__icon'], className)}
+          />
+        </>
       )}
     </a>
   );

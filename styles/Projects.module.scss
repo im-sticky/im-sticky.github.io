@@ -1,7 +1,7 @@
 @import 'styles/utilities.scss';
 
 .projects {
-  padding-top: pxToRems(64px);
+  @include pagePadding;
   @include gutters;
 
   &__list {

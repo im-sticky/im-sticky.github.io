@@ -49,6 +49,22 @@
   }
 }
 
+@mixin pagePadding($includeBottom: false) {
+  padding-top: pxToRems(32px);
+
+  @if ($includeBottom) {
+    padding-bottom: pxToRems(32px);
+  }
+
+  @include phone-and-up {
+    padding-top: pxToRems(64px);
+
+    @if ($includeBottom) {
+      padding-bottom: pxToRems(64px);
+    }
+  }
+}
+
 // reading text
 @mixin readableContent() {
   h1,

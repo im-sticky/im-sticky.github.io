@@ -3,8 +3,7 @@
 .about {
   display: flex;
   justify-content: center;
-  padding-top: pxToRems(64px);
-  padding-bottom: pxToRems(64px);
+  @include pagePadding(true);
   @include gutters;
 
   &__sub-text {

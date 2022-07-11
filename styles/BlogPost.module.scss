@@ -3,7 +3,7 @@
 .blog-post {
   $hero-height: 55vh;
 
-  padding-top: pxToRems(64px);
+  @include pagePadding;
   @include gutters;
 
   &--has-hero {
