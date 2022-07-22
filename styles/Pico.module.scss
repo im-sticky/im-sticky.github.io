@@ -17,7 +17,18 @@
     flex-shrink: 0;
   }
 
+  &__img {
+    display: block;
+    transition: transform $transition-time-normal $transition-ease-out-expo;
+  }
+
   &__link {
     text-decoration: none;
+
+    &:hover {
+      .carts__img {
+        transform: translateY(pxToRems(-12px));
+      }
+    }
   }
 }

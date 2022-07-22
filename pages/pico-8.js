@@ -60,11 +60,11 @@ export default function Pico({carts}) {
               <div key={cart.pid} className={styles.carts__item}>
                 <a
                   href={`https://www.lexaloffle.com/bbs/cart_info.php?cid=${cart.pid}`}
-                  className={styles.cart__link}
+                  className={styles.carts__link}
                   target="_blank"
                   rel="nofollow noreferrer noopener"
                 >
-                  <img src={cart.img} alt={cart.name} />
+                  <img src={cart.img} alt={cart.name} className={styles.carts__img} />
                 </a>
               </div>
             ))}
