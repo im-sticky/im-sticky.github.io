@@ -5,7 +5,7 @@ import {getAllPosts} from './helpers/postUtils.mjs';
 
 const SITE_URL = 'https://im-sticky.github.io';
 
-const posts = getAllPosts(['title', 'slug', 'date', 'description', 'edited']);
+const posts = getAllPosts(['title', 'slug', 'date', 'description', 'edited', 'customLink']);
 const feed = new Feed({
   title: "Alex Craig's blog",
   description: 'A collection of my thoughts and anecdotes',
@@ -36,7 +36,7 @@ posts.forEach((meta) =>
   feed.addItem({
     title: meta.title,
     id: meta.slug,
-    link: `${SITE_URL}/blog/${meta.slug}`,
+    link: `${SITE_URL}${meta.customLink ? meta.customLink : `/blog/${meta.slug}`}`,
     description: meta.description,
     date: new Date(meta.date),
     author: 'Alex Craig',

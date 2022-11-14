@@ -82,7 +82,9 @@ export default function Blog({posts}) {
           {filteredPosts.map((post) => (
             <div key={`post.${post.slug}`} className={styles.post}>
               <h3>
-                <InternalLink to={`/blog/${post.slug}`}>{post.title}</InternalLink>
+                <InternalLink to={post.customLink ?? `/blog/${post.slug}`}>
+                  {post.title}
+                </InternalLink>
               </h3>
               <p className={styles.post__description}>{post.description}</p>
               <small className={styles.post__date}>{formatDate(post.date)}</small>
@@ -122,7 +124,7 @@ export default function Blog({posts}) {
 
 // get posts from serverside at build time
 export const getStaticProps = async () => {
-  const posts = getAllPosts(['title', 'slug', 'date', 'description', 'edited']);
+  const posts = getAllPosts(['title', 'slug', 'date', 'description', 'edited', 'customLink']);
 
   // return the posts props
   return {props: {posts}};
