@@ -19,24 +19,24 @@ import sharedStyles from 'styles/Shared.module.scss';
 const mdxComponents = {ExternalLink, Figure};
 
 export default function Edh({source, frontMatter}) {
-  const heroScrollTarget = 700;
+  const heroScrollTarget = 600;
   const heroScreenRef = useRef();
   const heroImageRef = useRef();
 
-  const adjustHeroPosition = () => {
-    if (heroScreenRef.current && heroImageRef.current) {
-      const position = Math.min((window.pageYOffset / heroScrollTarget) * 100, 100);
+  const adjustHeroPosition = (always = false) => {
+    const position = Math.min((window.pageYOffset / heroScrollTarget) * 100, 101);
 
+    if (heroScreenRef.current && heroImageRef.current && (position <= 100 || always)) {
       heroScreenRef.current.style.backgroundImage = `linear-gradient(to left, rgb(250, 250, 250) ${position}%, rgba(250, 250, 250, 0) ${
-        position + 25
+        position * 1.3 + 25
       }%, rgba(250, 250, 250, 0))`;
       heroImageRef.current.style.objectPosition = `50% ${position}%`;
     }
   };
 
   useEffect(() => {
-    adjustHeroPosition();
-    window.addEventListener('scroll', adjustHeroPosition);
+    adjustHeroPosition(true);
+    window.addEventListener('scroll', () => adjustHeroPosition());
   }, []);
 
   return (
