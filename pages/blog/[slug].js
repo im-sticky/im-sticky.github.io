@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Head from 'next/head';
 import {serialize} from 'next-mdx-remote/serialize';
 import {MDXRemote} from 'next-mdx-remote';
@@ -24,7 +24,7 @@ import sharedStyles from 'styles/Shared.module.scss';
 const mdxComponents = {ExternalLink, Figure};
 
 export default function Post({source, frontMatter, posts, slug}) {
-  const postIndex = posts.findIndex((p) => p.slug === slug);
+  const [postIndex] = useState(posts.findIndex((p) => p.slug === slug));
 
   return (
     <>
@@ -121,7 +121,10 @@ export default function Post({source, frontMatter, posts, slug}) {
 
           <div className={sharedStyles['pagination']}>
             {postIndex > 0 ? (
-              <InternalLink icon to={`/blog/${posts[postIndex - 1].slug}`}>
+              <InternalLink
+                icon
+                to={posts[postIndex - 1].customLink ?? `/blog/${posts[postIndex - 1].slug}`}
+              >
                 <FontAwesomeIcon
                   icon={faLongArrowAltLeft}
                   className={sharedStyles['page__back-icon']}
@@ -133,7 +136,7 @@ export default function Post({source, frontMatter, posts, slug}) {
             {postIndex + 1 < posts.length ? (
               <InternalLink
                 icon
-                to={`/blog/${posts[postIndex + 1].slug}`}
+                to={posts[postIndex + 1].customLink ?? `/blog/${posts[postIndex + 1].slug}`}
                 className={sharedStyles['pagination__previous']}
               >
                 Previous post
@@ -151,9 +154,18 @@ export default function Post({source, frontMatter, posts, slug}) {
 }
 
 export const getStaticProps = async (context) => {
-  const posts = getAllPosts(['date', 'slug']);
+  const posts = getAllPosts(['date', 'slug', 'customLink']);
   const {slug} = context.params;
   const {content, data} = getPost(slug);
+
+  if (data.customLink) {
+    return {
+      redirect: {
+        destination: data.customLink,
+        permanent: true,
+      },
+    };
+  }
 
   const mdxSource = await serialize(content);
 
