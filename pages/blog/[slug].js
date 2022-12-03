@@ -54,7 +54,6 @@ export default function Post({source, frontMatter, posts, slug}) {
 
       <Section
         grow
-        id="BlogPost"
         className={clsx(styles['blog-post'], {[styles['blog-post--has-hero']]: frontMatter.hero})}
       >
         {frontMatter.hero ? (

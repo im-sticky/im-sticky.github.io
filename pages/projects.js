@@ -33,7 +33,7 @@ export default function Projects({projects}) {
         <meta name="twitter:image" content="/mstile-144x144.png" />
       </Head>
 
-      <Section grow id="Projects" className={styles.projects}>
+      <Section grow className={styles.projects}>
         <Container>
           <p
             className={clsx(

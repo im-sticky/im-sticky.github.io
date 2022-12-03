@@ -46,7 +46,7 @@ export default function Blog({posts}) {
         <meta name="twitter:image" content="/mstile-144x144.png" />
       </Head>
 
-      <Section grow id="BlogList" className={styles['blog-list']}>
+      <Section grow className={styles['blog-list']}>
         <Container>
           <p
             className={clsx(

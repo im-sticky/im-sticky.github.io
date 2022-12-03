@@ -29,7 +29,7 @@ export default function Home() {
         <meta name="twitter:image" content="/mstile-144x144.png" />
       </Head>
 
-      <Section grow id="About" className={styles.about}>
+      <Section grow className={styles.about}>
         <Container className={styles.about__body}>
           <TitleShape icon={faTerminal}>Alex Craig</TitleShape>
           <small className={styles['about__sub-text']}>

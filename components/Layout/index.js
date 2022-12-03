@@ -9,7 +9,7 @@ export function Layout({children, includeFooter = true}) {
     <>
       {children}
       {includeFooter ? (
-        <Section id="Footer" className={styles.footer}>
+        <Section className={styles.footer}>
           <ul className={styles.footer__list}>
             <li className={styles['footer__list-item']}>
               <InternalLink to="/projects">Projects</InternalLink>

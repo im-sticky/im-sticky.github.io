@@ -187,7 +187,7 @@ export default function Crt({clips}) {
         <meta name="twitter:image" content="/mstile-144x144.png" />
       </Head>
 
-      <Section grow id="crt" className={styles.section}>
+      <Section grow className={styles.section}>
         <div className={styles.background}>
           <div className={styles.container} ref={containerRef}>
             <div className={clsx(styles.crt, {[styles['crt--on']]: crtOn})} ref={screenRef}>

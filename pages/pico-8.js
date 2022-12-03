@@ -32,7 +32,7 @@ export default function Pico({carts}) {
         <meta name="twitter:image" content="/mstile-144x144.png" />
       </Head>
 
-      <Section grow id="Pico-8" className={styles['carts']}>
+      <Section grow className={styles['carts']}>
         <Container>
           <p
             className={clsx(
