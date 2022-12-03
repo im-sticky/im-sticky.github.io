@@ -1,9 +1,8 @@
 import React, {useEffect, useRef, useState} from 'react';
-import Head from 'next/head';
 import clsx from 'clsx';
 import {Section} from 'components/Section';
+import {PageHead} from 'components/PageHead';
 import {getAllCrtClips} from 'helpers/postUtils.mjs';
-import {SITE_URL} from 'helpers/constants';
 
 import styles from 'styles/Crt.module.scss';
 
@@ -163,29 +162,11 @@ export default function Crt({clips}) {
   // render
   return (
     <>
-      <Head>
-        <title>Alex Craig | CRT.tv</title>
-
-        <meta property="og:site_name" content="Alex Craig's Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${SITE_URL}/crt`} />
-        <meta property="og:title" content="CRT.tv" />
-        <meta
-          property="og:description"
-          content="A CRT that displays game clips on different channels"
-        />
-        <meta property="og:image" content="/mstile-144x144.png" />
-
-        <meta name="twitter:site" content="@im_sticky" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content={`${SITE_URL}/crt`} />
-        <meta name="twitter:title" content="CRT.tv" />
-        <meta
-          name="twitter:description"
-          content="A CRT that displays game clips on different channels"
-        />
-        <meta name="twitter:image" content="/mstile-144x144.png" />
-      </Head>
+      <PageHead
+        url="crt"
+        title="CRT.tv"
+        description="A CRT that displays game clips on different channels"
+      />
 
       <Section grow className={styles.section}>
         <div className={styles.background}>

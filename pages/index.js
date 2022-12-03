@@ -4,30 +4,13 @@ import {InternalLink} from 'components/Link';
 import {ExternalLink} from 'components/Link';
 import {TitleShape} from 'components/TitleShape';
 import {faTerminal, faUserFriends} from '@fortawesome/free-solid-svg-icons';
-import {SITE_URL} from 'helpers/constants';
-import Head from 'next/head';
+import {PageHead} from 'components/PageHead';
 import styles from 'styles/Home.module.scss';
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Alex Craig | Home</title>
-
-        <meta property="og:site_name" content="Alex Craig's Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${SITE_URL}`} />
-        <meta property="og:title" content="Home" />
-        <meta property="og:description" content="Portfolio website of Alex Craig." />
-        <meta property="og:image" content="/mstile-144x144.png" />
-
-        <meta name="twitter:site" content="@im_sticky" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content={`${SITE_URL}`} />
-        <meta name="twitter:title" content="Alex Craig's Portfolio" />
-        <meta name="twitter:description" content="Portfolio website of Alex Craig." />
-        <meta name="twitter:image" content="/mstile-144x144.png" />
-      </Head>
+      <PageHead url="" title="Home" description="Portfolio website of Alex Craig." />
 
       <Section grow className={styles.about}>
         <Container className={styles.about__body}>

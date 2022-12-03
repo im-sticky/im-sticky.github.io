@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import clsx from 'clsx';
 import {serialize} from 'next-mdx-remote/serialize';
 import {MDXRemote} from 'next-mdx-remote';
@@ -13,7 +12,7 @@ import {faDragon, faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome/fr
 import {ExternalLink} from 'components/Link';
 import {Figure} from 'components/Figure';
 import {VerticalHero} from 'components/VerticalHero';
-import {SITE_URL} from 'helpers/constants';
+import {PageHead} from 'components/PageHead';
 import styles from 'styles/Edh.module.scss';
 import sharedStyles from 'styles/Shared.module.scss';
 
@@ -22,23 +21,12 @@ const mdxComponents = {ExternalLink, Figure};
 export default function Edh({source, frontMatter}) {
   return (
     <>
-      <Head>
-        <title>Alex Craig | EDH</title>
-
-        <meta property="og:site_name" content="Alex Craig's Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${SITE_URL}/edh`} />
-        <meta property="og:title" content={frontMatter.title} />
-        <meta property="og:description" content={frontMatter.description} />
-        <meta property="og:image" content="/edh/splash.jpg" />
-
-        <meta name="twitter:site" content="@im_sticky" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content={`${SITE_URL}/edh`} />
-        <meta name="twitter:title" content={frontMatter.title} />
-        <meta name="twitter:description" content={frontMatter.description} />
-        <meta name="twitter:image" content="/edh/splash.jpg" />
-      </Head>
+      <PageHead
+        url="edh"
+        title={frontMatter.title}
+        description={frontMatter.description}
+        image="/edh/splash.jpg"
+      />
 
       <Section grow className={styles.edh}>
         <VerticalHero imageUrl="/edh/hero.jpg">

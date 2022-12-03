@@ -1,5 +1,4 @@
 import React from 'react';
-import Head from 'next/head';
 import {useRouter} from 'next/router';
 import clsx from 'clsx';
 import {getAllPosts} from 'helpers/postUtils.mjs';
@@ -7,6 +6,7 @@ import {Section} from 'components/Section';
 import {Container} from 'components/Container';
 import {InternalLink} from 'components/Link';
 import {TitleShape} from 'components/TitleShape';
+import {PageHead} from 'components/PageHead';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faQuoteLeft,
@@ -15,7 +15,6 @@ import {
   faLongArrowAltRight,
 } from '@fortawesome/free-solid-svg-icons';
 import {formatDate} from 'helpers/formatDate';
-import {SITE_URL} from 'helpers/constants';
 import sharedStyles from 'styles/Shared.module.scss';
 import styles from 'styles/Blog.module.scss';
 
@@ -28,23 +27,7 @@ export default function Blog({posts}) {
 
   return (
     <>
-      <Head>
-        <title>Alex Craig | Blog</title>
-
-        <meta property="og:site_name" content="Alex Craig's Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${SITE_URL}/blog`} />
-        <meta property="og:title" content="Blog" />
-        <meta property="og:description" content="Alex Craig's Blog" />
-        <meta property="og:image" content="/mstile-144x144.png" />
-
-        <meta name="twitter:site" content="@im_sticky" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content={`${SITE_URL}/blog`} />
-        <meta name="twitter:title" content="Blog" />
-        <meta name="twitter:description" content="Alex Craig's Blog" />
-        <meta name="twitter:image" content="/mstile-144x144.png" />
-      </Head>
+      <PageHead url="blog" title="Blog" description="Alex Craig's Blog" />
 
       <Section grow className={styles['blog-list']}>
         <Container>
