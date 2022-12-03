@@ -38,18 +38,36 @@ export default function Post({source, frontMatter, posts, slug}) {
         grow
         className={clsx(styles['blog-post'], {[styles['blog-post--has-hero']]: frontMatter.hero})}
       >
-        {frontMatter.hero ? (
-          <>
-            <img
-              className={clsx(styles['blog-post__hero'], {
-                [styles['blog-post__hero--top']]: frontMatter.heroPosition === 'top',
-                [styles['blog-post__hero--bottom']]: frontMatter.heroPosition === 'bottom',
-              })}
-              src={`/assets/${frontMatter.hero}`}
-              role="presentation"
+        {frontMatter.hero && !frontMatter.heroVideo ? (
+          <img
+            className={clsx(styles['blog-post__hero'], {
+              [styles['blog-post__hero--top']]: frontMatter.heroPosition === 'top',
+              [styles['blog-post__hero--bottom']]: frontMatter.heroPosition === 'bottom',
+            })}
+            src={`/assets/${frontMatter.hero}`}
+            role="presentation"
+          />
+        ) : null}
+
+        {frontMatter.heroVideo ? (
+          <video
+            autoPlay
+            muted
+            loop
+            className={clsx(styles['blog-post__hero'], {
+              [styles['blog-post__hero--top']]: frontMatter.heroPosition === 'top',
+              [styles['blog-post__hero--bottom']]: frontMatter.heroPosition === 'bottom',
+            })}
+          >
+            <source
+              src={`/assets/${frontMatter.heroVideo}`}
+              type={`video/${frontMatter.heroVideo.split('.').pop()}`}
             />
-            <div className={styles['blog-post__hero-screen']} />
-          </>
+          </video>
+        ) : null}
+
+        {frontMatter.hero || frontMatter.heroVideo ? (
+          <div className={styles['blog-post__hero-screen']} />
         ) : null}
 
         <Container>
