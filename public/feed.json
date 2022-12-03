@@ -11,11 +11,11 @@
     },
     "items": [
         {
-            "id": "edh",
-            "url": "https://im-sticky.github.io/edh",
-            "title": "EDH - A love letter to Magic the Gathering",
-            "summary": "My relationship with Magic the Gathering and what my EDH deck means to me.",
-            "date_modified": "2022-11-13T00:00:00.000Z",
+            "id": "celeste-part-1",
+            "url": "https://im-sticky.github.io/blog/celeste-part-1",
+            "title": "Gotta go fast - Celeste speedrunning",
+            "summary": "My journey about beginning to learn how to speedrun Celeste.",
+            "date_modified": "2022-12-01T00:00:00.000Z",
             "author": {}
         },
         {
