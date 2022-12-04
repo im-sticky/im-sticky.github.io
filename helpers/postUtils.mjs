@@ -2,6 +2,8 @@ import matter from 'gray-matter';
 import {join} from 'path';
 import fs from 'fs';
 
+const disabledPosts = ['edh'];
+
 // path to our list of available posts
 const POSTS_PATH = join(process.cwd(), '_posts');
 const CLIPS_PATH = join(process.cwd(), 'public/crt/clips');
@@ -49,6 +51,7 @@ export function getAllPosts(fields) {
   const filePaths = getPostsFilePaths();
   const posts = filePaths
     .map((filePath) => getPostItems(filePath, fields))
+    .filter((post) => !disabledPosts.includes(post.slug))
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 
   return posts;

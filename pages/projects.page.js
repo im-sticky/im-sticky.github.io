@@ -1,13 +1,12 @@
 import React from 'react';
-import Head from 'next/head';
 import clsx from 'clsx';
 import {Section} from 'components/Section';
 import {Container} from 'components/Container';
 import {InternalLink, ExternalLink} from 'components/Link';
 import {TitleShape} from 'components/TitleShape';
+import {PageHead} from 'components/PageHead';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faLongArrowAltLeft, faCodeBranch} from '@fortawesome/free-solid-svg-icons';
-import {SITE_URL} from 'helpers/constants';
 import {Project} from 'models/project';
 import styles from 'styles/Projects.module.scss';
 import sharedStyles from 'styles/Shared.module.scss';
@@ -15,25 +14,9 @@ import sharedStyles from 'styles/Shared.module.scss';
 export default function Projects({projects}) {
   return (
     <>
-      <Head>
-        <title>Alex Craig | Projects</title>
+      <PageHead url="projects" title="Projects" description="Alex Craig's Projects" />
 
-        <meta property="og:site_name" content="Alex Craig's Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${SITE_URL}/projects`} />
-        <meta property="og:title" content="Projects" />
-        <meta property="og:description" content="Alex Craig's Projects" />
-        <meta property="og:image" content="/mstile-144x144.png" />
-
-        <meta name="twitter:site" content="@im_sticky" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content={`${SITE_URL}/projects`} />
-        <meta name="twitter:title" content="Projects" />
-        <meta name="twitter:description" content="Alex Craig's Projects" />
-        <meta name="twitter:image" content="/mstile-144x144.png" />
-      </Head>
-
-      <Section grow id="Projects" className={styles.projects}>
+      <Section grow className={styles.projects}>
         <Container>
           <p
             className={clsx(

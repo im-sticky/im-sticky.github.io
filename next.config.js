@@ -4,6 +4,7 @@ const prod = process.env.NODE_ENV === 'production';
 const nextConfig = {
   reactStrictMode: true,
   assetPrefix: prod ? '' : '',
+  pageExtensions: ['page.js', 'page.ts'],
 };
 
 module.exports = nextConfig;

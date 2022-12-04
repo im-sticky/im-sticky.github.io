@@ -1,5 +1,4 @@
-import React from 'react';
-import Head from 'next/head';
+import React, {useEffect, useState} from 'react';
 import {serialize} from 'next-mdx-remote/serialize';
 import {MDXRemote} from 'next-mdx-remote';
 import {getAllPosts, getPost} from 'helpers/postUtils.mjs';
@@ -16,59 +15,63 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {ExternalLink} from 'components/Link';
 import {Figure} from 'components/Figure';
+import {PageHead} from 'components/PageHead';
 import {formatDate} from 'helpers/formatDate';
-import {SITE_URL} from 'helpers/constants';
 import styles from 'styles/BlogPost.module.scss';
 import sharedStyles from 'styles/Shared.module.scss';
 
 const mdxComponents = {ExternalLink, Figure};
 
 export default function Post({source, frontMatter, posts, slug}) {
-  const postIndex = posts.findIndex((p) => p.slug === slug);
+  const [postIndex, setPostIndex] = useState(posts.findIndex((p) => p.slug === slug));
+
+  useEffect(() => {
+    setPostIndex(posts.findIndex((p) => p.slug === slug));
+  }, [slug]);
 
   return (
     <>
-      <Head>
-        <title>Alex Craig | {frontMatter.title}</title>
-
-        <meta property="og:site_name" content="Alex Craig's Portfolio" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`${SITE_URL}/${slug}`} />
-        <meta property="og:title" content={frontMatter.title} />
-        <meta property="og:description" content={frontMatter.description} />
-        <meta
-          property="og:image"
-          content={frontMatter.hero ? `/assets/${frontMatter.hero}` : '/mstile-144x144.png'}
-        />
-
-        <meta name="twitter:site" content="@im_sticky" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content={`${SITE_URL}/${slug}`} />
-        <meta name="twitter:title" content={frontMatter.title} />
-        <meta name="twitter:description" content={frontMatter.description} />
-        <meta
-          name="twitter:image"
-          content={frontMatter.hero ? `/assets/${frontMatter.hero}` : '/mstile-144x144.png'}
-        />
-      </Head>
+      <PageHead
+        url={slug}
+        title={frontMatter.title}
+        description={frontMatter.description}
+        image={frontMatter.hero ? `/assets/${frontMatter.hero}` : '/mstile-144x144.png'}
+      />
 
       <Section
         grow
-        id="BlogPost"
         className={clsx(styles['blog-post'], {[styles['blog-post--has-hero']]: frontMatter.hero})}
       >
-        {frontMatter.hero ? (
-          <>
-            <img
-              className={clsx(styles['blog-post__hero'], {
-                [styles['blog-post__hero--top']]: frontMatter.heroPosition === 'top',
-                [styles['blog-post__hero--bottom']]: frontMatter.heroPosition === 'bottom',
-              })}
-              src={`/assets/${frontMatter.hero}`}
-              role="presentation"
+        {frontMatter.hero && !frontMatter.heroVideo ? (
+          <img
+            className={clsx(styles['blog-post__hero'], {
+              [styles['blog-post__hero--top']]: frontMatter.heroPosition === 'top',
+              [styles['blog-post__hero--bottom']]: frontMatter.heroPosition === 'bottom',
+            })}
+            src={`/assets/${frontMatter.hero}`}
+            role="presentation"
+          />
+        ) : null}
+
+        {frontMatter.heroVideo ? (
+          <video
+            autoPlay
+            muted
+            loop
+            className={clsx(styles['blog-post__hero'], {
+              [styles['blog-post__hero--top']]: frontMatter.heroPosition === 'top',
+              [styles['blog-post__hero--bottom']]: frontMatter.heroPosition === 'bottom',
+            })}
+          >
+            <source
+              src={`/assets/${frontMatter.heroVideo}`}
+              type={`video/${frontMatter.heroVideo.split('.').pop()}`}
             />
-            <div className={styles['blog-post__hero-screen']} />
-          </>
+          </video>
+        ) : null}
+
+        {frontMatter.hero || frontMatter.heroVideo ? (
+          <div className={styles['blog-post__hero-screen']} />
         ) : null}
 
         <Container>
@@ -121,7 +124,10 @@ export default function Post({source, frontMatter, posts, slug}) {
 
           <div className={sharedStyles['pagination']}>
             {postIndex > 0 ? (
-              <InternalLink icon to={`/blog/${posts[postIndex - 1].slug}`}>
+              <InternalLink
+                icon
+                to={posts[postIndex - 1].customLink ?? `/blog/${posts[postIndex - 1].slug}`}
+              >
                 <FontAwesomeIcon
                   icon={faLongArrowAltLeft}
                   className={sharedStyles['page__back-icon']}
@@ -133,7 +139,7 @@ export default function Post({source, frontMatter, posts, slug}) {
             {postIndex + 1 < posts.length ? (
               <InternalLink
                 icon
-                to={`/blog/${posts[postIndex + 1].slug}`}
+                to={posts[postIndex + 1].customLink ?? `/blog/${posts[postIndex + 1].slug}`}
                 className={sharedStyles['pagination__previous']}
               >
                 Previous post
@@ -151,9 +157,18 @@ export default function Post({source, frontMatter, posts, slug}) {
 }
 
 export const getStaticProps = async (context) => {
-  const posts = getAllPosts(['date', 'slug']);
+  const posts = getAllPosts(['date', 'slug', 'customLink']);
   const {slug} = context.params;
   const {content, data} = getPost(slug);
+
+  if (data.customLink) {
+    return {
+      redirect: {
+        destination: data.customLink,
+        permanent: true,
+      },
+    };
+  }
 
   const mdxSource = await serialize(content);
 
