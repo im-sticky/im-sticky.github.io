@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {serialize} from 'next-mdx-remote/serialize';
 import {MDXRemote} from 'next-mdx-remote';
 import {getAllPosts, getPost} from 'helpers/postUtils.mjs';
@@ -23,7 +23,11 @@ import sharedStyles from 'styles/Shared.module.scss';
 const mdxComponents = {ExternalLink, Figure};
 
 export default function Post({source, frontMatter, posts, slug}) {
-  const [postIndex] = useState(posts.findIndex((p) => p.slug === slug));
+  const [postIndex, setPostIndex] = useState(posts.findIndex((p) => p.slug === slug));
+
+  useEffect(() => {
+    setPostIndex(posts.findIndex((p) => p.slug === slug));
+  }, [slug]);
 
   return (
     <>
