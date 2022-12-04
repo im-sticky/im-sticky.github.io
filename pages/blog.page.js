@@ -107,7 +107,17 @@ export default function Blog({posts}) {
 
 // get posts from serverside at build time
 export const getStaticProps = async () => {
-  const posts = getAllPosts(['title', 'slug', 'date', 'description', 'edited', 'customLink']);
+  const posts = getAllPosts([
+    'title',
+    'slug',
+    'date',
+    'description',
+    'edited',
+    'customLink',
+    'hero',
+    'heroPosition',
+    'heroVideo',
+  ]);
 
   // return the posts props
   return {props: {posts}};

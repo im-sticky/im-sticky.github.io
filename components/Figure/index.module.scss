@@ -1,9 +1,31 @@
 @import 'styles/utilities.scss';
 
 .figure {
-  margin: pxToRems(40px);
+  margin: pxToRems(24px);
 
-  .image {
+  @include landscape-tablet-and-up {
+    margin: pxToRems(40px);
+
+    &--right,
+    &--left {
+      margin: pxToRems(16px) pxToRems(24px);
+      max-width: $container-width / 2;
+    }
+
+    &--right {
+      float: right;
+      clear: right;
+      margin-right: pxToRems(-$container-width / 6);
+    }
+
+    &--left {
+      float: left;
+      clear: left;
+      margin-left: pxToRems(-$container-width / 6);
+    }
+  }
+
+  .object {
     display: block;
   }
 
