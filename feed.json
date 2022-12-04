@@ -11,6 +11,14 @@
     },
     "items": [
         {
+            "id": "celeste-part-1",
+            "url": "https://im-sticky.github.io/blog/celeste-part-1",
+            "title": "Gotta go fast - Learning Celeste speedrunning",
+            "summary": "The beginning of my journey learning how to speedrun Celeste.",
+            "date_modified": "2022-12-04T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "tunic-review",
             "url": "https://im-sticky.github.io/blog/tunic-review",
             "title": "Tunic - A glimpse to the past",
