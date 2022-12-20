@@ -11,6 +11,14 @@
     },
     "items": [
         {
+            "id": "celeste-part-2",
+            "url": "https://im-sticky.github.io/blog/celeste-part-2",
+            "title": "Gotta go fast - Anxieties to starting runs",
+            "summary": "The tough parts of learning the finishing bits of a Celeste speedrun.",
+            "date_modified": "2022-12-19T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "celeste-part-1",
             "url": "https://im-sticky.github.io/blog/celeste-part-1",
             "title": "Gotta go fast - Learning Celeste speedrunning",
