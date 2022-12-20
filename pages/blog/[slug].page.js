@@ -40,7 +40,9 @@ export default function Post({source, frontMatter, posts, slug}) {
 
       <Section
         grow
-        className={clsx(styles['blog-post'], {[styles['blog-post--has-hero']]: frontMatter.hero})}
+        className={clsx(styles['blog-post'], {
+          [styles['blog-post--has-hero']]: frontMatter.hero || frontMatter.heroVideo,
+        })}
       >
         {frontMatter.hero && !frontMatter.heroVideo ? (
           <img
