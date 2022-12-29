@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://im-sticky.github.io</id>
     <title>Alex Craig's blog</title>
-    <updated>2022-12-20T03:33:41.979Z</updated>
+    <updated>2022-12-29T21:33:17.557Z</updated>
     <generator>Feed for node.js</generator>
     <author>
         <name>Alex Craig</name>
@@ -15,6 +15,13 @@
     <logo>https://im-sticky.github.io/mstile-144x144.png</logo>
     <icon>https://im-sticky.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Alex Craig</rights>
+    <entry>
+        <title type="html"><![CDATA[Gotta go fast - First goal achieved]]></title>
+        <id>celeste-part-3</id>
+        <link href="https://im-sticky.github.io/blog/celeste-part-3"/>
+        <updated>2022-12-29T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Hitting my first goal of sub 50 in Celeste speedruns and what's next.]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Gotta go fast - Anxieties to starting runs]]></title>
         <id>celeste-part-2</id>
