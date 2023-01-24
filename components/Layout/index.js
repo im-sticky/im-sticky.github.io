@@ -12,6 +12,9 @@ export function Layout({children, includeFooter = true}) {
         <Section className={styles.footer}>
           <ul className={styles.footer__list}>
             <li className={styles['footer__list-item']}>
+              <InternalLink to="/">Home</InternalLink>
+            </li>
+            <li className={styles['footer__list-item']}>
               <InternalLink to="/projects">Projects</InternalLink>
             </li>
             <li className={styles['footer__list-item']}>
