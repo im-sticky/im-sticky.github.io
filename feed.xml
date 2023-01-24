@@ -4,7 +4,7 @@
         <title>Alex Craig's blog</title>
         <link>https://im-sticky.github.io/blog</link>
         <description>A collection of my thoughts and anecdotes</description>
-        <lastBuildDate>Thu, 29 Dec 2022 21:33:17 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 24 Jan 2023 01:35:15 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for node.js</generator>
         <language>en</language>
@@ -13,7 +13,7 @@
             <url>https://im-sticky.github.io/mstile-144x144.png</url>
             <link>https://im-sticky.github.io/blog</link>
         </image>
-        <copyright>All rights reserved 2022, Alex Craig</copyright>
+        <copyright>All rights reserved 2023, Alex Craig</copyright>
         <atom:link href="https://im-sticky.github.io/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Gotta go fast - First goal achieved]]></title>
