@@ -1,0 +1,33 @@
+---
+title: Game Devlog - Initial game demo
+description: The beginning of my exploits with game development and Godot.
+date: '2023-10-15'
+---
+
+Hello and welcome to what will be a long running set of posts about my experiences and updates with game development. While I did go to school for software development and had a couple classes about game development, I have never actually dipped my toes into making a full game myself.
+
+A few of my friends are in the game dev space professionally and somewhat recently one of them started making her own game. After some talking, another friend and I got excited and decided to make our own games so we all could learn and share our progress together. While I've always wanted to try and work on a game, I never had a strong enough initial burst of motivation.
+
+## Godot game engine
+
+This was all happening around the time of Unity pricing fiasco and a topic of discussion that came up a lot in the game dev sphere was Godot. I personally have never heard of Godot before all this, but everyone was talking it up a fair bit. It being totally community driven, having a lot of community support, surprisingly very good documentation, as well as a friend who would be learning it alongside me, we decided why not this is the thing we'll do it in.
+
+## The game idea
+
+My basic idea for my game is a 2D platform fighter where the victory condition is to deplete all of the opponent's health rather than getting ring-outs. The arena would be an enclosed space with a lot of focus on combos that can be extended by knocking your opponent into the surrounding boundary.
+
+I'm drawing inspiration from Jump Ultimate Stars, Smash Bros., and, apparently, Guilty Gear. I have played and watched very little Guilty Gear but based on my ideas and talking with my friend, Guilty Gear does some things similarly to them.
+
+# Initial game demo
+
+<Figure video="devlog-initial-game.webm" caption="First playable iteration of my game" />
+
+My first game demo is quite rough around the edges, but it does work.
+
+Features of this version:
+
+- I have a system for making stages quickly with arbitrary platforms & walls
+- Players can join and leave a game in an arbitrary order
+- I have a system for creating hitboxes quickly and easily
+- Can easily group hitboxes into sets an assign them to a specific attack input
+- Players respond to getting hit and are launched based on the strength of the hitbox
