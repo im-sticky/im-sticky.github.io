@@ -11,6 +11,22 @@
     },
     "items": [
         {
+            "id": "game-devlog-part-2",
+            "url": "https://im-sticky.github.io/blog/game-devlog-part-2",
+            "title": "Game Devlog - First round of updates",
+            "summary": "An update of my exploits with game development and Godot.",
+            "date_modified": "2023-11-06T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "game-devlog-part-1",
+            "url": "https://im-sticky.github.io/blog/game-devlog-part-1",
+            "title": "Game Devlog - Initial game demo",
+            "summary": "The beginning of my exploits with game development and Godot.",
+            "date_modified": "2023-10-15T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "celeste-part-3",
             "url": "https://im-sticky.github.io/blog/celeste-part-3",
             "title": "Gotta go fast - First goal achieved",
