@@ -11,6 +11,14 @@
     },
     "items": [
         {
+            "id": "game-devlog-part-3",
+            "url": "https://im-sticky.github.io/blog/game-devlog-part-3",
+            "title": "Game Devlog - Game Jam Day and second round of updates",
+            "summary": "An update of my exploits with game development and Godot.",
+            "date_modified": "2023-11-25T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "game-devlog-part-2",
             "url": "https://im-sticky.github.io/blog/game-devlog-part-2",
             "title": "Game Devlog - First round of updates",

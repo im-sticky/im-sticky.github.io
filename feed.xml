@@ -4,7 +4,7 @@
         <title>Alex Craig's blog</title>
         <link>https://im-sticky.github.io/blog</link>
         <description>A collection of my thoughts and anecdotes</description>
-        <lastBuildDate>Tue, 07 Nov 2023 02:44:01 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 26 Nov 2023 04:46:41 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for node.js</generator>
         <language>en</language>
@@ -15,6 +15,13 @@
         </image>
         <copyright>All rights reserved 2023, Alex Craig</copyright>
         <atom:link href="https://im-sticky.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Game Devlog - Game Jam Day and second round of updates]]></title>
+            <link>https://im-sticky.github.io/blog/game-devlog-part-3</link>
+            <guid>game-devlog-part-3</guid>
+            <pubDate>Sat, 25 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[An update of my exploits with game development and Godot.]]></description>
+        </item>
         <item>
             <title><![CDATA[Game Devlog - First round of updates]]></title>
             <link>https://im-sticky.github.io/blog/game-devlog-part-2</link>
