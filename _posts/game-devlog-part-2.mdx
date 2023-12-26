@@ -1,0 +1,37 @@
+---
+title: Game Devlog - First round of updates
+description: An update of my exploits with game development and Godot.
+date: '2023-11-06'
+---
+
+<small>
+  <em>
+    First post available <InternalLink to="/blog/game-devlog-part-1">here</InternalLink>.
+  </em>
+</small>
+
+Welcome back to another development log of my game. Aside from fighting with the Godot editor, I have been having a positive experience with the engine itself. It's docs are good enough to be able to get by mostly on my own. The questions & answers available on their forums as well videos people put out on youtube are all great and incredibly helpful. I have to say I'm quite happy with it so far (aside from my editor woes).
+
+## Game updates
+
+<Figure video="devlog-update-1.webm" caption="First set of updates to my game" />
+
+This iteration has a laundry list of updates. A lot of background invisible updates to my system for managing player and hitbox states, as well as a lot of basic features you would expect to find in a fighting game.
+
+Features of this version in no particular order:
+
+- Variable jump heights
+- Disallow movement when performing an attack
+- Add hitbox hitstop
+- Handle directional inputs for attacks
+- Migrate hitbox state to individual nodes
+- Hook player health into UI element
+- Add different sprites for player states
+- Continue hitboxes where they left off after experiencing hitstop
+- Make hitstop halt player momentum in air
+- Various players states and transitions between them
+- Formula for calculating launch speed and hitstun
+- Adjustable gravity / weight / ground speed / air speed / dash speed
+- Fix launch vector sudden stop
+- Add double jump
+- Add aerial attack landing cancelling and end lag

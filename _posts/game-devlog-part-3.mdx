@@ -1,0 +1,58 @@
+---
+title: Game Devlog - Game Jam Day and second round of updates
+description: An update of my exploits with game development and Godot.
+date: '2023-11-25'
+hero: where_r_u_going.png
+---
+
+<small>
+  <em>
+    Second post available <InternalLink to="/blog/game-devlog-part-2">here</InternalLink>.
+  </em>
+</small>
+
+Hello and welcome to a special _Game Jam Day_ edition of my development logs. Well, that may be a bit misleading as a lot of the functionality for this update was developed over the past couple weeks and only some of it was developed on the game jam day. Regardless, this update is a juicy one.
+
+I spent a lot of time messing around with player movement and general feel and physics. I spent some time watching youtube videos talking about gravity, acceleration, and general approaches to physics calculations in video games. While a lot of it was not directly related to Godot or how I wanted to handle things specifically, it was a lot of great content which helped guide me on making my character movement feel much smoother. I felt pretty confident with how I had set all the physics related variables for my characters.
+
+My friends and I had an online game jam session a few weeks ago where we hung out in discord watching Blizzcon (we play Overwatch I'm sorry) and working on our games. It was the first time we had shown each other directly the internals to what we had been developing which I found a lot of fun to learn about. We set up another day to work on our games together in person.
+
+## Game Jam Day
+
+We got together, and Oh man, I went on an emotional rollercoaster. I went in feeling great and confident I would make a ton of progress with my game. Then all of it was thrown in the toilet when I spent most of the day working on my game feeling like I was making no progress and that I was a bad developer. Things were messy, I didn't like the code I was writing, I was struggling to do relatively simple things, and everyone elses games looked so much better. I swore off Godot and making games and was convinced I was going to drop development on my game after today.
+
+However, there was a turning point. We ate some food and one of my friends who had been making music all day gave me a background song and we spent a solid hour fucking around making sound effects and having fun. It was getting later in the day and I wanted to have something I deemed acceptable for them all to try out and play, so I started to care less about how I was approaching development and just actually doing things. It turns out if you just add to your game and not worry about everything being perfect it becomes a lot more fun. You know, treat it like a game jam.
+
+Playing my game with them all and just having fun fucking around with what I had built was a HUGE confidence booster. I did a total 180 again and want to spend more time developing my game. Having to deal with shitty quirks of the game and live patching moves and tweaking stats after games was so much fun. It helped me shift out of professional developer mode and made me really think of what the game actually was for: us. It was great to get to actually test it out with people for a little while and help me see what was working and what I should focus on next.
+
+## Game updates
+
+<Figure video="devlog-update-2.webm" caption="My game after the Game Jam Day" />
+
+Features of this version in no particular order:
+
+- New features
+  - Determine winner on round end or health depletion
+  - Add wall / ground bounce when in hitstun
+  - Add heavy attack button
+  - Complete set of hitboxes
+- General movement updates
+  - Added acceleration between all movement states
+  - Add skidding from turning around while running
+  - Add crouching state
+  - Allow player to jump out of dash and keep momentum
+  - Make player not able to switch aerial directions immediately
+  - Allow player to drop through platform
+  - Add short hopping
+- Various small bug fixes
+  - Change launch vector to hit in direction player is facing
+  - Fix player not going into airborne state when moving off a platform
+  - Fix aerial attack landing getting stuck sometimes
+  - Fix right stick constantly attacking
+  - Fix stuck in attacking grounded state with an invisible active hitbox active
+  - Fix double jump refreshing on attack
+  - Add fast-falling
+- Visuals and art
+  - Alternate colors for players
+  - Music and sound effects (fun temporary ones)
+  - Add player shifting while in hitstop

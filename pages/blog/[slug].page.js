@@ -20,7 +20,7 @@ import {formatDate} from 'helpers/formatDate';
 import styles from 'styles/BlogPost.module.scss';
 import sharedStyles from 'styles/Shared.module.scss';
 
-const mdxComponents = {ExternalLink, Figure};
+const mdxComponents = {ExternalLink, Figure, InternalLink};
 
 export default function Post({source, frontMatter, posts, slug}) {
   const [postIndex, setPostIndex] = useState(posts.findIndex((p) => p.slug === slug));
@@ -57,12 +57,15 @@ export default function Post({source, frontMatter, posts, slug}) {
 
         {frontMatter.heroVideo ? (
           <video
+            key={slug}
             autoPlay
             muted
             loop
             className={clsx(styles['blog-post__hero'], {
               [styles['blog-post__hero--top']]: frontMatter.heroPosition === 'top',
               [styles['blog-post__hero--bottom']]: frontMatter.heroPosition === 'bottom',
+              [styles['blog-post__hero--left']]: frontMatter.mobileHeroPosition === 'left',
+              [styles['blog-post__hero--right']]: frontMatter.mobileHeroPosition === 'right',
             })}
           >
             <source

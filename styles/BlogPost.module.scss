@@ -43,6 +43,16 @@
     &--bottom {
       object-position: bottom center;
     }
+
+    @media (max-width: #{$phone-width}) {
+      &--right {
+        object-position: right;
+      }
+
+      &--left {
+        object-position: left;
+      }
+    }
   }
 
   &__hero-screen {
