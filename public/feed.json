@@ -11,11 +11,59 @@
     },
     "items": [
         {
+            "id": "immortality-review",
+            "url": "https://im-sticky.github.io/blog/immortality-review",
+            "title": "Immortality - An FMV in this economy?",
+            "summary": "A brief spoiler free review of the game Immortality.",
+            "date_modified": "2023-12-26T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "game-devlog-part-3",
+            "url": "https://im-sticky.github.io/blog/game-devlog-part-3",
+            "title": "Game Devlog - Game Jam Day and second round of updates",
+            "summary": "An update of my exploits with game development and Godot.",
+            "date_modified": "2023-11-25T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "game-devlog-part-2",
+            "url": "https://im-sticky.github.io/blog/game-devlog-part-2",
+            "title": "Game Devlog - First round of updates",
+            "summary": "An update of my exploits with game development and Godot.",
+            "date_modified": "2023-11-06T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "game-devlog-part-1",
+            "url": "https://im-sticky.github.io/blog/game-devlog-part-1",
+            "title": "Game Devlog - Initial game demo",
+            "summary": "The beginning of my exploits with game development and Godot.",
+            "date_modified": "2023-10-15T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "celeste-part-3",
+            "url": "https://im-sticky.github.io/blog/celeste-part-3",
+            "title": "Gotta go fast - First goal achieved",
+            "summary": "Hitting my first goal of sub 50 in Celeste speedruns and what's next.",
+            "date_modified": "2022-12-29T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "celeste-part-2",
+            "url": "https://im-sticky.github.io/blog/celeste-part-2",
+            "title": "Gotta go fast - Anxieties to starting runs",
+            "summary": "The tough parts of learning the finishing bits of a Celeste speedrun.",
+            "date_modified": "2022-12-19T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "celeste-part-1",
             "url": "https://im-sticky.github.io/blog/celeste-part-1",
-            "title": "Gotta go fast - Celeste speedrunning",
-            "summary": "My journey about beginning to learn how to speedrun Celeste.",
-            "date_modified": "2022-12-01T00:00:00.000Z",
+            "title": "Gotta go fast - Learning Celeste speedrunning",
+            "summary": "The beginning of my journey learning how to speedrun Celeste.",
+            "date_modified": "2022-12-04T00:00:00.000Z",
             "author": {}
         },
         {

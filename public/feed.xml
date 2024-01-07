@@ -4,7 +4,7 @@
         <title>Alex Craig's blog</title>
         <link>https://im-sticky.github.io/blog</link>
         <description>A collection of my thoughts and anecdotes</description>
-        <lastBuildDate>Sat, 03 Dec 2022 16:28:43 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 07 Jan 2024 18:01:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for node.js</generator>
         <language>en</language>
@@ -13,14 +13,56 @@
             <url>https://im-sticky.github.io/mstile-144x144.png</url>
             <link>https://im-sticky.github.io/blog</link>
         </image>
-        <copyright>All rights reserved 2022, Alex Craig</copyright>
+        <copyright>All rights reserved 2024, Alex Craig</copyright>
         <atom:link href="https://im-sticky.github.io/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Gotta go fast - Celeste speedrunning]]></title>
+            <title><![CDATA[Immortality - An FMV in this economy?]]></title>
+            <link>https://im-sticky.github.io/blog/immortality-review</link>
+            <guid>immortality-review</guid>
+            <pubDate>Tue, 26 Dec 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[A brief spoiler free review of the game Immortality.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Game Devlog - Game Jam Day and second round of updates]]></title>
+            <link>https://im-sticky.github.io/blog/game-devlog-part-3</link>
+            <guid>game-devlog-part-3</guid>
+            <pubDate>Sat, 25 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[An update of my exploits with game development and Godot.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Game Devlog - First round of updates]]></title>
+            <link>https://im-sticky.github.io/blog/game-devlog-part-2</link>
+            <guid>game-devlog-part-2</guid>
+            <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[An update of my exploits with game development and Godot.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Game Devlog - Initial game demo]]></title>
+            <link>https://im-sticky.github.io/blog/game-devlog-part-1</link>
+            <guid>game-devlog-part-1</guid>
+            <pubDate>Sun, 15 Oct 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[The beginning of my exploits with game development and Godot.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Gotta go fast - First goal achieved]]></title>
+            <link>https://im-sticky.github.io/blog/celeste-part-3</link>
+            <guid>celeste-part-3</guid>
+            <pubDate>Thu, 29 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[Hitting my first goal of sub 50 in Celeste speedruns and what's next.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Gotta go fast - Anxieties to starting runs]]></title>
+            <link>https://im-sticky.github.io/blog/celeste-part-2</link>
+            <guid>celeste-part-2</guid>
+            <pubDate>Mon, 19 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[The tough parts of learning the finishing bits of a Celeste speedrun.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Gotta go fast - Learning Celeste speedrunning]]></title>
             <link>https://im-sticky.github.io/blog/celeste-part-1</link>
             <guid>celeste-part-1</guid>
-            <pubDate>Thu, 01 Dec 2022 00:00:00 GMT</pubDate>
-            <description><![CDATA[My journey about beginning to learn how to speedrun Celeste.]]></description>
+            <pubDate>Sun, 04 Dec 2022 00:00:00 GMT</pubDate>
+            <description><![CDATA[The beginning of my journey learning how to speedrun Celeste.]]></description>
         </item>
         <item>
             <title><![CDATA[Tunic - A glimpse to the past]]></title>
