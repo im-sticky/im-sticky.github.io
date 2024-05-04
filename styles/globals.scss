@@ -110,3 +110,17 @@ deck-list::part(link) {
     background-size: 100% pxToRems(2px);
   }
 }
+
+.mobile-only {
+  @include landscape-tablet-and-up {
+    display: none;
+  }
+}
+
+.desktop-only {
+  display: none;
+
+  @include landscape-tablet-and-up {
+    display: initial;
+  }
+}

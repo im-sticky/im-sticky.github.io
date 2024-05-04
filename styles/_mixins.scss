@@ -86,6 +86,21 @@
   video {
     max-width: 100%;
   }
+
+  dl {
+    dt {
+      font-weight: 600;
+    }
+
+    dd {
+      display: list-item;
+      list-style-type: disc;
+
+      + dt {
+        margin-top: pxToRems(8px);
+      }
+    }
+  }
 }
 
 // media queries
