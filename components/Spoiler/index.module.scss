@@ -1,0 +1,46 @@
+@import 'styles/utilities.scss';
+
+.spoiler {
+  position: relative;
+  display: flow-root;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $font-color;
+    border-radius: 0.5rem;
+    z-index: 2;
+    transition: background-color $transition-time-normal $transition-ease-out-expo;
+  }
+
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    color: $background-color;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  &__text {
+    @include fontSize(10px);
+  }
+
+  &--spoiled {
+    &::before {
+      background-color: transparent;
+    }
+
+    .spoiler__button {
+      display: none;
+    }
+  }
+}

@@ -15,12 +15,13 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {ExternalLink} from 'components/Link';
 import {Figure} from 'components/Figure';
+import {Spoiler} from 'components/Spoiler';
 import {PageHead} from 'components/PageHead';
 import {formatDate} from 'helpers/formatDate';
 import styles from 'styles/BlogPost.module.scss';
 import sharedStyles from 'styles/Shared.module.scss';
 
-const mdxComponents = {ExternalLink, Figure, InternalLink};
+const mdxComponents = {ExternalLink, Figure, InternalLink, Spoiler};
 
 export default function Post({source, frontMatter, posts, slug}) {
   const [postIndex, setPostIndex] = useState(posts.findIndex((p) => p.slug === slug));
