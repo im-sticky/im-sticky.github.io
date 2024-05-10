@@ -16,12 +16,13 @@ import {
 import {ExternalLink} from 'components/Link';
 import {Figure} from 'components/Figure';
 import {Spoiler} from 'components/Spoiler';
+import {ImageCard} from 'components/ImageCard';
 import {PageHead} from 'components/PageHead';
 import {formatDate} from 'helpers/formatDate';
 import styles from 'styles/BlogPost.module.scss';
 import sharedStyles from 'styles/Shared.module.scss';
 
-const mdxComponents = {ExternalLink, Figure, InternalLink, Spoiler};
+const mdxComponents = {ExternalLink, Figure, InternalLink, Spoiler, ImageCard};
 
 export default function Post({source, frontMatter, posts, slug}) {
   const [postIndex, setPostIndex] = useState(posts.findIndex((p) => p.slug === slug));

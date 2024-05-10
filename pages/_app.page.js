@@ -1,5 +1,6 @@
 import 'normalize.css/normalize.css';
 import 'styles/globals.scss';
+import 'styles/grid.scss';
 import {GoogleAnalytics, usePageViews} from 'nextjs-google-analytics';
 import {Layout} from 'components/Layout';
 
