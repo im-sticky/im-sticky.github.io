@@ -4,7 +4,7 @@ $image-height: 8rem;
 
 .container {
   position: relative;
-  padding-top: calc(#{$image-height} - 2rem);
+  padding: calc(#{$image-height} - 2rem) 0.5rem 0 0.5rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   overflow: hidden;
