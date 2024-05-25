@@ -37,6 +37,7 @@
   &--spoiled {
     &::before {
       background-color: transparent;
+      pointer-events: none;
     }
 
     .spoiler__button {
