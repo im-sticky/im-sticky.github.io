@@ -38,7 +38,7 @@ export default function Home() {
             Socials
           </TitleShape>
           <small className={styles['about__sub-text']}>
-            You can find me on any of these platforms
+            You can find me or my work here and on any of these platforms
           </small>
 
           <ul className={styles['about__social-list']}>
