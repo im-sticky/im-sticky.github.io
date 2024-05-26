@@ -38,7 +38,13 @@ export default function Post({source, frontMatter, posts, slug}) {
         url={slug}
         title={frontMatter.title}
         description={frontMatter.description}
-        image={frontMatter.hero ? `/assets/${frontMatter.hero}` : '/mstile-144x144.png'}
+        image={
+          frontMatter.hero
+            ? `/assets/${frontMatter.hero}`
+            : frontMatter.shareAsset
+            ? `/assets/${frontMatter.shareAsset}`
+            : '/mstile-144x144.png'
+        }
       />
 
       <Section
