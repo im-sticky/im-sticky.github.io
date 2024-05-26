@@ -15,12 +15,15 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {ExternalLink} from 'components/Link';
 import {Figure} from 'components/Figure';
+import {Spoiler} from 'components/Spoiler';
+import {ImageCard} from 'components/ImageCard';
 import {PageHead} from 'components/PageHead';
+import {TableOfContents} from 'components/TableOfContents';
 import {formatDate} from 'helpers/formatDate';
 import styles from 'styles/BlogPost.module.scss';
 import sharedStyles from 'styles/Shared.module.scss';
 
-const mdxComponents = {ExternalLink, Figure, InternalLink};
+const mdxComponents = {ExternalLink, Figure, InternalLink, Spoiler, ImageCard, TableOfContents};
 
 export default function Post({source, frontMatter, posts, slug}) {
   const [postIndex, setPostIndex] = useState(posts.findIndex((p) => p.slug === slug));
@@ -35,7 +38,13 @@ export default function Post({source, frontMatter, posts, slug}) {
         url={slug}
         title={frontMatter.title}
         description={frontMatter.description}
-        image={frontMatter.hero ? `/assets/${frontMatter.hero}` : '/mstile-144x144.png'}
+        image={
+          frontMatter.hero
+            ? `/assets/${frontMatter.hero}`
+            : frontMatter.shareAsset
+            ? `/assets/${frontMatter.shareAsset}`
+            : '/mstile-144x144.png'
+        }
       />
 
       <Section
@@ -51,7 +60,7 @@ export default function Post({source, frontMatter, posts, slug}) {
               [styles['blog-post__hero--bottom']]: frontMatter.heroPosition === 'bottom',
             })}
             src={`/assets/${frontMatter.hero}`}
-            role="presentation"
+            alt=""
           />
         ) : null}
 

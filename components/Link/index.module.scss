@@ -9,6 +9,10 @@
     }
   }
 
+  &--active {
+    background-size: 100% pxToRems(2px);
+  }
+
   &--icon {
     display: inline-flex;
     align-items: center;

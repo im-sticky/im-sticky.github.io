@@ -44,6 +44,15 @@ p {
   margin: 0 0 pxToRems(8px) 0;
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0.5rem;
+  font: inherit;
+  cursor: pointer;
+}
+
 #__next {
   min-height: 100vh;
   display: flex;
@@ -52,6 +61,20 @@ p {
 
 .hidden {
   display: none !important;
+}
+
+.mobile-only {
+  @include landscape-tablet-and-up {
+    display: none;
+  }
+}
+
+.desktop-only {
+  display: none;
+
+  @include landscape-tablet-and-up {
+    display: initial;
+  }
 }
 
 deck-list {

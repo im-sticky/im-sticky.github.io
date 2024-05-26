@@ -13,6 +13,7 @@ export function InternalLink({
   className,
   noUnderline = false,
   icon = false,
+  active = false,
   ...props
 }) {
   return (
@@ -22,6 +23,7 @@ export function InternalLink({
         className={clsx(styles.link, className, {
           [styles['link--no-underline']]: noUnderline,
           [styles['link--icon']]: icon,
+          [styles['link--active']]: active,
         })}
       >
         {children}
@@ -35,6 +37,7 @@ InternalLink.propTypes = {
   className: PropTypes.string,
   children: PropTypes.any.isRequired,
   noUnderline: PropTypes.bool,
+  active: PropTypes.bool,
   icon: PropTypes.bool,
 };
 

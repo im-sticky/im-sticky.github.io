@@ -1,0 +1,52 @@
+@use 'sass:math';
+@import 'styles/utilities.scss';
+
+$item-indentation: 1rem;
+$contents-width: math.div($container-width, 3) + 32px;
+
+.heading {
+  @include fontSize(13px);
+  font-weight: 600;
+}
+
+.contents {
+  padding: 0 1rem;
+
+  @media (min-width: #{$tablet-landscape-width + $contents-width * 2}) {
+    position: fixed;
+    transform: translateX(calc(-100% - #{$container-width / 6}));
+    width: pxToRems($contents-width);
+    margin: 0;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+
+    @media (min-width: #{$tablet-landscape-width + $contents-width * 2}) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    line-height: 1.25;
+    padding: 0.25rem 0;
+
+    &--h3 {
+      padding-left: $item-indentation;
+    }
+
+    &--h4 {
+      padding-left: $item-indentation * 2;
+    }
+
+    &--h5 {
+      padding-left: $item-indentation * 3;
+    }
+
+    &--h6 {
+      padding-left: $item-indentation * 4;
+    }
+  }
+}
