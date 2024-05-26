@@ -60,7 +60,7 @@ export default function Post({source, frontMatter, posts, slug}) {
               [styles['blog-post__hero--bottom']]: frontMatter.heroPosition === 'bottom',
             })}
             src={`/assets/${frontMatter.hero}`}
-            role="presentation"
+            alt=""
           />
         ) : null}
 
