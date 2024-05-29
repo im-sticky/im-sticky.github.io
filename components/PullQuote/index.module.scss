@@ -1,0 +1,44 @@
+@use 'sass:math';
+@import 'styles/utilities.scss';
+
+.quote {
+  position: relative;
+  margin: 1rem;
+  border-left: 3px solid $primary-color;
+  padding: 0.5rem 1rem;
+  @include fontSize(13px);
+
+  @include landscape-tablet-and-up {
+    margin: 0.75rem 1.5rem;
+    @include fontSize(20px);
+    width: math.div($container-width, 2);
+
+    &--right {
+      float: right;
+      clear: right;
+      margin-right: pxToRems(math.div(-$container-width, 6));
+    }
+
+    &--left {
+      float: left;
+      clear: left;
+      margin-left: pxToRems(math.div(-$container-width, 6));
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    z-index: -1;
+    color: $primary-color;
+    opacity: 0.1;
+    font-size: 8rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  p {
+    margin: 0 !important;
+    font-style: italic;
+  }
+}

@@ -19,11 +19,20 @@ import {Spoiler} from 'components/Spoiler';
 import {ImageCard} from 'components/ImageCard';
 import {PageHead} from 'components/PageHead';
 import {TableOfContents} from 'components/TableOfContents';
+import {PullQuote} from 'components/PullQuote';
 import {formatDate} from 'helpers/formatDate';
 import styles from 'styles/BlogPost.module.scss';
 import sharedStyles from 'styles/Shared.module.scss';
 
-const mdxComponents = {ExternalLink, Figure, InternalLink, Spoiler, ImageCard, TableOfContents};
+const mdxComponents = {
+  ExternalLink,
+  Figure,
+  InternalLink,
+  Spoiler,
+  ImageCard,
+  TableOfContents,
+  PullQuote,
+};
 
 export default function Post({source, frontMatter, posts, slug}) {
   const [postIndex, setPostIndex] = useState(posts.findIndex((p) => p.slug === slug));
