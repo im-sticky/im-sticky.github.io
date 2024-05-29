@@ -28,17 +28,17 @@ export default function Home() {
               team.
             </p>
             <p>
-              I enjoy creating visual, interactive, and mixed media web based projects. A few of my
-              hobbies include Magic The Gathering, competitive Smash Bros., as well as collecting
-              old video games and&nbsp;vinyl.
+              I enjoy creating interactive mixed media projects and dabbling in game development.
+              Some of my hobbies and interests include Magic The Gathering, speedrunning,
+              competitive Smash Bros., and collecting video game paraphernalia.
             </p>
           </div>
 
           <TitleShape small level={2} icon={faUserFriends}>
-            Socials
+            Work &amp; Socials
           </TitleShape>
           <small className={styles['about__sub-text']}>
-            You can find me or my work here and on any of these platforms
+            Find my work and musings here or on these platforms
           </small>
 
           <ul className={styles['about__social-list']}>

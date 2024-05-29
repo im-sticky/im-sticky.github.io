@@ -39,10 +39,10 @@ export default function Post({source, frontMatter, posts, slug}) {
         title={frontMatter.title}
         description={frontMatter.description}
         image={
-          frontMatter.hero
-            ? `/assets/${frontMatter.hero}`
-            : frontMatter.shareAsset
+          frontMatter.shareAsset
             ? `/assets/${frontMatter.shareAsset}`
+            : frontMatter.hero
+            ? `/assets/${frontMatter.hero}`
             : '/mstile-144x144.png'
         }
       />
