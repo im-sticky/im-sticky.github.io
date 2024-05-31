@@ -1,4 +1,48 @@
+@use 'sass:color';
 @import 'styles/utilities.scss';
+
+.cube {
+  position: relative;
+  background: $primary-color;
+  width: 80px;
+  height: 80px;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateZ(45deg);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: color.adjust($primary-color, $lightness: -15%);
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: color.adjust($primary-color, $lightness: -30%);
+    transform-origin: 0 0;
+    transform: rotateY(90deg);
+  }
+
+  &:nth-of-type(odd) {
+    transform: translate3d(40px, -5px, 0) rotateX(60deg) rotateZ(45deg);
+  }
+
+  &:nth-of-type(even) {
+    transform: translate3d(-40px, 5px, 0) rotateX(60deg) rotateZ(45deg);
+  }
+}
 
 .about {
   display: flex;

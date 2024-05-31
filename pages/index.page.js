@@ -12,6 +12,9 @@ export default function Home() {
     <>
       <PageHead url="" title="Home" description="Portfolio website of Alex Craig." />
 
+      <div className={styles.cube}></div>
+      <div className={styles.cube}></div>
+      <div className={styles.cube}></div>
       <Section grow className={styles.about}>
         <Container className={styles.about__body}>
           <TitleShape icon={faTerminal}>Alex Craig</TitleShape>
