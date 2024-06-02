@@ -1,0 +1,37 @@
+@import '@styles/utilities.scss';
+
+.blog-list {
+  @include pagePadding;
+  @include gutters;
+
+  &__descriptor {
+    margin-bottom: 0;
+
+    &--small {
+      font-size: 80%;
+      line-height: 1.4;
+    }
+  }
+
+  &__rss {
+    margin-right: pxToRems(4px);
+    max-width: pxToRems(12px);
+  }
+
+  .post {
+    margin-top: pxToRems(24px);
+
+    &:first-of-type {
+      margin-top: pxToRems(40px);
+    }
+
+    &__description {
+      margin-bottom: 0;
+    }
+
+    &__date {
+      display: block;
+      font-style: italic;
+    }
+  }
+}

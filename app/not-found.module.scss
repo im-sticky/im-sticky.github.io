@@ -1,0 +1,19 @@
+@import '@styles/utilities.scss';
+
+.not-found {
+  text-align: center;
+  justify-content: center;
+
+  &__title {
+    @include fontSize(52px);
+    line-height: 1;
+  }
+
+  &__text {
+    margin-bottom: 0;
+  }
+
+  &__back {
+    @include fontSize(12px);
+  }
+}

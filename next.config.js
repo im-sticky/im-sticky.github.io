@@ -1,10 +1,12 @@
-const prod = process.env.NODE_ENV === 'production';
+const path = require('path');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
-  assetPrefix: prod ? '' : '',
-  pageExtensions: ['page.js', 'page.ts'],
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
 };
 
 module.exports = nextConfig;

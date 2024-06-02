@@ -2,7 +2,6 @@
 
 html {
   @include fontSize($baseFontSize);
-  font-family: 'Montserrat', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Sulphur Point', sans-serif;
+  font-family: var(--font-sulphur-point);
   font-weight: 400;
   line-height: 1.2;
   margin: 0;
@@ -53,7 +52,7 @@ button {
   cursor: pointer;
 }
 
-#__next {
+#main {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
