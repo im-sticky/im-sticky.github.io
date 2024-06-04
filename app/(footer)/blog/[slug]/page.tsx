@@ -8,27 +8,18 @@ import {InternalLink} from '@components/InternalLink';
 import {TitleShape} from '@components/TitleShape';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faQuoteLeft, faLongArrowLeft, faLongArrowRight} from '@fortawesome/free-solid-svg-icons';
-import {Article} from './article';
+import {Mdx} from './mdx';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
+import {Metadata} from 'next';
+import {SITE_URL} from '@helpers/constants';
 
-/* <PageHead
-      url={slug}
-      title={frontMatter.title}
-      description={frontMatter.description}
-      image={
-        frontMatter.shareAsset
-          ? `/assets/${frontMatter.shareAsset}`
-          : frontMatter.hero
-          ? `/assets/${frontMatter.hero}`
-          : '/mstile-144x144.png'
-      }
-    /> */
+interface PostParams {
+  slug: string;
+}
 
 interface PostProps {
-  params: {
-    slug: string;
-  };
+  params: PostParams;
 }
 
 export default async function Post({params}: PostProps) {
@@ -124,7 +115,9 @@ export default async function Post({params}: PostProps) {
           </p>
         ) : null}
 
-        <Article mdxSource={mdxSource} className={styles['blog-post__content']} />
+        <article className={styles['blog-post__content']}>
+          <Mdx mdxSource={mdxSource} />
+        </article>
 
         <div className={sharedStyles['pagination']}>
           {postIndex > 0 ? (
@@ -156,8 +149,27 @@ export default async function Post({params}: PostProps) {
   );
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<PostParams[]> {
   return getAllPosts(['slug']).map((post) => ({
     slug: post.slug,
   }));
+}
+
+export async function generateMetadata({params}: PostProps): Promise<Metadata> {
+  const {frontMatter} = getPost(params.slug);
+
+  return {
+    title: frontMatter.title,
+    description: frontMatter.description,
+    openGraph: {
+      url: `${SITE_URL}/blog/${params.slug}`,
+      images: {
+        url: frontMatter.shareAsset
+          ? `/assets/${frontMatter.shareAsset}`
+          : frontMatter.hero
+          ? `/assets/${frontMatter.hero}`
+          : '/default-share.png',
+      },
+    },
+  };
 }

@@ -24,13 +24,8 @@ const components = {
 
 interface ArticleProps {
   mdxSource: MDXRemoteSerializeResult;
-  className?: string;
 }
 
-export function Article({mdxSource, className}: ArticleProps) {
-  return (
-    <article className={className}>
-      <MDX {...mdxSource} components={components} />
-    </article>
-  );
+export function Mdx({mdxSource}: ArticleProps) {
+  return <MDX {...mdxSource} components={components} />;
 }

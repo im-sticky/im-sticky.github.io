@@ -1,5 +1,4 @@
 import clsx from 'clsx';
-import {Suspense} from 'react';
 import {Metadata} from 'next';
 import {getAllPosts} from '@helpers/postUtils';
 import {Section} from '@components/Section';
@@ -61,9 +60,7 @@ export default function Blog() {
           </InternalLink>
         </p>
 
-        <Suspense>
-          <PostList allPosts={posts} />
-        </Suspense>
+        <PostList allPosts={posts} />
       </Container>
     </Section>
   );

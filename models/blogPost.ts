@@ -4,6 +4,7 @@ export interface IBlogPostFrontMatter {
   description: string;
   edited?: string;
   customLink?: string;
+  shareAsset?: string;
   hero?: string;
   heroPosition?: string;
   mobileHeroPosition?: string;
