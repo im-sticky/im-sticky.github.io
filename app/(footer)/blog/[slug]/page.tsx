@@ -9,10 +9,11 @@ import {TitleShape} from '@components/TitleShape';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faQuoteLeft, faLongArrowLeft, faLongArrowRight} from '@fortawesome/free-solid-svg-icons';
 import {Mdx} from './mdx';
-import sharedStyles from '@styles/shared.module.scss';
-import styles from './index.module.scss';
 import {Metadata} from 'next';
 import {SITE_URL} from '@helpers/constants';
+import {openGraphMeta} from '@helpers/openGraphMeta';
+import sharedStyles from '@styles/shared.module.scss';
+import styles from './index.module.scss';
 
 interface PostParams {
   slug: string;
@@ -161,15 +162,13 @@ export async function generateMetadata({params}: PostProps): Promise<Metadata> {
   return {
     title: frontMatter.title,
     description: frontMatter.description,
-    openGraph: {
-      url: `${SITE_URL}/blog/${params.slug}`,
-      images: {
-        url: frontMatter.shareAsset
-          ? `/assets/${frontMatter.shareAsset}`
-          : frontMatter.hero
-          ? `/assets/${frontMatter.hero}`
-          : '/default-share.png',
-      },
-    },
+    openGraph: openGraphMeta(
+      `/blog/${params.slug}`,
+      frontMatter.shareAsset
+        ? `/assets/${frontMatter.shareAsset}`
+        : frontMatter.hero
+        ? `/assets/${frontMatter.hero}`
+        : '/default-share.png'
+    ),
   };
 }

@@ -9,12 +9,14 @@ import {Section} from '@components/Section';
 import {Container} from '@components/Container';
 import {InternalLink} from '@components/InternalLink';
 import {ExternalLink} from '@components/ExternalLink';
+import {openGraphMeta} from '@helpers/openGraphMeta';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
 
 export const metadata: Metadata = {
   title: 'Projects',
   description: "List of some of Alex Craig's Projects",
+  openGraph: openGraphMeta('/projects'),
 };
 
 export default function Projects() {

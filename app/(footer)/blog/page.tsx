@@ -7,13 +7,15 @@ import {InternalLink} from '@components/InternalLink';
 import {TitleShape} from '@components/TitleShape';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faQuoteLeft, faRssSquare, faLongArrowLeft} from '@fortawesome/free-solid-svg-icons';
+import {PostList} from './postList';
+import {openGraphMeta} from '@helpers/openGraphMeta';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
-import {PostList} from './postList';
 
 export const metadata: Metadata = {
   title: 'Blog',
   description: "Alex Craig's Blog.",
+  openGraph: openGraphMeta('/blog'),
 };
 
 export default function Blog() {
@@ -41,7 +43,7 @@ export default function Blog() {
         >
           <InternalLink icon to="/">
             <FontAwesomeIcon icon={faLongArrowLeft} className={sharedStyles['page__back-icon']} />
-            Back to home
+            Back to about
           </InternalLink>
         </p>
         <TitleShape icon={faQuoteLeft}>Blog Posts</TitleShape>

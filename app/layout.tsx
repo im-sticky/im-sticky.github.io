@@ -3,6 +3,7 @@ import {Metadata} from 'next';
 import {Montserrat, Sulphur_Point} from 'next/font/google';
 import {config} from '@fortawesome/fontawesome-svg-core';
 import {SITE_URL} from '@helpers/constants';
+import {openGraphMeta} from '@helpers/openGraphMeta';
 import 'normalize.css/normalize.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import '@styles/globals.scss';
@@ -25,15 +26,7 @@ export const metadata: Metadata = {
     default: 'About',
   },
   description: 'Personal website of Alex Craig.',
-  openGraph: {
-    siteName: 'Alex Craig Website',
-    type: 'website',
-    images: {
-      url: '/default-share.png',
-      width: 144,
-      height: 144,
-    },
-  },
+  openGraph: openGraphMeta(),
   twitter: {
     site: '@im_sticky',
     card: 'summary',

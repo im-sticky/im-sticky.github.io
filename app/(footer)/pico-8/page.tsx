@@ -6,12 +6,14 @@ import {TitleShape} from '@components/TitleShape';
 import {InternalLink} from '@components/InternalLink';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faGamepad, faLongArrowLeft} from '@fortawesome/free-solid-svg-icons';
+import {openGraphMeta} from '@helpers/openGraphMeta';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
 
 export const metadata: Metadata = {
   title: 'PICO-8 Carts',
   description: 'A collection of PICO-8 games and concept carts',
+  openGraph: openGraphMeta('/pico-8'),
 };
 
 export default function Pico() {
