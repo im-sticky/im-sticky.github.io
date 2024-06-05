@@ -1,5 +1,5 @@
 @use 'sass:math';
-@import 'styles/utilities.scss';
+@import '@styles/utilities.scss';
 
 $item-indentation: 1rem;
 $contents-width: math.div($container-width, 3) + 32px;

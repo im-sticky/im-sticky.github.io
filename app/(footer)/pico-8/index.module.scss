@@ -1,0 +1,34 @@
+@import '@styles/utilities.scss';
+
+.carts {
+  @include pagePadding;
+  @include gutters;
+
+  &__list {
+    margin-top: pxToRems(40px);
+    display: flex;
+    flex-wrap: wrap;
+    gap: pxToRems(24px);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  &__img {
+    display: block;
+    transition: transform $transition-time-normal $transition-ease-out-expo;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      .carts__img {
+        transform: translateY(pxToRems(-12px));
+      }
+    }
+  }
+}

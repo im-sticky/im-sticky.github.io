@@ -1,37 +1,39 @@
 {
   "name": "im-sticky.github.io",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
-    "postbuild": "next-sitemap --config next-sitemap.config.js && node generate-rss.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prebuild": "next-sitemap --config next-sitemap.config.js && node generate-rss.mjs"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/free-regular-svg-icons": "^6.1.1",
-    "@fortawesome/free-solid-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
-    "clsx": "^1.1.1",
-    "gray-matter": "^4.0.3",
-    "mtg-card-seer": "^2.0.2",
-    "next": "12.1.4",
-    "next-mdx-remote": "^4.0.2",
-    "nextjs-google-analytics": "^1.2.1",
-    "normalize.css": "^8.0.1",
-    "prop-types": "^15.8.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "@fortawesome/fontawesome-svg-core": "6.5.2",
+    "@fortawesome/free-brands-svg-icons": "6.5.2",
+    "@fortawesome/free-regular-svg-icons": "6.5.2",
+    "@fortawesome/free-solid-svg-icons": "6.5.2",
+    "@fortawesome/react-fontawesome": "0.2.2",
+    "clsx": "2.1.1",
+    "gray-matter": "4.0.3",
+    "mtg-card-seer": "2.0.2",
+    "next": "14.2.3",
+    "next-mdx-remote": "5.0.0",
+    "nextjs-google-analytics": "2.3.3",
+    "normalize.css": "8.0.1",
+    "react": "18",
+    "react-dom": "18"
   },
   "devDependencies": {
-    "eslint": "8.12.0",
-    "eslint-config-next": "12.1.4",
-    "feed": "^4.2.2",
-    "next-sitemap": "^2.5.20",
-    "sass": "^1.49.11"
+    "@types/node": "20",
+    "@types/react": "18",
+    "@types/react-dom": "18",
+    "eslint": "8",
+    "eslint-config-next": "14.2.3",
+    "feed": "4.2.2",
+    "next-sitemap": "4.2.3",
+    "sass": "1.77.4",
+    "typescript": "5"
   }
 }

@@ -1,0 +1,17 @@
+@import '@styles/utilities.scss';
+
+.external-link {
+  @include linkStyles;
+
+  @include focusStates {
+    background-size: 100% pxToRems(2px);
+  }
+
+  display: inline-flex;
+  align-items: center;
+
+  &__icon {
+    @include fontSize(10px);
+    margin-left: pxToRems(4px);
+  }
+}

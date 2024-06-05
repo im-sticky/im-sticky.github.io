@@ -19,14 +19,20 @@ export function getPost(slug) {
   const fileContents = fs.readFileSync(fullPath, 'utf-8');
   const {data, content} = matter(fileContents);
 
-  return {data, content};
+  return {frontMatter: data, content};
 }
 
 // load the post items
 export function getPostItems(filePath, fields = []) {
   const slug = filePath.replace(/\.mdx?$/, '');
-  const {data, content} = getPost(slug);
-  const items = {};
+  const {frontMatter, content} = getPost(slug);
+  const items = {
+    slug: '',
+    content: '',
+    title: '',
+    date: '',
+    description: '',
+  };
 
   // just load and include the content needed
   fields.forEach((field) => {
@@ -38,8 +44,8 @@ export function getPostItems(filePath, fields = []) {
       items[field] = content;
     }
 
-    if (data[field]) {
-      items[field] = data[field];
+    if (frontMatter[field]) {
+      items[field] = frontMatter[field];
     }
   });
 
@@ -60,12 +66,14 @@ export function getAllPosts(fields) {
 export function getAllCrtClips() {
   const filePaths = fs.readdirSync(CLIPS_PATH).filter((path) => /\.(webm|mp4)?$/.test(path));
 
-  return filePaths.map((path) => {
-    const match = path.match(/(.+)\.(webm|mp4)?$/);
+  return filePaths
+    .map((path) => {
+      const match = path.match(/(.+)\.(webm|mp4)?$/);
 
-    return {
-      slug: match[1],
-      mimetype: match[2],
-    };
-  });
+      return {
+        slug: match[1],
+        mimetype: match[2],
+      };
+    })
+    .filter((x) => !!x);
 }
