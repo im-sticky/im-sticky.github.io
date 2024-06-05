@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import {Metadata} from 'next';
 import {MDXRemote} from 'next-mdx-remote/rsc';
-import {getAllPosts, getPost} from '@helpers/postUtils';
+import {IBlogPost} from '@models/blogPost';
+import {getAllPosts, getPost} from '@helpers/postUtils.mjs';
 import {formatDate} from '@helpers/formatDate';
 import {openGraphMeta} from '@helpers/openGraphMeta';
 import {Section} from '@components/Section';
@@ -40,7 +41,7 @@ interface PostProps {
 export default async function Post({params}: PostProps) {
   const {frontMatter, content} = getPost(params.slug);
   // const mdxSource = await serialize(content);
-  const allPosts = getAllPosts(['slug', 'date', 'customLink']);
+  const allPosts = getAllPosts(['slug', 'date', 'customLink']) as IBlogPost[];
   const postIndex = allPosts.findIndex((p) => p.slug === params.slug);
 
   return (

@@ -1,6 +1,6 @@
 import {Metadata} from 'next';
 import {Section} from '@components/Section';
-import {getAllCrtClips} from '@helpers/postUtils';
+import {getAllCrtClips} from '@helpers/postUtils.mjs';
 import {openGraphMeta} from '@helpers/openGraphMeta';
 import {Crt} from './crt';
 import styles from './index.module.scss';

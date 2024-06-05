@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import {Metadata} from 'next';
-import {getAllPosts} from '@helpers/postUtils';
+import {getAllPosts} from '@helpers/postUtils.mjs';
 import {Section} from '@components/Section';
 import {Container} from '@components/Container';
 import {InternalLink} from '@components/InternalLink';

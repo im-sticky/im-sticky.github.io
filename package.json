@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prebuild": "next-sitemap --config next-sitemap.config.js"
+    "prebuild": "next-sitemap --config next-sitemap.config.js && node generate-rss.mjs"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.5.2",

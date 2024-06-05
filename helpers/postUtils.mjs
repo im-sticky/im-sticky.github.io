@@ -1,8 +1,6 @@
 import matter from 'gray-matter';
 import {join} from 'path';
 import fs from 'fs';
-import {IBlogPostFrontMatter, IBlogPost} from '@models/blogPost';
-import {ICrtClip} from '@models/crtClip';
 
 const disabledPosts = ['edh'];
 
@@ -16,19 +14,19 @@ function getPostsFilePaths() {
 }
 
 // getting a single post
-export function getPost(slug: string) {
+export function getPost(slug) {
   const fullPath = join(POSTS_PATH, `${slug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, 'utf-8');
   const {data, content} = matter(fileContents);
 
-  return {frontMatter: data as IBlogPostFrontMatter, content};
+  return {frontMatter: data, content};
 }
 
 // load the post items
-export function getPostItems(filePath: string, fields: string[] = []): IBlogPost {
+export function getPostItems(filePath, fields = []) {
   const slug = filePath.replace(/\.mdx?$/, '');
   const {frontMatter, content} = getPost(slug);
-  const items: IBlogPost = {
+  const items = {
     slug: '',
     content: '',
     title: '',
@@ -46,9 +44,7 @@ export function getPostItems(filePath: string, fields: string[] = []): IBlogPost
       items[field] = content;
     }
 
-    // @ts-ignore
     if (frontMatter[field]) {
-      // @ts-ignore
       items[field] = frontMatter[field];
     }
   });
@@ -57,7 +53,7 @@ export function getPostItems(filePath: string, fields: string[] = []): IBlogPost
 }
 
 // getting all posts
-export function getAllPosts(fields: string[]): IBlogPost[] {
+export function getAllPosts(fields) {
   const filePaths = getPostsFilePaths();
   const posts = filePaths
     .map((filePath) => getPostItems(filePath, fields))
@@ -67,7 +63,7 @@ export function getAllPosts(fields: string[]): IBlogPost[] {
   return posts;
 }
 
-export function getAllCrtClips(): ICrtClip[] {
+export function getAllCrtClips() {
   const filePaths = fs.readdirSync(CLIPS_PATH).filter((path) => /\.(webm|mp4)?$/.test(path));
 
   return filePaths
@@ -75,11 +71,9 @@ export function getAllCrtClips(): ICrtClip[] {
       const match = path.match(/(.+)\.(webm|mp4)?$/);
 
       return {
-        // @ts-ignore
         slug: match[1],
-        // @ts-ignore
         mimetype: match[2],
-      } as ICrtClip;
+      };
     })
     .filter((x) => !!x);
 }
