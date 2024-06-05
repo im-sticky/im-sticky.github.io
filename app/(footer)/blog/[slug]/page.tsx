@@ -1,19 +1,33 @@
-import {serialize} from 'next-mdx-remote/serialize';
+import clsx from 'clsx';
+import {Metadata} from 'next';
+import {MDXRemote} from 'next-mdx-remote/rsc';
 import {getAllPosts, getPost} from '@helpers/postUtils';
 import {formatDate} from '@helpers/formatDate';
-import clsx from 'clsx';
+import {openGraphMeta} from '@helpers/openGraphMeta';
 import {Section} from '@components/Section';
 import {Container} from '@components/Container';
 import {InternalLink} from '@components/InternalLink';
 import {TitleShape} from '@components/TitleShape';
+import {ExternalLink} from '@components/ExternalLink';
+import {Figure} from '@components/Figure';
+import {Spoiler} from '@components/Spoiler';
+import {ImageCard} from '@components/ImageCard';
+import {TableOfContents} from '@components/TableOfContents';
+import {PullQuote} from '@components/PullQuote';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faQuoteLeft, faLongArrowLeft, faLongArrowRight} from '@fortawesome/free-solid-svg-icons';
-import {Mdx} from './mdx';
-import {Metadata} from 'next';
-import {SITE_URL} from '@helpers/constants';
-import {openGraphMeta} from '@helpers/openGraphMeta';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
+
+const mdxComponents = {
+  InternalLink,
+  ExternalLink,
+  Figure,
+  Spoiler,
+  ImageCard,
+  TableOfContents,
+  PullQuote,
+};
 
 interface PostParams {
   slug: string;
@@ -25,7 +39,7 @@ interface PostProps {
 
 export default async function Post({params}: PostProps) {
   const {frontMatter, content} = getPost(params.slug);
-  const mdxSource = await serialize(content);
+  // const mdxSource = await serialize(content);
   const allPosts = getAllPosts(['slug', 'date', 'customLink']);
   const postIndex = allPosts.findIndex((p) => p.slug === params.slug);
 
@@ -117,7 +131,8 @@ export default async function Post({params}: PostProps) {
         ) : null}
 
         <article className={styles['blog-post__content']}>
-          <Mdx mdxSource={mdxSource} />
+          {/* <Mdx mdxSource={mdxSource} /> */}
+          <MDXRemote source={content} components={mdxComponents} />
         </article>
 
         <div className={sharedStyles['pagination']}>
