@@ -48,10 +48,11 @@ export default function About() {
           <SocialLink href="https://github.com/im-sticky" name="GitHub" />
           <SocialLink href="https://www.linkedin.com/in/alex-craig-57427069/" name="LinkedIn" />
           <SocialLink href="https://twitter.com/im_sticky" name="Twitter" />
+          <SocialLink href="https://www.speedrun.com/users/im_sticky" name="Speedrun.com" />
         </ul>
 
         <p className={styles['about__email']}>
-          Want to get in touch with me directly? Feel free to email me at{' '}
+          Want to get in touch with me directly? Email me at{' '}
           <ExternalLink href="mailto:dev.alexcraig@gmail.com">dev.alexcraig@gmail.com</ExternalLink>
           .
         </p>
