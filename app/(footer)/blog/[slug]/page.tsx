@@ -40,7 +40,6 @@ interface PostProps {
 
 export default async function Post({params}: PostProps) {
   const {frontMatter, content} = getPost(params.slug);
-  // const mdxSource = await serialize(content);
   const allPosts = getAllPosts(['slug', 'date', 'customLink']) as IBlogPost[];
   const postIndex = allPosts.findIndex((p) => p.slug === params.slug);
 
@@ -132,7 +131,6 @@ export default async function Post({params}: PostProps) {
         ) : null}
 
         <article className={styles['blog-post__content']}>
-          {/* <Mdx mdxSource={mdxSource} /> */}
           <MDXRemote source={content} components={mdxComponents} />
         </article>
 
