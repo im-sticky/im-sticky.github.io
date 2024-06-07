@@ -11,6 +11,14 @@
     },
     "items": [
         {
+            "id": "nextjs-on-github-pages",
+            "url": "https://im-sticky.github.io/blog/nextjs-on-github-pages",
+            "title": "Next.js on GitHub Pages",
+            "summary": "A short guide to automating deploying a static Next.js site on GitHub Pages.",
+            "date_modified": "2024-06-05T00:00:00.000Z",
+            "author": {}
+        },
+        {
             "id": "spring-game-ratings",
             "url": "https://im-sticky.github.io/blog/spring-game-ratings",
             "title": "Tri-annual game review roundup - Spring Edition",
