@@ -1,14 +1,13 @@
 {
   "name": "im-sticky.github.io",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prebuild": "node generate-rss.mjs",
-    "postbuild": "next-sitemap --config next-sitemap.config.js && move-file ./public/sitemap.xml ./out/sitemap.xml && move-file ./public/sitemap-0.xml ./out/sitemap-0.xml"
+    "postbuild": "node generate-rss.mjs && next-sitemap --config next-sitemap.config.js && move-file ./public/sitemap.xml ./out/sitemap.xml && move-file ./public/sitemap-0.xml ./out/sitemap-0.xml && move-file ./public/feed.xml ./out/feed.xml && move-file ./public/feed.json ./out/feed.json && move-file ./public/atom.xml ./out/atom.xml"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.5.2",
