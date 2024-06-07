@@ -92,7 +92,8 @@ function getProjects() {
     new Project({
       title: 'PICO-8 Carts',
       description: 'A collection of PICO-8 games and concept carts I have made.',
-      link: '/pico-8',
+      link: 'https://www.lexaloffle.com/bbs/?uid=59846&mode=carts&sub=0#m',
+      external: true,
       image: '/projects/pico-8.jpg',
     }),
     new Project({

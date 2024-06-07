@@ -51,7 +51,7 @@ export default function About() {
         </ul>
 
         <p className={styles['about__email']}>
-          Want to get in touch with me directly? Feel free to email me at{' '}
+          Want to get in touch with me directly? Email me at{' '}
           <ExternalLink href="mailto:dev.alexcraig@gmail.com">dev.alexcraig@gmail.com</ExternalLink>
           .
         </p>

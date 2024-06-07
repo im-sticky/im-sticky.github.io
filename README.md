@@ -1,10 +1,12 @@
 # im-sticky.github.io
 
-This is a build for my personal website which is publicly available through the use github pages. While much of the content and code is for personal use, if you would like an easy to setup and deploy blog the structure of my site is available to view here for your own purposes.
+This is the repository for my [personal website](https://im-sticky.github.io/) which is built with [Next.js](https://nextjs.org/) and hosted using [GitHub Pages](https://pages.github.com/). I wrote a [blog post](https://im-sticky.github.io/blog/nextjs-on-github-pages) about hosting a static Next.js site on GitHub pages.
 
-## Local dev
+While much of the content and code is for personal use, if you would like an easy to setup and deploy website or blog, the structure is available to view here.
 
-The website is built using [Next.js](https://nextjs.org/). To run local development server:
+## Local development
+
+To run local development server:
 
 ```
 npm install
@@ -13,4 +15,4 @@ npm run dev
 
 ## Deploying
 
-Deploying is managed through GitHub actions. It is setup from [this blog post](https://gregrickaby.blog/article/nextjs-github-pages) and the deploy action can be found [here](/.github/workflows/deploy.yml).
+Deploying is automatic whenever any commits are pushed to the `main` branch. It is managed through [GitHub Actions](https://docs.github.com/en/actions) and the workflow is [here](/.github/workflows/deploy.yml).

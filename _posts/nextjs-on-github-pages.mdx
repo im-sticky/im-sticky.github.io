@@ -1,0 +1,123 @@
+---
+title: Next.js on GitHub Pages
+description: A short guide to automating deploying a static Next.js site on GitHub Pages.
+date: '2024-06-05'
+category: Development
+---
+
+_Vercel has an <ExternalLink href="https://github.com/vercel/next.js/tree/main/examples/github-pages">official example</ExternalLink> for deploying to GitHub Pages. Look at this as well to make an informed decision on what strategy works best for you._
+
+My original setup for hosting a static <ExternalLink href="https://nextjs.org/">Next.js</ExternalLink> site on <ExternalLink href="https://pages.github.com/">GitHub Pages</ExternalLink> was made using a blog post that unfortunately no longer exists. So here is a guide for what I have now.
+
+## Configure Next.js
+
+> 📢 This guide is using Next.js version 14 using app router.
+
+In your `next.config.js` file add the following:
+
+```
+const nextConfig = {
+  output: 'export',
+  // Any other config options
+};
+
+module.exports = nextConfig;
+```
+
+In your `/app/layout.tsx` file add the following at the bottom of the file:
+
+```
+export const dynamic = 'force-static';
+```
+
+Lastly add a blank `.nojekyll` file in the `/public/` folder to disable GitHub Pages from trying to create a Jekyll website.
+
+## Setup GitHub repository
+
+Configure your repo for automating deployments.
+
+### Enable GitHub Pages
+
+To enable Pages in your GitHub repo:
+
+1. Create and push a **gh-pages**
+2. Go to **Settings -> Pages**
+3. Set the **Build and deployment -> Source** to **Deploy from a branch**
+4. Set the branch to **gh-pages**
+5. Set the folder to **/ (root)**
+6. Save
+
+### Generate deploy keys
+
+For <ExternalLink href="https://docs.github.com/en/actions">GitHub Actions</ExternalLink> to commit and push to the `gh-pages` branch you need to generate public and private keys for it to authenticate.
+
+In your Next.js root directory run the following command:
+
+```
+ssh-keygen -t rsa -b 4096 -C "$(git config user.email)" -f gh-pages -N ""
+```
+
+### Setup deploy key
+
+In your GitHub repo:
+
+1. Go to **Settings -> Deploy Keys**
+2. Click **Add deploy key**
+3. Add title: **Public key of ACTIONS_DEPLOY_KEY**
+4. Add key: _copy and paste the public key you just generated_
+5. Check: Allow write access
+6. Add key
+
+### Setup private key
+
+In your GitHub repo:
+
+1. Go to **Settings -> Secrets and variables -> Actions**
+2. Click **New repository secret**
+3. Add name: **ACTIONS_DEPLOY_KEY**
+4. Add secret: _copy and paste the private key you just generated_
+5. Add secret
+
+Now GitHub Actions is able to authenticate with your repo. Delete the two keys from your Next.js root directory. **Do not commit or share those files with anyone.**
+
+## Setup GitHub Actions
+
+Add a workflow file `/.github/workflows/deploy.yml`:
+
+```
+name: Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.1.5
+
+      - name: Setup Node
+        uses: actions/setup-node@v4.0.2
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Build
+        run: |
+          npm i
+          npm run build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          publish_dir: ./out
+```
+
+## Enjoy your site
+
+You're done! Now whenever you push to the `main` branch your site will automatically build and deploy and be publicly available at `repo-name.github.io`.

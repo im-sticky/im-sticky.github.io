@@ -13,9 +13,10 @@
   }
 
   &__bio {
-    margin-bottom: pxToRems(64px);
+    margin-bottom: 2rem;
 
     @include tablet-and-up {
+      margin-bottom: 4rem;
       @include fontSize(18px);
     }
   }

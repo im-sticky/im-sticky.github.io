@@ -32,6 +32,7 @@ export function getPostItems(filePath, fields = []) {
     title: '',
     date: '',
     description: '',
+    category: 'General',
   };
 
   // just load and include the content needed
