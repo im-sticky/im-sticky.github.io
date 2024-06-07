@@ -1,3 +1,10 @@
+export enum BlogCategory {
+  General = 'General',
+  Gaming = 'Gaming',
+  Magic = 'Magic',
+  Development = 'Development',
+}
+
 export interface IBlogPostFrontMatter {
   title: string;
   date: string;
@@ -9,6 +16,7 @@ export interface IBlogPostFrontMatter {
   heroPosition?: string;
   mobileHeroPosition?: string;
   heroVideo?: string;
+  category?: BlogCategory;
 }
 
 export interface IBlogPost extends IBlogPostFrontMatter {

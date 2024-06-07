@@ -13,7 +13,7 @@
       .blog-post__title {
         @include fontSize(48px);
 
-        .title-shape {
+        svg {
           @include fontSize(32px);
         }
       }
