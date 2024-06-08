@@ -6,5 +6,5 @@ module.exports = {
   changefreq: 'monthly',
   generateRobotsTxt: true,
   sitemapSize: 1000,
-  exclude: ['/blog/edh'],
+  exclude: [],
 };

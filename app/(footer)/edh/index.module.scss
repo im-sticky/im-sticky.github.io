@@ -1,0 +1,9 @@
+@import '@styles/utilities.scss';
+
+.title-description {
+  margin-bottom: 0;
+
+  @include tablet-and-up {
+    @include fontSize(18px);
+  }
+}
