@@ -4,4 +4,8 @@
   margin: 0 auto;
   max-width: $container-width;
   width: 100%;
+
+  &--large {
+    max-width: $tablet-landscape-width;
+  }
 }

@@ -1,1 +1,18 @@
 @import '@styles/utilities.scss';
+
+.picture {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  cursor: crosshair;
+}
+
+.image {
+  &--small {
+    max-width: 100%;
+  }
+
+  &--large {
+    position: absolute;
+  }
+}

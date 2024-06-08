@@ -1,9 +1,10 @@
 import fs from 'fs';
 import {join} from 'path';
+import clsx from 'clsx';
 import {Metadata} from 'next';
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import {openGraphMeta} from '@helpers/openGraphMeta';
-import {EdhCard} from '@models/edhCard';
+import {EdhCard, IEdhCard} from '@models/edhCard';
 import {Section} from '@components/Section';
 import {Container} from '@components/Container';
 import {TitleShape} from '@components/TitleShape';
@@ -34,7 +35,9 @@ export default function Edh() {
 
       <Container>
         <MDXRemote source={fileContents} />
+      </Container>
 
+      <Container large className={clsx('grid', 'grid--3')}>
         {cards.map((card) => (
           <CardZoom key={card.name} card={card} />
         ))}
@@ -43,10 +46,10 @@ export default function Edh() {
   );
 }
 
-function getCards(): EdhCard[] {
+function getCards(): IEdhCard[] {
   return [
     new EdhCard({
       name: 'Tundra',
     }),
-  ];
+  ].map((x) => x.toJSON() as IEdhCard);
 }

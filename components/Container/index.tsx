@@ -5,11 +5,15 @@ import styles from './index.module.scss';
 interface ContainerProps {
   children: React.ReactNode;
   className?: string;
+  large?: boolean;
 }
 
 export const Container = forwardRef<HTMLDivElement, ContainerProps>(
-  ({children, className}: ContainerProps, ref) => (
-    <div ref={ref} className={clsx(styles.container, className)}>
+  ({children, className, large = false}: ContainerProps, ref) => (
+    <div
+      ref={ref}
+      className={clsx(styles.container, className, {[styles['container--large']]: large})}
+    >
       {children}
     </div>
   )

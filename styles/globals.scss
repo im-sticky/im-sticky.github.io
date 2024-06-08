@@ -81,6 +81,10 @@ button {
 }
 
 deck-list {
+  &:not(:defined) {
+    display: none;
+  }
+
   &::part(container) {
     margin: pxToRems(40px) 0;
     max-width: 100%;
