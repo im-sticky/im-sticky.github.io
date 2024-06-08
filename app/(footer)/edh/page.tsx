@@ -50,6 +50,10 @@ function getCards(): IEdhCard[] {
   return [
     new EdhCard({
       name: 'Tundra',
+      year: 2015,
+      yearUnknown: true,
+      description:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Hic, consequuntur! Sed consequatur iure explicabo harum in ad corporis fuga reiciendis nemo. Voluptatem enim incidunt qui, cumque rem inventore quod pariatur!',
     }),
   ].map((x) => x.toJSON() as IEdhCard);
 }
