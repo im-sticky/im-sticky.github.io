@@ -59,7 +59,6 @@ export function CardZoom({card, className}: CardZoomProps) {
         <img
           ref={largeImgRef}
           src={`/edh/large/${card.imageName}`}
-          title={card.name}
           alt={`${card.name} zoomed in`}
           className={clsx(styles.image, styles['image--large'], {
             hidden: imageSize !== ImageSize.Large,
