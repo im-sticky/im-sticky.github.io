@@ -22,6 +22,8 @@ export function CardZoom({card, className}: CardZoomProps) {
 
   return (
     <div className={clsx(styles.container, className)}>
+      <p className={styles.name}>{card.name}</p>
+
       <div
         ref={pictureRef}
         className={styles.picture}
@@ -67,9 +69,11 @@ export function CardZoom({card, className}: CardZoomProps) {
         />
       </div>
 
-      <p>
-        <strong>Location:</strong> {card.acquired ?? 'Forgotten'}
-      </p>
+      {card.acquired ? (
+        <p>
+          <strong>Location:</strong> {card.acquired ?? 'Forgotten'}
+        </p>
+      ) : null}
 
       {card.year ? (
         <p>
