@@ -36,7 +36,7 @@ export default function Edh() {
         </p>
       </VerticalHero>
 
-      <Container>
+      <Container className={styles.content}>
         <MDXRemote source={fileContents} />
       </Container>
 

@@ -9,7 +9,7 @@ import styles from './about.module.scss';
 
 export const metadata: Metadata = {
   title: 'About',
-  description: 'Portfolio website of Alex Craig.',
+  description: 'Personal website of Alex Craig.',
 };
 
 export default function About() {
@@ -43,11 +43,10 @@ export default function About() {
         </small>
 
         <ul className={styles['about__social-list']}>
-          <DeepLink href="/projects" name="Projects" />
           <DeepLink href="/blog" name="Blog" />
+          <DeepLink href="/projects" name="Projects &amp; Hobbies" />
           <SocialLink href="https://github.com/im-sticky" name="GitHub" />
           <SocialLink href="https://www.linkedin.com/in/alex-craig-57427069/" name="LinkedIn" />
-          <SocialLink href="https://twitter.com/im_sticky" name="Twitter" />
         </ul>
 
         <p className={styles['about__email']}>
