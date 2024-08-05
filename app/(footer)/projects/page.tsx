@@ -71,7 +71,7 @@ export default function Projects() {
 
       <Container className={styles.hobbies}>
         <TitleShape icon={faHatWizard}>Hobbies</TitleShape>
-        <p className={sharedStyles['page__descriptor']}>An small insight into some of my hobbies</p>
+        <p className={sharedStyles['page__descriptor']}>A small insight into some of my hobbies</p>
 
         <div className={styles.projects__list}>
           {hobbies.map((hobby) => (

@@ -5,7 +5,15 @@
   max-width: $container-width;
   width: 100%;
 
+  @include ultra-hd {
+    max-width: $tablet-landscape-width;
+  }
+
   &--large {
     max-width: $tablet-landscape-width;
+
+    @include ultra-hd {
+      max-width: $laptop-width;
+    }
   }
 }

@@ -15,7 +15,7 @@ import styles from './index.module.scss';
 
 export const metadata: Metadata = {
   title: 'Elder Dragon Highlander',
-  description: 'The cards and stories that make up my lifelong EDH deck.',
+  description: 'The cards that make up my lifelong EDH deck.',
   openGraph: openGraphMeta('/edh', '/edh/splash.jpg'),
 };
 
@@ -28,28 +28,32 @@ export default function Edh() {
   }).toJSON() as IEdhCard;
 
   return (
-    <Section grow>
-      <VerticalHero imageUrl="/edh/hero.jpg">
-        <TitleShape icon={faDragon}>Elder Dragon Highlander</TitleShape>
-        <p className={styles['title-description']}>
-          The cards and stories that make up my lifelong EDH deck.
-        </p>
-      </VerticalHero>
+    <>
+      <Section grow>
+        <VerticalHero imageUrl="/edh/hero.jpg">
+          <TitleShape icon={faDragon}>Elder Dragon Highlander</TitleShape>
+          <p className={styles['title-description']}>
+            The cards that make up my lifelong EDH deck.
+          </p>
+        </VerticalHero>
+      </Section>
 
-      <Container className={styles.content}>
-        <MDXRemote source={fileContents} />
-      </Container>
+      <Section grow className={styles.container}>
+        <Container className={styles.content}>
+          <MDXRemote source={fileContents} />
+        </Container>
 
-      <Container large className={clsx('grid', 'grid--3')}>
-        <div></div>
-        <CardZoom card={commander} />
-        <div></div>
+        <Container large className={clsx('grid', 'grid--3', styles['span-grid'])}>
+          <h2 className={clsx(styles.title, styles['span-grid'])}>The cards</h2>
 
-        {cards.map((card) => (
-          <CardZoom key={card.imageName} card={card} />
-        ))}
-      </Container>
-    </Section>
+          <CardZoom card={commander} className={styles['span-grid']} />
+
+          {cards.map((card) => (
+            <CardZoom key={card.imageName} card={card} />
+          ))}
+        </Container>
+      </Section>
+    </>
   );
 }
 
