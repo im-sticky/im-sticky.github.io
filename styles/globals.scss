@@ -47,6 +47,10 @@ p {
   margin: 0 0 pxToRems(8px) 0;
 }
 
+strong {
+  font-weight: 600;
+}
+
 button {
   background: none;
   color: inherit;
@@ -81,6 +85,10 @@ button {
 }
 
 deck-list {
+  &:not(:defined) {
+    display: none;
+  }
+
   &::part(container) {
     margin: pxToRems(40px) 0;
     max-width: 100%;

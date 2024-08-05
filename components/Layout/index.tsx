@@ -19,10 +19,10 @@ export function Layout({children, includeFooter = true}: LayoutProps) {
               <InternalLink to="/">About</InternalLink>
             </li>
             <li className={styles['footer__list-item']}>
-              <InternalLink to="/projects">Projects</InternalLink>
+              <InternalLink to="/blog">Blog</InternalLink>
             </li>
             <li className={styles['footer__list-item']}>
-              <InternalLink to="/blog">Blog</InternalLink>
+              <InternalLink to="/projects">Projects &amp; Hobbies</InternalLink>
             </li>
             <li className={styles['footer__list-item']}>&copy;&nbsp;{new Date().getFullYear()}</li>
           </ul>

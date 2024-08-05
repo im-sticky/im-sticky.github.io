@@ -17,7 +17,7 @@ export function PostList({allPosts}: PostListProps) {
   const searchParams = useSearchParams();
   const page = searchParams.get('page');
   const pageState = page ? parseInt(page) : 1;
-  const postsPerPage = 8;
+  const postsPerPage = 10;
   const filteredPosts = allPosts.slice((pageState - 1) * postsPerPage, pageState * postsPerPage);
 
   return (

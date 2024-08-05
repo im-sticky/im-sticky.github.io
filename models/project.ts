@@ -5,7 +5,7 @@ interface IConstructor {
   description: string;
   link: string;
   external?: boolean;
-  image: string;
+  image?: string;
 }
 
 export class Project extends Base {
@@ -13,7 +13,7 @@ export class Project extends Base {
   description: string;
   link: string;
   external: boolean;
-  image: string;
+  image?: string;
 
   constructor({title, description, link, external = false, image}: IConstructor) {
     super();

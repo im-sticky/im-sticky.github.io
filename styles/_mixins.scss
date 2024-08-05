@@ -188,3 +188,9 @@
     @content;
   }
 }
+
+@mixin ultra-hd {
+  @media (min-width: 1921px) {
+    @content;
+  }
+}
