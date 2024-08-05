@@ -1,0 +1,26 @@
+@import '@styles/utilities.scss';
+
+.title-description {
+  margin-bottom: 0;
+
+  @include tablet-and-up {
+    @include fontSize(18px);
+  }
+}
+
+.container {
+  @include gutters;
+}
+
+.content {
+  @include readableContent();
+}
+
+.title {
+  text-align: center;
+}
+
+.span-grid {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}

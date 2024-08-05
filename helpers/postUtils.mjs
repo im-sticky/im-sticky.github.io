@@ -2,7 +2,7 @@ import matter from 'gray-matter';
 import {join} from 'path';
 import fs from 'fs';
 
-const disabledPosts = ['edh'];
+const disabledPosts = [];
 
 // path to our list of available posts
 const POSTS_PATH = join(process.cwd(), '_posts');
@@ -32,6 +32,7 @@ export function getPostItems(filePath, fields = []) {
     title: '',
     date: '',
     description: '',
+    category: 'General',
   };
 
   // just load and include the content needed

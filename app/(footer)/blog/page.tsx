@@ -7,8 +7,9 @@ import {InternalLink} from '@components/InternalLink';
 import {TitleShape} from '@components/TitleShape';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faQuoteLeft, faRssSquare, faLongArrowLeft} from '@fortawesome/free-solid-svg-icons';
-import {PostList} from './postList';
 import {openGraphMeta} from '@helpers/openGraphMeta';
+import {IBlogPost} from '@models/blogPost';
+import {PostList} from './postList';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
 
@@ -24,12 +25,9 @@ export default function Blog() {
     'slug',
     'date',
     'description',
-    'edited',
     'customLink',
-    'hero',
-    'heroPosition',
-    'heroVideo',
-  ]);
+    'category',
+  ]) as IBlogPost[];
 
   return (
     <Section grow className={styles['blog-list']}>

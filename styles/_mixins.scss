@@ -101,6 +101,31 @@
       }
     }
   }
+
+  pre {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border: 1px solid $font-color;
+    border-radius: 0.375rem;
+    background-color: $subtle-gray;
+  }
+
+  code {
+    font-size: inherit;
+    background-color: $subtle-gray;
+    border-radius: 0.125rem;
+  }
+
+  blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    border-left: 3px solid $primary-color;
+    background-color: rgba(79, 0, 236, 0.1);
+
+    p {
+      margin: 0;
+    }
+  }
 }
 
 // media queries
@@ -160,6 +185,12 @@
 
 @mixin desktop {
   @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin ultra-hd {
+  @media (min-width: 1921px) {
     @content;
   }
 }

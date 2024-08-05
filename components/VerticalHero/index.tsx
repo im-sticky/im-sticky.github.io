@@ -1,4 +1,6 @@
-import React, {useEffect, useRef} from 'react';
+'use client';
+
+import {useEffect, useRef} from 'react';
 import {Container} from '@components/Container';
 import styles from './index.module.scss';
 
@@ -15,7 +17,7 @@ export function VerticalHero({children, imageUrl, scrollTarget = 600}: VerticalH
   const heroImageRef = useRef<HTMLImageElement>(null);
 
   const adjustHeroPosition = (always = false) => {
-    const position = Math.min((window.pageYOffset / scrollTarget) * 100, 101);
+    const position = Math.min((window.scrollY / scrollTarget) * 100, 101);
 
     if (
       heroContainerRef.current &&

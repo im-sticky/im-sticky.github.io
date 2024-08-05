@@ -31,6 +31,10 @@ h6 {
   margin: 0;
 }
 
+h1 {
+  @include fontSize(32px);
+}
+
 h2 {
   @include fontSize(26px);
 }
@@ -41,6 +45,10 @@ h3 {
 
 p {
   margin: 0 0 pxToRems(8px) 0;
+}
+
+strong {
+  font-weight: 600;
 }
 
 button {
@@ -77,6 +85,10 @@ button {
 }
 
 deck-list {
+  &:not(:defined) {
+    display: none;
+  }
+
   &::part(container) {
     margin: pxToRems(40px) 0;
     max-width: 100%;

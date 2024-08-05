@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import {Metadata} from 'next';
 import {MDXRemote} from 'next-mdx-remote/rsc';
-import {IBlogPost} from '@models/blogPost';
+import {BlogCategory, IBlogPost} from '@models/blogPost';
 import {getAllPosts, getPost} from '@helpers/postUtils.mjs';
 import {formatDate} from '@helpers/formatDate';
 import {openGraphMeta} from '@helpers/openGraphMeta';
@@ -16,7 +16,14 @@ import {ImageCard} from '@components/ImageCard';
 import {TableOfContents} from '@components/TableOfContents';
 import {PullQuote} from '@components/PullQuote';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faQuoteLeft, faLongArrowLeft, faLongArrowRight} from '@fortawesome/free-solid-svg-icons';
+import {
+  faQuoteLeft,
+  faCode,
+  faGamepad,
+  faDragon,
+  faLongArrowLeft,
+  faLongArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
 
@@ -40,9 +47,22 @@ interface PostProps {
 
 export default async function Post({params}: PostProps) {
   const {frontMatter, content} = getPost(params.slug);
-  // const mdxSource = await serialize(content);
   const allPosts = getAllPosts(['slug', 'date', 'customLink']) as IBlogPost[];
   const postIndex = allPosts.findIndex((p) => p.slug === params.slug);
+
+  let titleIcon = faQuoteLeft;
+
+  switch (frontMatter.category) {
+    case BlogCategory.Development:
+      titleIcon = faCode;
+      break;
+    case BlogCategory.Gaming:
+      titleIcon = faGamepad;
+      break;
+    case BlogCategory.Magic:
+      titleIcon = faDragon;
+      break;
+  }
 
   return (
     <Section
@@ -100,7 +120,7 @@ export default async function Post({params}: PostProps) {
           </InternalLink>
         </p>
 
-        <TitleShape className={styles['blog-post__title']} icon={faQuoteLeft}>
+        <TitleShape className={styles['blog-post__title']} icon={titleIcon}>
           {frontMatter.title}
         </TitleShape>
 
@@ -132,7 +152,6 @@ export default async function Post({params}: PostProps) {
         ) : null}
 
         <article className={styles['blog-post__content']}>
-          {/* <Mdx mdxSource={mdxSource} /> */}
           <MDXRemote source={content} components={mdxComponents} />
         </article>
 
