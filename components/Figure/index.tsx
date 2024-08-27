@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import styles from './index.module.scss';
 
 interface FigureProps {
-  title: string;
+  title?: string;
   image?: string;
   sources?: {
     media?: string;
@@ -38,7 +38,7 @@ export function Figure({
           ))}
           <img
             src={`/assets/${image}`}
-            title={title}
+            title={title ?? caption}
             alt={title}
             className={styles.object}
             loading="lazy"
