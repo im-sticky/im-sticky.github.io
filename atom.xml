@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://im-sticky.github.io</id>
     <title>Alex Craig's blog</title>
-    <updated>2024-08-05T22:00:46.643Z</updated>
+    <updated>2024-09-27T01:50:45.648Z</updated>
     <generator>Feed for node.js</generator>
     <author>
         <name>Alex Craig</name>
@@ -16,6 +16,13 @@
     <icon>https://im-sticky.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, Alex Craig</rights>
     <entry>
+        <title type="html"><![CDATA[Tri-annual game review roundup - Summer Edition]]></title>
+        <id>summer-game-ratings</id>
+        <link href="https://im-sticky.github.io/blog/summer-game-ratings"/>
+        <updated>2024-09-01T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A collection of my thoughts and feelings for the games I have played during the second third of 2024.]]></summary>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Next.js on GitHub Pages]]></title>
         <id>nextjs-on-github-pages</id>
         <link href="https://im-sticky.github.io/blog/nextjs-on-github-pages"/>
@@ -27,7 +34,7 @@
         <id>spring-game-ratings</id>
         <link href="https://im-sticky.github.io/blog/spring-game-ratings"/>
         <updated>2024-05-25T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A collection of my thoughts and feelings for the games I have played in the first third of 2024.]]></summary>
+        <summary type="html"><![CDATA[A collection of my thoughts and feelings for the games I have played during the first third of 2024.]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[Immortality - An FMV? In this economy?]]></title>
