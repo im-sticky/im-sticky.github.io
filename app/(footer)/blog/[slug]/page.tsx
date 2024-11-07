@@ -15,6 +15,7 @@ import {Spoiler} from '@components/Spoiler';
 import {ImageCard} from '@components/ImageCard';
 import {TableOfContents} from '@components/TableOfContents';
 import {PullQuote} from '@components/PullQuote';
+import {AudioTrigger} from '@components/AudioTrigger';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
   faQuoteLeft,
@@ -35,6 +36,7 @@ const mdxComponents = {
   ImageCard,
   TableOfContents,
   PullQuote,
+  AudioTrigger,
 };
 
 interface PostParams {
