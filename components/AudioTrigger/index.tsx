@@ -1,6 +1,6 @@
 'use client';
 
-import React, {useRef} from 'react';
+import React, {useState, useEffect} from 'react';
 
 interface AudioTriggerProps {
   children: React.ReactNode;
@@ -8,13 +8,17 @@ interface AudioTriggerProps {
 }
 
 export function AudioTrigger({children, filePath, ...props}: AudioTriggerProps) {
-  const audioEffect = useRef<HTMLAudioElement>(new Audio(filePath));
+  const [audioEffect, setAudioEffect] = useState<HTMLAudioElement>();
+
+  useEffect(() => {
+    setAudioEffect(new Audio(filePath));
+  }, []);
 
   return (
     <span
       {...props}
       onMouseEnter={() => {
-        audioEffect.current.play();
+        audioEffect?.play();
       }}
     >
       {children}
