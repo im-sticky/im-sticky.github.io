@@ -16,6 +16,7 @@ export interface IBlogPostFrontMatter {
   heroPosition?: string;
   mobileHeroPosition?: string;
   heroVideo?: string;
+  heroFixed?: boolean;
   category?: BlogCategory;
 }
 

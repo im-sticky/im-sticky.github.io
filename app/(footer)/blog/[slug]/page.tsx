@@ -71,6 +71,7 @@ export default async function Post({params}: PostProps) {
       grow
       className={clsx(styles['blog-post'], {
         [styles['blog-post--has-hero']]: frontMatter.hero || frontMatter.heroVideo,
+        [styles['blog-post--fixed-hero']]: frontMatter.heroFixed,
       })}
     >
       {frontMatter.hero && !frontMatter.heroVideo ? (
@@ -108,7 +109,7 @@ export default async function Post({params}: PostProps) {
         <div className={styles['blog-post__hero-screen']} />
       ) : null}
 
-      <Container>
+      <Container className={styles['blog-post__container']}>
         <p
           className={clsx(
             sharedStyles['page__descriptor'],
