@@ -23,6 +23,15 @@
       clear: left;
       margin-left: pxToRems(-$container-width / 6);
     }
+
+    &--large {
+      margin-left: -5rem;
+      margin-right: -5rem;
+
+      .object {
+        width: 100%;
+      }
+    }
   }
 
   .object {
