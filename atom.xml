@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://im-sticky.github.io</id>
     <title>Alex Craig's blog</title>
-    <updated>2024-09-27T01:50:45.648Z</updated>
+    <updated>2024-12-27T20:52:06.845Z</updated>
     <generator>Feed for node.js</generator>
     <author>
         <name>Alex Craig</name>
@@ -16,9 +16,16 @@
     <icon>https://im-sticky.github.io/favicon.ico</icon>
     <rights>All rights reserved 2024, Alex Craig</rights>
     <entry>
-        <title type="html"><![CDATA[Tri-annual game review roundup - Summer Edition]]></title>
-        <id>summer-game-ratings</id>
-        <link href="https://im-sticky.github.io/blog/summer-game-ratings"/>
+        <title type="html"><![CDATA[Tri-annual game roundup - Winter 2024 Edition]]></title>
+        <id>winter-2024-game-ratings</id>
+        <link href="https://im-sticky.github.io/blog/winter-2024-game-ratings"/>
+        <updated>2024-12-27T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[A collection of my thoughts and feelings for the games I have played during the final third of 2024.]]></summary>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Tri-annual game roundup - Summer 2024 Edition]]></title>
+        <id>summer-2024-game-ratings</id>
+        <link href="https://im-sticky.github.io/blog/summer-2024-game-ratings"/>
         <updated>2024-09-01T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A collection of my thoughts and feelings for the games I have played during the second third of 2024.]]></summary>
     </entry>
@@ -30,9 +37,9 @@
         <summary type="html"><![CDATA[A short guide to automating deploying a static Next.js site on GitHub Pages.]]></summary>
     </entry>
     <entry>
-        <title type="html"><![CDATA[Tri-annual game review roundup - Spring Edition]]></title>
-        <id>spring-game-ratings</id>
-        <link href="https://im-sticky.github.io/blog/spring-game-ratings"/>
+        <title type="html"><![CDATA[Tri-annual game roundup - Spring 2024 Edition]]></title>
+        <id>spring-2024-game-ratings</id>
+        <link href="https://im-sticky.github.io/blog/spring-2024-game-ratings"/>
         <updated>2024-05-25T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A collection of my thoughts and feelings for the games I have played during the first third of 2024.]]></summary>
     </entry>

@@ -11,9 +11,17 @@
     },
     "items": [
         {
-            "id": "summer-game-ratings",
-            "url": "https://im-sticky.github.io/blog/summer-game-ratings",
-            "title": "Tri-annual game review roundup - Summer Edition",
+            "id": "winter-2024-game-ratings",
+            "url": "https://im-sticky.github.io/blog/winter-2024-game-ratings",
+            "title": "Tri-annual game roundup - Winter 2024 Edition",
+            "summary": "A collection of my thoughts and feelings for the games I have played during the final third of 2024.",
+            "date_modified": "2024-12-27T00:00:00.000Z",
+            "author": {}
+        },
+        {
+            "id": "summer-2024-game-ratings",
+            "url": "https://im-sticky.github.io/blog/summer-2024-game-ratings",
+            "title": "Tri-annual game roundup - Summer 2024 Edition",
             "summary": "A collection of my thoughts and feelings for the games I have played during the second third of 2024.",
             "date_modified": "2024-09-01T00:00:00.000Z",
             "author": {}
@@ -27,9 +35,9 @@
             "author": {}
         },
         {
-            "id": "spring-game-ratings",
-            "url": "https://im-sticky.github.io/blog/spring-game-ratings",
-            "title": "Tri-annual game review roundup - Spring Edition",
+            "id": "spring-2024-game-ratings",
+            "url": "https://im-sticky.github.io/blog/spring-2024-game-ratings",
+            "title": "Tri-annual game roundup - Spring 2024 Edition",
             "summary": "A collection of my thoughts and feelings for the games I have played during the first third of 2024.",
             "date_modified": "2024-05-25T00:00:00.000Z",
             "author": {}

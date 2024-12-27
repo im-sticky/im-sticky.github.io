@@ -4,7 +4,7 @@
         <title>Alex Craig's blog</title>
         <link>https://im-sticky.github.io/blog</link>
         <description>A collection of my thoughts and anecdotes</description>
-        <lastBuildDate>Fri, 27 Sep 2024 01:50:45 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 27 Dec 2024 20:52:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for node.js</generator>
         <language>en</language>
@@ -16,9 +16,16 @@
         <copyright>All rights reserved 2024, Alex Craig</copyright>
         <atom:link href="https://im-sticky.github.io/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
-            <title><![CDATA[Tri-annual game review roundup - Summer Edition]]></title>
-            <link>https://im-sticky.github.io/blog/summer-game-ratings</link>
-            <guid>summer-game-ratings</guid>
+            <title><![CDATA[Tri-annual game roundup - Winter 2024 Edition]]></title>
+            <link>https://im-sticky.github.io/blog/winter-2024-game-ratings</link>
+            <guid>winter-2024-game-ratings</guid>
+            <pubDate>Fri, 27 Dec 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[A collection of my thoughts and feelings for the games I have played during the final third of 2024.]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Tri-annual game roundup - Summer 2024 Edition]]></title>
+            <link>https://im-sticky.github.io/blog/summer-2024-game-ratings</link>
+            <guid>summer-2024-game-ratings</guid>
             <pubDate>Sun, 01 Sep 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[A collection of my thoughts and feelings for the games I have played during the second third of 2024.]]></description>
         </item>
@@ -30,9 +37,9 @@
             <description><![CDATA[A short guide to automating deploying a static Next.js site on GitHub Pages.]]></description>
         </item>
         <item>
-            <title><![CDATA[Tri-annual game review roundup - Spring Edition]]></title>
-            <link>https://im-sticky.github.io/blog/spring-game-ratings</link>
-            <guid>spring-game-ratings</guid>
+            <title><![CDATA[Tri-annual game roundup - Spring 2024 Edition]]></title>
+            <link>https://im-sticky.github.io/blog/spring-2024-game-ratings</link>
+            <guid>spring-2024-game-ratings</guid>
             <pubDate>Sat, 25 May 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[A collection of my thoughts and feelings for the games I have played during the first third of 2024.]]></description>
         </item>
