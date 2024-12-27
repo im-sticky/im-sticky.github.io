@@ -13,6 +13,7 @@ interface FigureProps {
   caption: string;
   left?: boolean;
   right?: boolean;
+  large?: boolean;
 }
 
 export function Figure({
@@ -22,6 +23,7 @@ export function Figure({
   caption,
   left = false,
   right = false,
+  large = false,
   sources = [],
 }: FigureProps) {
   return (
@@ -29,6 +31,7 @@ export function Figure({
       className={clsx(styles.figure, {
         [styles['figure--left']]: left,
         [styles['figure--right']]: right,
+        [styles['figure--large']]: large,
       })}
     >
       {image ? (
