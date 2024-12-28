@@ -9,17 +9,18 @@ import styles from './index.module.scss';
 
 interface SpoilerProps {
   children: React.ReactNode;
+  className?: string;
   inline?: boolean;
   doConfetti?: boolean;
 }
 
-export function Spoiler({inline = false, doConfetti = false, children}: SpoilerProps) {
+export function Spoiler({inline = false, doConfetti = false, className, children}: SpoilerProps) {
   const [spoiled, setSpoiled] = useState(false);
   const SpoilerTag = (inline ? 'span' : 'div') as keyof JSX.IntrinsicElements;
 
   return (
     <SpoilerTag
-      className={clsx(styles.spoiler, {
+      className={clsx(className, styles.spoiler, {
         [styles['spoiler--spoiled']]: spoiled,
         [styles['spoiler--inline']]: inline,
       })}

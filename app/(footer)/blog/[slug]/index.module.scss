@@ -8,6 +8,13 @@
   @include pagePadding;
   @include gutters;
 
+  @include landscape-tablet-and-up {
+    :global(.large-spoiler::before) {
+      left: -5rem !important;
+      right: -5rem !important;
+    }
+  }
+
   &--has-hero {
     padding-top: calc(#{$hero-height} - $hero-margin);
 
