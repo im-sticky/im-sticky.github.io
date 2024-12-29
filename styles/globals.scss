@@ -1,14 +1,27 @@
 @import './utilities';
 
+:root {
+  --primary-color: #4f00ec;
+  --font-color: #333333;
+  --background-color: #fafafa;
+  --subtle-gray: #efefef;
+}
+
+[data-theme='dark'] {
+  --primary-color: #af98de;
+  --font-color: #efefef;
+  --background-color: #1f1f1f;
+}
+
 html {
   @include fontSize($baseFontSize);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $font-color;
+  color: var(--font-color);
   font-weight: 400;
   line-height: 1.5;
-  background-color: $background-color;
+  background-color: var(--background-color);
 }
 
 body {
@@ -111,7 +124,7 @@ deck-list {
   }
 
   &::part(separator) {
-    border-top: 1px solid $font-color;
+    border-top: 1px solid var(--font-color);
   }
 
   &::part(flip-preview) {
@@ -119,10 +132,10 @@ deck-list {
   }
 
   &::part(export) {
-    background: $primary-color;
+    background: var(--primary-color);
 
     &:hover {
-      background: $font-color;
+      background: var(--font-color);
     }
   }
 
@@ -139,7 +152,7 @@ card-link::part(link) {
 }
 
 deck-list::part(link) {
-  @include linkStyles($font-color);
+  @include linkStyles(var(--font-color));
   @include focusStates {
     background-size: 100% pxToRems(2px);
   }

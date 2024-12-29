@@ -1,0 +1,23 @@
+.alan-wake-spoiler {
+  &--pressing {
+    &::before {
+      animation: zoom 2.2s linear 0s 1;
+    }
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes shake {
+  from {
+  }
+  to {
+  }
+}

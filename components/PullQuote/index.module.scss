@@ -4,7 +4,7 @@
 .quote {
   position: relative;
   margin: 1rem;
-  border-left: 3px solid $primary-color;
+  border-left: 3px solid var(--primary-color);
   padding: 0.5rem 1rem;
   @include fontSize(13px);
 
@@ -29,7 +29,7 @@
   &__icon {
     position: absolute;
     z-index: -1;
-    color: $primary-color;
+    color: var(--primary-color);
     opacity: 0.1;
     font-size: 8rem;
     top: 50%;
