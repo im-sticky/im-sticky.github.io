@@ -1,17 +1,11 @@
-.alan-wake-spoiler {
-  &--pressing {
-    &::before {
-      animation: zoom 2.2s linear 0s 1;
-    }
-  }
-}
+.spoiler__text {
+  position: relative;
 
-@keyframes zoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
+  &--pressing {
+    &::after {
+      content: '';
+      position: absolute;
+    }
   }
 }
 
