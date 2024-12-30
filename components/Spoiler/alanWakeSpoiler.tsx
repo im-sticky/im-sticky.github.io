@@ -14,15 +14,17 @@ interface AlanWakeSpoilerProps {
 export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
   const [spoiled, setSpoiled] = useState(false);
   const [beingPressed, setBeingPressed] = useState(false);
-  const [audioEffect, setAudioEffect] = useState<HTMLAudioElement>();
+  const [videoFinished, setVideoFinished] = useState(false);
+  const [audioFile, setAudioFile] = useState<HTMLAudioElement>();
   const animationRef = useRef<number>();
   const previousTimeRef = useRef<number>();
+  const videoRef = useRef<HTMLVideoElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const mainBodyRef = useRef<HTMLDivElement>();
   let elapsedTime = 0;
 
   useEffect(() => {
-    setAudioEffect(new Audio('/assets/gottt/aw2-enter.mp3'));
+    setAudioFile(new Audio('/assets/gottt/aw2-enter.mp3'));
 
     if (!mainBodyRef.current) {
       mainBodyRef.current = document.querySelector<HTMLDivElement>('#main') ?? undefined;
@@ -30,7 +32,7 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
   }, []);
 
   useEffect(() => {
-    if (!animationRef.current || !mainBodyRef.current || !buttonRef.current || !audioEffect) {
+    if (!animationRef.current || !mainBodyRef.current || !buttonRef.current || !audioFile) {
       return;
     }
 
@@ -39,22 +41,23 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
         buttonRef.current.getBoundingClientRect().top + document.documentElement.scrollTop
       }px`;
       mainBodyRef.current.classList.add('alan-wake-spoiler--zoom');
-      audioEffect.play();
+      audioFile.play();
     } else {
       cancelAnimationFrame(animationRef.current);
       mainBodyRef.current.classList.remove('alan-wake-spoiler--zoom');
       previousTimeRef.current = undefined;
       elapsedTime = 0;
-      audioEffect.pause();
-      audioEffect.currentTime = 0;
+      audioFile.pause();
+      audioFile.currentTime = 0;
     }
   }, [beingPressed]);
 
   useEffect(() => {
-    if (spoiled) {
+    if (spoiled && audioFile) {
       document.documentElement.setAttribute('data-theme', 'dark');
-      audioEffect.pause();
-      audioEffect.currentTime = 0;
+      videoRef.current?.play();
+      audioFile.pause();
+      audioFile.currentTime = 0;
     }
   }, [spoiled]);
 
@@ -65,7 +68,7 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
       elapsedTime = elapsedTime + deltaTime / 1000;
     }
 
-    if (Math.floor(elapsedTime) === 3 && animationRef.current) {
+    if (elapsedTime >= 3 && animationRef.current) {
       setBeingPressed(false);
       setSpoiled(true);
     } else {
@@ -88,7 +91,36 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
         }
       )}
     >
-      {children}
+      <div
+        className={clsx(specificStyles.video__container, {
+          [specificStyles['video__container--visible']]: !videoFinished,
+        })}
+      >
+        <video
+          ref={videoRef}
+          className={specificStyles.video}
+          onTimeUpdate={() => {
+            if (!videoRef.current) {
+              return;
+            }
+
+            if (videoRef.current?.currentTime >= 19.4) {
+              setVideoFinished(true);
+            }
+          }}
+        >
+          <source src="/assets/gottt/aw2-intro.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      <div
+        className={clsx(specificStyles.summary, {
+          [specificStyles['summary--hidden']]: !videoFinished,
+        })}
+      >
+        {children}
+      </div>
+
       <button
         type="button"
         ref={buttonRef}

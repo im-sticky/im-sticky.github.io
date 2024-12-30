@@ -19,6 +19,38 @@
   }
 }
 
+.video {
+  display: block;
+  width: 100%;
+
+  &__container {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    margin-left: -5rem;
+    margin-right: -5rem;
+    cursor: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 500ms ease-out;
+
+    &--visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.summary {
+  opacity: 1;
+  transition: opacity 500ms ease-out;
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 .circular-progress {
   --size: 64px;
   --half-size: calc(var(--size) / 2);
