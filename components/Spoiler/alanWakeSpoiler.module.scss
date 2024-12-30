@@ -1,3 +1,5 @@
+@import '@styles/utilities.scss';
+
 .alan-wake-spoiler {
   &--pressing {
     animation: shake 0.3s linear 0.5s infinite, shake 0.25s linear 1s infinite,
@@ -25,14 +27,18 @@
 
   &__container {
     position: absolute;
-    top: 2.5rem;
+    top: 1.5rem;
     left: 0;
-    margin-left: -5rem;
-    margin-right: -5rem;
     cursor: none;
     opacity: 0;
     pointer-events: none;
     transition: opacity 500ms ease-out;
+
+    @include landscape-tablet-and-up {
+      top: 2.5rem;
+      margin-left: -5rem;
+      margin-right: -5rem;
+    }
 
     &--visible {
       opacity: 1;
