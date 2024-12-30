@@ -4,7 +4,7 @@
         <title>Alex Craig's blog</title>
         <link>https://im-sticky.github.io/blog</link>
         <description>A collection of my thoughts and anecdotes</description>
-        <lastBuildDate>Fri, 27 Dec 2024 20:52:06 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 30 Dec 2024 16:42:12 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for node.js</generator>
         <language>en</language>
@@ -15,6 +15,13 @@
         </image>
         <copyright>All rights reserved 2024, Alex Craig</copyright>
         <atom:link href="https://im-sticky.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Game of the Three Thirds Award™ 2024]]></title>
+            <link>https://im-sticky.github.io/blog/gottt-2024</link>
+            <guid>gottt-2024</guid>
+            <pubDate>Mon, 30 Dec 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Awards ceremony for all the games that I have played throughout 2024.]]></description>
+        </item>
         <item>
             <title><![CDATA[Tri-annual game roundup - Winter 2024 Edition]]></title>
             <link>https://im-sticky.github.io/blog/winter-2024-game-ratings</link>
