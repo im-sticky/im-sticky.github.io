@@ -28,10 +28,10 @@
   }
 }
 
-@mixin linkStyles($color: $primary-color) {
+@mixin linkStyles($color: var(--primary-color)) {
   color: $color;
   text-decoration: none;
-  background-image: linear-gradient(120deg, $primary-color 0%, $primary-color 100%);
+  background-image: linear-gradient(120deg, var(--primary-color) 0%, var(--primary-color) 100%);
   background-repeat: no-repeat;
   background-size: 0 pxToRems(2px);
   background-position: 0 100%;
@@ -105,21 +105,21 @@
   pre {
     margin: 1.5rem 0;
     padding: 1rem;
-    border: 1px solid $font-color;
+    border: 1px solid var(--font-color);
     border-radius: 0.375rem;
-    background-color: $subtle-gray;
+    background-color: var(--subtle-gray);
   }
 
   code {
     font-size: inherit;
-    background-color: $subtle-gray;
+    background-color: var(--subtle-gray);
     border-radius: 0.125rem;
   }
 
   blockquote {
     margin: 1.5rem 0;
     padding: 1rem;
-    border-left: 3px solid $primary-color;
+    border-left: 3px solid var(--primary-color);
     background-color: rgba(79, 0, 236, 0.1);
 
     p {

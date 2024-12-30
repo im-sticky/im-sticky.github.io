@@ -12,6 +12,7 @@ import {TitleShape} from '@components/TitleShape';
 import {ExternalLink} from '@components/ExternalLink';
 import {Figure} from '@components/Figure';
 import {Spoiler} from '@components/Spoiler';
+import {AlanWakeSpoiler} from '@components/Spoiler/alanWakeSpoiler';
 import {ImageCard} from '@components/ImageCard';
 import {TableOfContents} from '@components/TableOfContents';
 import {PullQuote} from '@components/PullQuote';
@@ -33,6 +34,7 @@ const mdxComponents = {
   ExternalLink,
   Figure,
   Spoiler,
+  AlanWakeSpoiler,
   ImageCard,
   TableOfContents,
   PullQuote,

@@ -23,7 +23,7 @@
       display: block;
       width: pxToRems(3px);
       height: pxToRems(3px);
-      background-color: $font-color;
+      background-color: var(--font-color);
       border-radius: 50%;
       margin: 0 pxToRems(8px);
     }

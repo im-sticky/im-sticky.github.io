@@ -1,0 +1,147 @@
+@import '@styles/utilities.scss';
+
+.alan-wake-spoiler {
+  &--pressing {
+    animation: shake 0.3s linear 0.5s infinite, shake 0.25s linear 1s infinite,
+      shake 0.2s linear 2s infinite, shake 0.15s linear 2.5s infinite;
+  }
+
+  &--spoiled {
+    .circular-progress {
+      display: none;
+    }
+  }
+}
+
+.spoiler__text {
+  &--hold {
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  &--desktop {
+    display: none;
+
+    @include landscape-tablet-and-up {
+      display: inline-block;
+    }
+  }
+
+  &--mobile {
+    display: inline-block;
+
+    @include landscape-tablet-and-up {
+      display: none;
+    }
+  }
+}
+
+.video {
+  display: block;
+  width: 100%;
+
+  &__container {
+    position: absolute;
+    top: 1.5rem;
+    left: 0;
+    cursor: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 500ms ease-out;
+
+    @include landscape-tablet-and-up {
+      top: 2.5rem;
+      margin-left: -5rem;
+      margin-right: -5rem;
+    }
+
+    &--visible {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+}
+
+.summary {
+  opacity: 1;
+  transition: opacity 500ms ease-out;
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.circular-progress {
+  --size: 64px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 4px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  transform: translate3d(-50%, -50%, 0);
+
+  &--animate {
+    animation: progress-animation 3s linear 0s 1 forwards;
+  }
+
+  circle {
+    cx: var(--half-size);
+    cy: var(--half-size);
+    r: var(--radius);
+    stroke-width: var(--stroke-width);
+    fill: none;
+    stroke-linecap: butt;
+  }
+
+  &__background {
+    stroke: var(--subtle-gray);
+    opacity: 0.25;
+  }
+
+  &__foreground {
+    transform: rotate(-90deg);
+    transform-origin: var(--half-size) var(--half-size);
+    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+    stroke: var(--background-color);
+  }
+}
+
+@property --progress {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+@keyframes progress-animation {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 100;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 5px) rotate(1deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}

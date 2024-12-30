@@ -6,7 +6,7 @@
 
   &--inline {
     display: inline;
-    background-color: $font-color;
+    background-color: var(--font-color);
     border-radius: 0.5rem;
     transition: background-color $transition-time-normal $transition-ease-out-expo;
     user-select: none;
@@ -28,10 +28,14 @@
       right: 0;
       top: 0;
       bottom: 0;
-      background-color: $font-color;
+      background-color: var(--font-color);
       border-radius: 0.5rem;
       z-index: 2;
       transition: background-color $transition-time-normal $transition-ease-out-expo;
+    }
+
+    &.spoiler--no-anim::before {
+      transition: none;
     }
 
     .spoiler__button {
@@ -44,7 +48,7 @@
 
   &__button {
     position: absolute;
-    color: $background-color;
+    color: var(--background-color);
     z-index: 3;
     display: flex;
     align-items: center;
