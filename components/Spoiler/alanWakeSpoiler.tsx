@@ -18,7 +18,7 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
   const previousTimeRef = useRef<number>();
   const buttonRef = useRef<HTMLButtonElement>(null);
   const mainBodyRef = useRef<HTMLDivElement>();
-  let count = 0;
+  let elapsedTime = 0;
 
   useEffect(() => {
     if (!mainBodyRef.current) {
@@ -36,12 +36,11 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
         buttonRef.current.getBoundingClientRect().top + document.documentElement.scrollTop
       }px`;
       mainBodyRef.current.classList.add('alan-wake-spoiler--zoom');
-      console.log(mainBodyRef.current.style.transformOrigin);
     } else {
       cancelAnimationFrame(animationRef.current);
       mainBodyRef.current.classList.remove('alan-wake-spoiler--zoom');
       previousTimeRef.current = undefined;
-      count = 0;
+      elapsedTime = 0;
     }
   }, [beingPressed]);
 
@@ -49,10 +48,10 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
     if (previousTimeRef.current !== undefined) {
       const deltaTime = time - previousTimeRef.current;
 
-      count = count + deltaTime / 1000;
+      elapsedTime = elapsedTime + deltaTime / 1000;
     }
 
-    if (Math.floor(count) === 3 && animationRef.current) {
+    if (Math.floor(elapsedTime) === 3 && animationRef.current) {
       setBeingPressed(false);
       setSpoiled(true);
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -71,6 +70,8 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
         specificStyles['alan-wake-spoiler'],
         {
           [styles['spoiler--spoiled']]: spoiled,
+          [specificStyles['alan-wake-spoiler--spoiled']]: spoiled,
+          [specificStyles['alan-wake-spoiler--pressing']]: beingPressed,
         }
       )}
     >
@@ -78,9 +79,7 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
       <button
         type="button"
         ref={buttonRef}
-        className={clsx(styles.spoiler__button, {
-          [specificStyles['spoiler__text--pressing']]: beingPressed,
-        })}
+        className={clsx(styles.spoiler__button, specificStyles['spoiler__text--hold'])}
         onMouseDown={() => {
           setBeingPressed(true);
           animationRef.current = requestAnimationFrame(animate);
@@ -98,9 +97,21 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
           setBeingPressed(false);
         }}
       >
-        <span className={styles.spoiler__text}>Hold to Reveal</span>
+        <span className={styles.spoiler__text}>Hold</span>
         <FontAwesomeIcon icon={faEyeSlash} />
       </button>
+
+      <svg
+        width="64"
+        height="64"
+        viewBox="0 0 64 64"
+        className={clsx(specificStyles['circular-progress'], {
+          [specificStyles['circular-progress--animate']]: beingPressed,
+        })}
+      >
+        <circle className={specificStyles['circular-progress__background']}></circle>
+        <circle className={specificStyles['circular-progress__foreground']}></circle>
+      </svg>
     </div>
   );
 }
