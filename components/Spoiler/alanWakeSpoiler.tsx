@@ -14,7 +14,7 @@ interface AlanWakeSpoilerProps {
 export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
   const [spoiled, setSpoiled] = useState(false);
   const [beingPressed, setBeingPressed] = useState(false);
-  const [audioEffect] = useState<HTMLAudioElement>(new Audio('/assets/gottt/aw2-enter.mp3'));
+  const [audioEffect, setAudioEffect] = useState<HTMLAudioElement>();
   const animationRef = useRef<number>();
   const previousTimeRef = useRef<number>();
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -22,6 +22,8 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
   let elapsedTime = 0;
 
   useEffect(() => {
+    setAudioEffect(new Audio('/assets/gottt/aw2-enter.mp3'));
+
     if (!mainBodyRef.current) {
       mainBodyRef.current = document.querySelector<HTMLDivElement>('#main') ?? undefined;
     }
