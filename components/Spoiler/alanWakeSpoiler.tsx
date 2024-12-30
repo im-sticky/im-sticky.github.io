@@ -4,6 +4,7 @@ import React, {useState, useRef, useEffect} from 'react';
 import clsx from 'clsx';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEyeSlash} from '@fortawesome/free-solid-svg-icons';
+import {getMobileOperatingSystem, OperatingSystem} from '@helpers/checkMobileBrowser';
 import styles from './index.module.scss';
 import specificStyles from './alanWakeSpoiler.module.scss';
 
@@ -97,6 +98,7 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
         })}
       >
         <video
+          playsInline
           ref={videoRef}
           className={specificStyles.video}
           onTimeUpdate={() => {
@@ -126,6 +128,11 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
         ref={buttonRef}
         className={clsx(styles.spoiler__button, specificStyles['spoiler__text--hold'])}
         onMouseDown={() => {
+          if (getMobileOperatingSystem() !== OperatingSystem.Desktop) {
+            setSpoiled(true);
+            return;
+          }
+
           setBeingPressed(true);
           animationRef.current = requestAnimationFrame(animate);
         }}
@@ -142,7 +149,12 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
           setBeingPressed(false);
         }}
       >
-        <span className={styles.spoiler__text}>Hold</span>
+        <span className={clsx(styles.spoiler__text, specificStyles['spoiler__text--desktop'])}>
+          Hold
+        </span>
+        <span className={clsx(styles.spoiler__text, specificStyles['spoiler__text--mobile'])}>
+          Press
+        </span>
         <FontAwesomeIcon icon={faEyeSlash} />
       </button>
 

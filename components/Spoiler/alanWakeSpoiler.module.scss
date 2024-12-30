@@ -19,6 +19,22 @@
     width: 3.5rem;
     height: 3.5rem;
   }
+
+  &--desktop {
+    display: none;
+
+    @include landscape-tablet-and-up {
+      display: inline-block;
+    }
+  }
+
+  &--mobile {
+    display: inline-block;
+
+    @include landscape-tablet-and-up {
+      display: none;
+    }
+  }
 }
 
 .video {
