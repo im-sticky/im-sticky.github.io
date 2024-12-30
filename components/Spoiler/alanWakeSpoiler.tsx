@@ -14,6 +14,7 @@ interface AlanWakeSpoilerProps {
 export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
   const [spoiled, setSpoiled] = useState(false);
   const [beingPressed, setBeingPressed] = useState(false);
+  const [audioEffect] = useState<HTMLAudioElement>(new Audio('/assets/gottt/aw2-enter.mp3'));
   const animationRef = useRef<number>();
   const previousTimeRef = useRef<number>();
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -27,7 +28,7 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
   }, []);
 
   useEffect(() => {
-    if (!animationRef.current || !mainBodyRef.current || !buttonRef.current) {
+    if (!animationRef.current || !mainBodyRef.current || !buttonRef.current || !audioEffect) {
       return;
     }
 
@@ -36,13 +37,24 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
         buttonRef.current.getBoundingClientRect().top + document.documentElement.scrollTop
       }px`;
       mainBodyRef.current.classList.add('alan-wake-spoiler--zoom');
+      audioEffect.play();
     } else {
       cancelAnimationFrame(animationRef.current);
       mainBodyRef.current.classList.remove('alan-wake-spoiler--zoom');
       previousTimeRef.current = undefined;
       elapsedTime = 0;
+      audioEffect.pause();
+      audioEffect.currentTime = 0;
     }
   }, [beingPressed]);
+
+  useEffect(() => {
+    if (spoiled) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      audioEffect.pause();
+      audioEffect.currentTime = 0;
+    }
+  }, [spoiled]);
 
   const animate = (time: number) => {
     if (previousTimeRef.current !== undefined) {
@@ -54,7 +66,6 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
     if (Math.floor(elapsedTime) === 3 && animationRef.current) {
       setBeingPressed(false);
       setSpoiled(true);
-      document.documentElement.setAttribute('data-theme', 'dark');
     } else {
       previousTimeRef.current = time;
       animationRef.current = requestAnimationFrame(animate);
