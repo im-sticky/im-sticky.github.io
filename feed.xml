@@ -4,7 +4,7 @@
         <title>Alex Craig's blog</title>
         <link>https://im-sticky.github.io/blog</link>
         <description>A collection of my thoughts and anecdotes</description>
-        <lastBuildDate>Mon, 30 Dec 2024 16:42:12 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 03 Jan 2025 01:28:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for node.js</generator>
         <language>en</language>
@@ -13,7 +13,7 @@
             <url>https://im-sticky.github.io/mstile-144x144.png</url>
             <link>https://im-sticky.github.io/blog</link>
         </image>
-        <copyright>All rights reserved 2024, Alex Craig</copyright>
+        <copyright>All rights reserved 2025, Alex Craig</copyright>
         <atom:link href="https://im-sticky.github.io/feed.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Game of the Three Thirds Award™ 2024]]></title>
