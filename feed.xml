@@ -4,7 +4,7 @@
         <title>Alex Craig's blog</title>
         <link>https://im-sticky.github.io/blog</link>
         <description>A collection of my thoughts and anecdotes</description>
-        <lastBuildDate>Fri, 03 Jan 2025 01:28:00 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 04 Feb 2025 03:56:19 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>Feed for node.js</generator>
         <language>en</language>
@@ -15,6 +15,13 @@
         </image>
         <copyright>All rights reserved 2025, Alex Craig</copyright>
         <atom:link href="https://im-sticky.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Guile under pressure - Beginnings]]></title>
+            <link>https://im-sticky.github.io/blog/street-fighter-grind-part-1</link>
+            <guid>street-fighter-grind-part-1</guid>
+            <pubDate>Mon, 03 Feb 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Documenting my grind to become not ass at Street Fighter 6.]]></description>
+        </item>
         <item>
             <title><![CDATA[Game of the Three Thirds Award™ 2024]]></title>
             <link>https://im-sticky.github.io/blog/gottt-2024</link>

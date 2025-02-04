@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://im-sticky.github.io</id>
     <title>Alex Craig's blog</title>
-    <updated>2025-01-03T01:28:00.407Z</updated>
+    <updated>2025-02-04T03:56:19.970Z</updated>
     <generator>Feed for node.js</generator>
     <author>
         <name>Alex Craig</name>
@@ -15,6 +15,13 @@
     <logo>https://im-sticky.github.io/mstile-144x144.png</logo>
     <icon>https://im-sticky.github.io/favicon.ico</icon>
     <rights>All rights reserved 2025, Alex Craig</rights>
+    <entry>
+        <title type="html"><![CDATA[Guile under pressure - Beginnings]]></title>
+        <id>street-fighter-grind-part-1</id>
+        <link href="https://im-sticky.github.io/blog/street-fighter-grind-part-1"/>
+        <updated>2025-02-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Documenting my grind to become not ass at Street Fighter 6.]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Game of the Three Thirds Award™ 2024]]></title>
         <id>gottt-2024</id>
