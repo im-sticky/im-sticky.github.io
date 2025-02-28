@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import {Metadata} from 'next';
-import {Montserrat, Sulphur_Point} from 'next/font/google';
+import {Montserrat, Sulphur_Point, Grape_Nuts} from 'next/font/google';
 import {config} from '@fortawesome/fontawesome-svg-core';
 import {SITE_URL} from '@helpers/constants';
 import {openGraphMeta} from '@helpers/openGraphMeta';
@@ -19,6 +19,13 @@ const sulphurPoint = Sulphur_Point({
   variable: '--font-sulphur-point',
 });
 
+const grapeNuts = Grape_Nuts({
+  weight: ['400'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-grape-nuts',
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -35,7 +42,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className={clsx(montserrat.className, sulphurPoint.variable)}>
+    <html
+      lang="en"
+      className={clsx(montserrat.className, sulphurPoint.variable, grapeNuts.variable)}
+    >
       <body>{children}</body>
     </html>
   );

@@ -1,0 +1,8 @@
+@import '@styles/utilities.scss';
+
+.playground {
+  @include pagePadding;
+  @include gutters;
+
+  gap: 1.5rem;
+}
