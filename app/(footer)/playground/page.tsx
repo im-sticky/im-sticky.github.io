@@ -11,9 +11,9 @@ import {faArrowLeftLong, faBicycle} from '@fortawesome/free-solid-svg-icons';
 import {Folder} from '@components/Folder';
 import {FileCabinet} from '@components/FileCabinet';
 import {FolderColor, TabLocation} from '@components/Folder/enums';
+import {Polaroid} from '@components/Polaroid';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
-import {Polaroid} from '@components/Polaroid';
 
 export const metadata: Metadata = {
   title: 'Playground',
@@ -45,7 +45,7 @@ export default function Playground() {
         </p>
       </Container>
 
-      <Container>
+      <Container className={styles['tall-container']}>
         <FileCabinet>
           <Folder tabLocation={TabLocation.Left} title="Exhibit A" subTitle="Evidence of contact">
             <Polaroid
