@@ -6,6 +6,7 @@
   > * {
     position: absolute;
     top: calc(4.5rem * var(--index));
+    transform-origin: bottom;
     transition: all $transition-time-slow * 1.75 $transition-ease-out-cubic;
 
     &:hover {
