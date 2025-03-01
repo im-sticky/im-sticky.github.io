@@ -34,7 +34,7 @@
 
       &__contents {
         > * {
-          transition-delay: $transition-time-slow * 1.25;
+          transition-delay: $transition-time-slow * 1.25, $transition-time-slow * 1.25, 0;
           top: calc(-5rem + var(--reverse-index) * -2.5rem);
 
           &:nth-child(odd) {
@@ -170,7 +170,13 @@
       position: absolute;
       top: 0;
       max-width: 100%;
-      transition: all $transition-time-slow * 2 $transition-ease-out-cubic;
+      transition-property: transform, top, margin;
+      transition-duration: $transition-time-slow * 2, $transition-time-slow * 2,
+        $transition-time-slow;
+
+      &:hover {
+        margin-top: -14rem;
+      }
     }
   }
 }
