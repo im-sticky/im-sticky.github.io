@@ -8,7 +8,8 @@ import {InternalLink} from '@components/InternalLink';
 import {TitleShape} from '@components/TitleShape';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowLeftLong, faBicycle} from '@fortawesome/free-solid-svg-icons';
-import {Folder, TabLocation} from '@components/Folder';
+import {Folder} from '@components/Folder';
+import {FolderColor, TabLocation} from '@components/Folder/enums';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
 import {Polaroid} from '@components/Polaroid';
@@ -53,6 +54,18 @@ export default function Playground() {
             imagePath="summer-game-reviews/alan-wake-projector.png"
             caption="Alan finds a reel of himself"
           />
+        </Folder>
+
+        <Folder tabLocation={TabLocation.Right} color={FolderColor.Red} title="A different colour">
+          <img src="/assets/summer-game-reviews/alan-wake-2-ratings.png" alt="" />
+        </Folder>
+
+        <Folder
+          tabLocation={TabLocation.Left}
+          color={FolderColor.Green}
+          title="There can be anything in here"
+        >
+          <iframe src="/blog" height="600" width="600" title="Example"></iframe>
         </Folder>
       </Container>
     </Section>

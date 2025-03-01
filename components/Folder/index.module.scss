@@ -3,6 +3,13 @@
 
 @import '@styles/utilities.scss';
 
+$color-blue: #01a3e5;
+$color-red: #e43153;
+$color-green: #02a167;
+$color-orange: #f0852c;
+$color-yellow: #fdda06;
+$color-purple: #6a59a6;
+
 @mixin noiseBackground($color, $lighten: false) {
   @if ($lighten) {
     background-color: color.scale($color, $lightness: 57%);
@@ -15,8 +22,6 @@
 }
 
 .folder {
-  $color-blue: #01a3e5;
-
   position: relative;
   display: block;
   width: 64rem;
@@ -24,27 +29,154 @@
   aspect-ratio: 11 / 8.5;
   padding: 2rem 1rem 0.5rem;
   margin-top: 2.75rem;
-  @include noiseBackground($color-blue, true);
 
-  &:hover {
-    .folder {
-      &__front {
-        transform: rotate3d(1, 0, 0, 30deg);
+  &--open {
+    .folder__front {
+      transform: rotate3d(1, 0, 0, 35deg) !important;
+    }
+
+    .folder__contents {
+      > * {
+        transition-delay: $transition-time-slow * 1.2, $transition-time-slow * 1.2, 0ms;
+        top: calc(-5rem + var(--reverse-index) * -2.5rem);
+
+        &:nth-child(odd) {
+          transform: rotate(2deg) translateX(1.75rem);
+        }
+
+        &:nth-child(even) {
+          transform: rotate(-2deg) translateX(-1.75rem);
+        }
+
+        &:hover {
+          margin-top: -14rem;
+        }
+      }
+    }
+  }
+
+  &--blue {
+    @include noiseBackground($color-blue, true);
+
+    .folder__tab {
+      @include noiseBackground($color-blue, true);
+    }
+
+    .folder__front {
+      @include noiseBackground($color-blue);
+
+      &::before {
+        @include noiseBackground($color-blue);
       }
 
-      &__contents {
-        > * {
-          transition-delay: $transition-time-slow * 1.25, $transition-time-slow * 1.25, 0;
-          top: calc(-5rem + var(--reverse-index) * -2.5rem);
+      &::after {
+        border-top: 1px solid color.scale($color-blue, $lightness: 5%, $saturation: 25%);
+        border-bottom: 1px solid color.scale($color-blue, $lightness: 5%, $saturation: 25%);
+      }
+    }
+  }
 
-          &:nth-child(odd) {
-            transform: rotate(2deg) translateX(1.75rem);
-          }
+  &--red {
+    @include noiseBackground($color-red, true);
 
-          &:nth-child(even) {
-            transform: rotate(-2deg) translateX(-1.75rem);
-          }
-        }
+    .folder__tab {
+      @include noiseBackground($color-red, true);
+    }
+
+    .folder__front {
+      @include noiseBackground($color-red);
+
+      &::before {
+        @include noiseBackground($color-red);
+      }
+
+      &::after {
+        border-top: 1px solid color.scale($color-red, $lightness: 5%, $saturation: 25%);
+        border-bottom: 1px solid color.scale($color-red, $lightness: 5%, $saturation: 25%);
+      }
+    }
+  }
+
+  &--green {
+    @include noiseBackground($color-green, true);
+
+    .folder__tab {
+      @include noiseBackground($color-green, true);
+    }
+
+    .folder__front {
+      @include noiseBackground($color-green);
+
+      &::before {
+        @include noiseBackground($color-green);
+      }
+
+      &::after {
+        border-top: 1px solid color.scale($color-green, $lightness: 5%, $saturation: 25%);
+        border-bottom: 1px solid color.scale($color-green, $lightness: 5%, $saturation: 25%);
+      }
+    }
+  }
+
+  &--orange {
+    @include noiseBackground($color-orange, true);
+
+    .folder__tab {
+      @include noiseBackground($color-orange, true);
+    }
+
+    .folder__front {
+      @include noiseBackground($color-orange);
+
+      &::before {
+        @include noiseBackground($color-orange);
+      }
+
+      &::after {
+        border-top: 1px solid color.scale($color-orange, $lightness: 5%, $saturation: 25%);
+        border-bottom: 1px solid color.scale($color-orange, $lightness: 5%, $saturation: 25%);
+      }
+    }
+  }
+
+  &--yellow {
+    @include noiseBackground($color-yellow, true);
+
+    .folder__tab {
+      @include noiseBackground($color-yellow, true);
+    }
+
+    .folder__front {
+      @include noiseBackground($color-yellow);
+
+      &::before {
+        @include noiseBackground($color-yellow);
+      }
+
+      &::after {
+        border-top: 1px solid color.scale($color-yellow, $lightness: 5%, $saturation: 25%);
+        border-bottom: 1px solid color.scale($color-yellow, $lightness: 5%, $saturation: 25%);
+      }
+    }
+  }
+
+  &--purple {
+    @include noiseBackground($color-purple, true);
+
+    .folder__tab {
+      @include noiseBackground($color-purple, true);
+    }
+
+    .folder__front {
+      @include noiseBackground($color-purple);
+
+      &::before {
+        @include noiseBackground($color-purple);
+      }
+
+      &::after {
+        border-top: 1px solid color.scale($color-purple, $lightness: 5%, $saturation: 25%);
+        border-bottom: 1px solid color.scale($color-purple, $lightness: 5%, $saturation: 25%);
       }
     }
   }
@@ -90,7 +222,6 @@
     bottom: calc(100% - 1px);
     border-top-right-radius: 1.5rem;
     border-top-left-radius: 1.5rem;
-    @include noiseBackground($color-blue, true);
 
     &::before,
     &::after {
@@ -136,7 +267,11 @@
     height: calc(100% - 3.5rem);
     transform-origin: bottom;
     transition: transform $transition-time-slow * 2 $transition-ease-out-back;
-    @include noiseBackground($color-blue);
+
+    &:hover {
+      cursor: pointer;
+      transform: rotate3d(1, 0, 0, 10deg);
+    }
 
     &::before {
       content: '';
@@ -146,7 +281,6 @@
       bottom: calc(100% - 1px);
       border-top-right-radius: 1.5rem;
       border-top-left-radius: 1.5rem;
-      @include noiseBackground($color-blue);
     }
 
     &::after {
@@ -156,8 +290,6 @@
       left: 0;
       right: 0;
       height: 0.5rem;
-      border-top: 1px solid color.scale($color-blue, $lightness: 5%, $saturation: 25%);
-      border-bottom: 1px solid color.scale($color-blue, $lightness: 5%, $saturation: 25%);
     }
   }
 
@@ -170,13 +302,10 @@
       position: absolute;
       top: 0;
       max-width: 100%;
+      max-height: 100%;
       transition-property: transform, top, margin;
       transition-duration: $transition-time-slow * 2, $transition-time-slow * 2,
         $transition-time-slow;
-
-      &:hover {
-        margin-top: -14rem;
-      }
     }
   }
 }
