@@ -8,7 +8,7 @@ import {InternalLink} from '@components/InternalLink';
 import {TitleShape} from '@components/TitleShape';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowLeftLong, faBicycle} from '@fortawesome/free-solid-svg-icons';
-import {Folder} from '@components/Folder';
+import {Folder, TabLocation} from '@components/Folder';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
 import {Polaroid} from '@components/Polaroid';
@@ -44,10 +44,14 @@ export default function Playground() {
       </Container>
 
       <Container>
-        <Folder>
+        <Folder tabLocation={TabLocation.Left} title="Exhibit A" subTitle="Evidence of contact">
           <Polaroid
             imagePath="summer-game-reviews/alan-wake-payphone.jpg"
             caption="Alan on the phone"
+          />
+          <Polaroid
+            imagePath="summer-game-reviews/alan-wake-projector.png"
+            caption="Alan finds a reel of himself"
           />
         </Folder>
       </Container>

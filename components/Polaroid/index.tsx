@@ -7,9 +7,9 @@ interface PolaroidProps {
   caption?: string;
 }
 
-export function Polaroid({imagePath, caption}: PolaroidProps) {
+export function Polaroid({imagePath, caption, ...props}: PolaroidProps) {
   return (
-    <figure className={styles.polaroid}>
+    <figure className={styles.polaroid} {...props}>
       <picture className={styles.polaroid__picture}>
         <img src={`/assets/${imagePath}`} alt={caption} />
       </picture>

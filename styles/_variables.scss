@@ -12,4 +12,7 @@ $container-width: $tablet-width;
 // animations
 $transition-time-fast: 160ms;
 $transition-time-normal: 220ms;
+$transition-time-slow: 280ms;
+$transition-ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
 $transition-ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+$transition-ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
