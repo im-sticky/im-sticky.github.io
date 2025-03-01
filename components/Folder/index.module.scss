@@ -264,7 +264,7 @@ $color-purple: #6a59a6;
     bottom: 0;
     left: 0;
     right: 0;
-    height: calc(100% - 3.5rem);
+    height: calc(100% - 3rem);
     transform-origin: bottom;
     transition: transform $transition-time-slow * 2 $transition-ease-out-back;
 
@@ -308,4 +308,8 @@ $color-purple: #6a59a6;
         $transition-time-slow;
     }
   }
+}
+
+.strikethrough {
+  text-decoration: line-through;
 }

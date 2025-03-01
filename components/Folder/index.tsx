@@ -8,6 +8,7 @@ import styles from './index.module.scss';
 interface FolderProps {
   title?: string;
   subTitle?: string;
+  strikethrough?: boolean;
   tabLocation?: TabLocation;
   color?: FolderColor;
   children?: React.ReactElement | React.ReactElement[];
@@ -16,9 +17,11 @@ interface FolderProps {
 export function Folder({
   title,
   subTitle,
+  strikethrough = false,
   tabLocation = TabLocation.Left,
   color = FolderColor.Blue,
   children,
+  ...props
 }: FolderProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -29,10 +32,28 @@ export function Folder({
       className={clsx(styles.folder, styles[`folder--${color}`], styles[`folder--${tabLocation}`], {
         [styles['folder--open']]: isOpen,
       })}
+      onMouseLeave={() => setIsOpen(false)}
+      {...props}
     >
       <div className={styles.folder__tab}>
-        {title ? <span className={styles['folder__tab-title']}>{title}</span> : null}
-        {subTitle ? <span className={styles['folder__tab-sub-title']}>{subTitle}</span> : null}
+        {title ? (
+          <span
+            className={clsx(styles['folder__tab-title'], {
+              [styles['strikethrough']]: strikethrough,
+            })}
+          >
+            {title}
+          </span>
+        ) : null}
+        {subTitle ? (
+          <span
+            className={clsx(styles['folder__tab-sub-title'], {
+              [styles['strikethrough']]: strikethrough,
+            })}
+          >
+            {subTitle}
+          </span>
+        ) : null}
       </div>
 
       <div className={styles.folder__contents}>

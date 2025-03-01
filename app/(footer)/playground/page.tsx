@@ -9,6 +9,7 @@ import {TitleShape} from '@components/TitleShape';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowLeftLong, faBicycle} from '@fortawesome/free-solid-svg-icons';
 import {Folder} from '@components/Folder';
+import {FileCabinet} from '@components/FileCabinet';
 import {FolderColor, TabLocation} from '@components/Folder/enums';
 import sharedStyles from '@styles/shared.module.scss';
 import styles from './index.module.scss';
@@ -45,28 +46,43 @@ export default function Playground() {
       </Container>
 
       <Container>
-        <Folder tabLocation={TabLocation.Left} title="Exhibit A" subTitle="Evidence of contact">
-          <Polaroid
-            imagePath="summer-game-reviews/alan-wake-payphone.jpg"
-            caption="Alan on the phone"
-          />
-          <Polaroid
-            imagePath="summer-game-reviews/alan-wake-projector.png"
-            caption="Alan finds a reel of himself"
-          />
-        </Folder>
+        <FileCabinet>
+          <Folder tabLocation={TabLocation.Left} title="Exhibit A" subTitle="Evidence of contact">
+            <Polaroid
+              imagePath="summer-game-reviews/alan-wake-payphone.jpg"
+              caption="Alan on the phone"
+            />
+            <Polaroid
+              imagePath="summer-game-reviews/alan-wake-projector.png"
+              caption="Alan finds a reel of himself"
+            />
+          </Folder>
 
-        <Folder tabLocation={TabLocation.Right} color={FolderColor.Red} title="A different colour">
-          <img src="/assets/summer-game-reviews/alan-wake-2-ratings.png" alt="" />
-        </Folder>
+          <Folder
+            tabLocation={TabLocation.Right}
+            color={FolderColor.Red}
+            title="A different colour"
+          >
+            <img src="/assets/summer-game-reviews/animal-well-nice.jpg" alt="" />
+          </Folder>
 
-        <Folder
-          tabLocation={TabLocation.Left}
-          color={FolderColor.Green}
-          title="There can be anything in here"
-        >
-          <iframe src="/blog" height="600" width="600" title="Example"></iframe>
-        </Folder>
+          <Folder
+            tabLocation={TabLocation.Left}
+            color={FolderColor.Green}
+            title="There can be anything in here"
+          >
+            <iframe src="/blog" height="600" width="600" title="Example"></iframe>
+          </Folder>
+
+          <Folder
+            tabLocation={TabLocation.Right}
+            color={FolderColor.Yellow}
+            title="Suspicious documents"
+            strikethrough
+          ></Folder>
+          <Folder tabLocation={TabLocation.Left} color={FolderColor.Orange}></Folder>
+          <Folder tabLocation={TabLocation.Right} color={FolderColor.Purple}></Folder>
+        </FileCabinet>
       </Container>
     </Section>
   );
