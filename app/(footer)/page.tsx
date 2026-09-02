@@ -24,9 +24,9 @@ export default function About() {
         <div className={styles.about__bio}>
           <p>I am a Toronto based full stack web developer currently looking for work.</p>
           <p>
-            I enjoy creating interactive mixed media projects and dabbling in game development. Some
-            of my hobbies and interests include Magic The Gathering, speedrunning, competitive Smash
-            Bros., and collecting video game paraphernalia.
+            I enjoy creating interactive mixed media projects and game development. Some of my
+            hobbies and interests include Magic The Gathering and other TCGs, speedrunning,
+            competitive Smash Bros., and collecting video game paraphernalia.
           </p>
         </div>
 
