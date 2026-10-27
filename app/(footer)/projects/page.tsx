@@ -30,7 +30,7 @@ export default function Projects() {
           className={clsx(
             sharedStyles['page__descriptor'],
             sharedStyles['page__descriptor--small'],
-            sharedStyles['page__descriptor--spaced']
+            sharedStyles['page__descriptor--spaced'],
           )}
         >
           <InternalLink icon to="/">
@@ -102,6 +102,14 @@ export default function Projects() {
 
 function getProjects() {
   return [
+    new Project({
+      title: 'Picomon Stadium',
+      description:
+        'An online multiplayer Pokemon Stadium game made as if it was on the Game Boy Colour. Based on a PICO-8 cartridge I previously made.',
+      link: 'https://picomon-stadium-2.vercel.app/',
+      external: true,
+      image: '/projects/picomon-stadium.png',
+    }),
     new Project({
       title: 'Game Rater',
       description:
