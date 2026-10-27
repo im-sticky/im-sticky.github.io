@@ -22,11 +22,12 @@ export default function About() {
         </small>
 
         <div className={styles.about__bio}>
-          <p>I am a Toronto based full stack web developer currently looking for work.</p>
+          <p>I am a Toronto based software architect currently looking for work.</p>
           <p>
-            I enjoy creating interactive mixed media projects and game development. Some of my
-            hobbies and interests include Magic The Gathering and other TCGs, speedrunning,
-            competitive Smash Bros., and collecting video game paraphernalia.
+            Hello, I'm Alex. A full stack web developer that enjoys the nuance and design of the
+            front end. I also enjoy creating mixed media projects as well as game design and
+            development. Some of my hobbies and interests include collecting and competing in
+            trading card games, speedrunning, and collecting video game paraphernalia.
           </p>
         </div>
 
@@ -38,8 +39,8 @@ export default function About() {
         </small>
 
         <ul className={styles['about__social-list']}>
-          <DeepLink href="/blog" name="Blog" />
           <DeepLink href="/projects" name="Projects &amp; Hobbies" />
+          <DeepLink href="/blog" name="Blog" />
           <SocialLink href="https://github.com/im-sticky" name="GitHub" />
           <SocialLink href="https://www.linkedin.com/in/alex-craig-57427069/" name="LinkedIn" />
         </ul>
