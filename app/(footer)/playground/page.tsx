@@ -126,5 +126,12 @@ function getPlayground() {
       link: '/playground/polaroids',
       external: false,
     }),
+    new Project({
+      title: 'Gyroscope',
+      description:
+        'Simple test for working with a devices gyroscope to control something on the page.',
+      link: '/playground/gyroscope',
+      external: false,
+    }),
   ];
 }

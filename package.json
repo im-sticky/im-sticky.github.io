@@ -17,6 +17,7 @@
     "@fortawesome/free-solid-svg-icons": "6.5.2",
     "@fortawesome/react-fontawesome": "0.2.2",
     "@tsparticles/confetti": "^3.7.1",
+    "@types/w3c-generic-sensor": "^1.0.11",
     "clsx": "2.1.1",
     "gray-matter": "4.0.3",
     "mtg-card-seer": "2.0.2",
