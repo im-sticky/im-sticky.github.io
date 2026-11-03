@@ -1,0 +1,12 @@
+@import '@styles/utilities.scss';
+
+.folders {
+  @include pagePadding;
+  @include gutters;
+
+  gap: 1.5rem;
+}
+
+.tall-container {
+  min-height: 100vh;
+}

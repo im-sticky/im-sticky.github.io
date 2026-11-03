@@ -3,10 +3,25 @@
 .playground {
   @include pagePadding;
   @include gutters;
-
-  gap: 1.5rem;
 }
 
-.tall-container {
-  min-height: 100vh;
+.items {
+  padding-top: 4rem;
+
+  &__list {
+    margin-top: 2.5rem;
+  }
+}
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
