@@ -1,0 +1,6 @@
+.card-container {
+  transform-style: preserve-3d;
+  perspective: 600px;
+  transition: transform ease-out 0.3s;
+  transform-origin: center;
+}

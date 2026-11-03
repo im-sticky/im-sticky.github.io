@@ -1,4 +1,3 @@
-import React from 'react';
 import clsx from 'clsx';
 import {Metadata} from 'next';
 import {openGraphMeta} from '@helpers/openGraphMeta';
@@ -6,7 +5,8 @@ import {Section} from '@components/Section';
 import {Container} from '@components/Container';
 import {InternalLink} from '@components/InternalLink';
 import {TitleShape} from '@components/TitleShape';
-import {GyroscopeDisplay} from '@components/GyroscopeDisplay';
+import {DeviceOrientationDisplay} from '@components/DeviceOrientationDisplay';
+import {CardTilt} from '@components/CardTilt';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faArrowLeftLong, faBicycle} from '@fortawesome/free-solid-svg-icons';
 import sharedStyles from '@styles/shared.module.scss';
@@ -43,7 +43,8 @@ export default function Gyroscope() {
       </Container>
 
       <Container className={styles['gyroscope-container']}>
-        <GyroscopeDisplay />
+        <DeviceOrientationDisplay />
+        <CardTilt />
       </Container>
     </Section>
   );
