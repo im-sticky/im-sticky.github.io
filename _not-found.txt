@@ -1,0 +1,28 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/00npdm7cl-f0g.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+5:"/_next/static/chunks/0llm-fik4j6z6.js"
+6:"/_next/static/chunks/0k8t927p7l9y9.js"
+7:I[36768,["$2","$5","$6"],"default"]
+b:I[47257,["$2"],"ClientPageRoot"]
+e:I[97367,["$2"],"OutletBoundary"]
+f:"$Sreact.suspense"
+11:"ViewportBoundary"
+12:I[97367,["$2"],"$11"]
+14:"MetadataBoundary"
+15:I[97367,["$2"],"$14"]
+17:I[68027,["$2"],"default",1]
+:HL["/_next/static/chunks/1ak-u6lc7p1iy.css","style"]
+:HL["/_next/static/chunks/16po5bnu8eajg.css","style"]
+9:X
+a:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$Lb",null,{"Component":"$7","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@c","$@d"]}}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/16po5bnu8eajg.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0llm-fik4j6z6.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0k8t927p7l9y9.js","async":true,"nonce":"$undefined"}]],["$","$Le",null,{"children":["$","$f",null,{"name":"Next.MetadataOutlet","children":"$@10"}]}]]}],"p":false,"v":null}}]]
+8:[["children",{"s":"/_not-found","h":512,"d":{"r":["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],"p":false,"v":"$9"},"c":"$Qa"}]]
+0:{"P":null,"c":["","_not-found"],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1ak-u6lc7p1iy.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/00npdm7cl-f0g.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"gs4hVa_className c0ymma_variable CHLcFW_variable","children":["$","body",null,{"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","$L7",null,{}],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/16po5bnu8eajg.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],"p":false,"v":null},"c":"$Q8"},"h":{"r":["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L12",null,{"children":"$L13"}],["$","$L15",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$f",null,{"name":"Next.Metadata","children":"$L16"}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":false,"v":null}},"m":"$undefined","G":["$17",[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/1ak-u6lc7p1iy.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"YlnmxUgeak6jc3PqKtE65"}
+9:C
+c:{}
+d:"$a:0:1:d:r:props:children:0:props:serverProvidedParams:params"
+13:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+18:I[27201,["$2"],"IconMark"]
+10:null
+16:[["$","title","0",{"children":"About"}],["$","meta","1",{"name":"description","content":"Personal website of Alex Craig."}],["$","link","2",{"rel":"manifest","href":"/manifest.webmanifest","crossOrigin":"$undefined"}],["$","meta","3",{"property":"og:title","content":"About"}],["$","meta","4",{"property":"og:description","content":"Personal website of Alex Craig."}],["$","meta","5",{"property":"og:url","content":"https://im-sticky.github.io"}],["$","meta","6",{"property":"og:site_name","content":"Alex Craig Website"}],["$","meta","7",{"property":"og:image","content":"https://im-sticky.github.io/default-share.png"}],["$","meta","8",{"property":"og:type","content":"website"}],["$","meta","9",{"name":"twitter:card","content":"summary"}],["$","meta","10",{"name":"twitter:site","content":"@im_sticky"}],["$","meta","11",{"name":"twitter:title","content":"About"}],["$","meta","12",{"name":"twitter:description","content":"Personal website of Alex Craig."}],["$","meta","13",{"name":"twitter:image","content":"https://im-sticky.github.io/default-share.png"}],["$","link","14",{"rel":"icon","href":"/favicon.ico?favicon.0_9uhkoo8m464.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L18","15",{}]]

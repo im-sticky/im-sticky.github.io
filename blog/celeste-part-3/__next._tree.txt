@@ -1,0 +1,11 @@
+:HL["/_next/static/chunks/1ak-u6lc7p1iy.css","style"]
+:HL["/_next/static/chunks/16po5bnu8eajg.css","style"]
+:HL["/_next/static/media/2ede04b1c840a61d-s.p.2-zmtk_61c5kz.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/628c21d3defc230e-s.p.3syxqddg-0e-j.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/65341aea9fb91af5-s.p.1dqa_6e_ad4sj.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/e08b47c434d447eb-s.p.0-ko87zfx5hki.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+4:[["children",{"s":"__PAGE__","h":160}]]
+3:[["children",{"s":{"n":"slug","t":"d","k":"celeste-part-3","s":[]},"h":96,"c":"$Q4"}]]
+2:[["children",{"s":"blog","h":96,"c":"$Q3"}]]
+1:[["children",{"s":"(footer)","h":96,"c":"$Q2"}]]
+0:{"b":"YlnmxUgeak6jc3PqKtE65","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
