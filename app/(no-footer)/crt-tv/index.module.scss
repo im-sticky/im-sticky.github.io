@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import '@styles/utilities.scss';
 
 .section {
@@ -47,7 +48,7 @@ $screen-background: #121010;
   $steps: 20;
 
   @for $i from 0 through $steps {
-    #{percentage($i*(1/$steps))} {
+    #{percentage($i * math.div(1, $steps))} {
       opacity: random();
     }
   }
@@ -110,7 +111,8 @@ $screen-background: #121010;
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(
+    background:
+      linear-gradient(
         transparentize($screen-background, 1) 50%,
         transparentize(darken($screen-background, 10), 0.75) 50%
       ),
@@ -121,7 +123,9 @@ $screen-background: #121010;
         transparentize(#0000ff, 0.94)
       );
     z-index: 2;
-    background-size: 100% 2px, 3px 100%;
+    background-size:
+      100% 2px,
+      3px 100%;
     pointer-events: none;
   }
 }
@@ -213,7 +217,11 @@ $screen-background: #121010;
   top: 20px;
   left: 5%;
   font-size: 60px;
-  text-shadow: 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
+  text-shadow:
+    2px 2px black,
+    -2px -2px black,
+    -2px 2px black,
+    2px -2px black;
   visibility: hidden;
   pointer-events: none;
 }
@@ -234,7 +242,11 @@ $screen-background: #121010;
   &::after,
   &::before {
     color: #00ff00;
-    text-shadow: 2px 2px black, -2px -2px black, -2px 2px black, 2px -2px black;
+    text-shadow:
+      2px 2px black,
+      -2px -2px black,
+      -2px 2px black,
+      2px -2px black;
     align-self: center;
     font-size: 30px;
   }

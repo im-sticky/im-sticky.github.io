@@ -1,6 +1,10 @@
+@use 'sass:math';
 @import '@styles/utilities.scss';
 
 .figure {
+  $side-figure-width: math.div($container-width, 2);
+  $side-figure-offset: pxToRems(math.div(-$container-width, 6));
+
   margin: pxToRems(24px);
 
   @include landscape-tablet-and-up {
@@ -9,19 +13,19 @@
     &--right,
     &--left {
       margin: pxToRems(16px) pxToRems(24px);
-      max-width: $container-width / 2;
+      max-width: $side-figure-width;
     }
 
     &--right {
       float: right;
       clear: right;
-      margin-right: pxToRems(-$container-width / 6);
+      margin-right: $side-figure-offset;
     }
 
     &--left {
       float: left;
       clear: left;
-      margin-left: pxToRems(-$container-width / 6);
+      margin-left: $side-figure-offset;
     }
 
     &--large {

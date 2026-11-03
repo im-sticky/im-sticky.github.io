@@ -46,13 +46,14 @@ interface PostParams {
 }
 
 interface PostProps {
-  params: PostParams;
+  params: Promise<PostParams>;
 }
 
 export default async function Post({params}: PostProps) {
-  const {frontMatter, content} = getPost(params.slug);
+  const {slug} = await params;
+  const {frontMatter, content} = getPost(slug);
   const allPosts = getAllPosts(['slug', 'date', 'customLink']) as IBlogPost[];
-  const postIndex = allPosts.findIndex((p) => p.slug === params.slug);
+  const postIndex = allPosts.findIndex((p) => p.slug === slug);
 
   let titleIcon = faQuoteLeft;
 
@@ -89,7 +90,7 @@ export default async function Post({params}: PostProps) {
 
       {frontMatter.heroVideo ? (
         <video
-          key={params.slug}
+          key={slug}
           autoPlay
           muted
           loop
@@ -116,7 +117,7 @@ export default async function Post({params}: PostProps) {
           className={clsx(
             sharedStyles['page__descriptor'],
             sharedStyles['page__descriptor--small'],
-            sharedStyles['page__descriptor--spaced']
+            sharedStyles['page__descriptor--spaced'],
           )}
         >
           <InternalLink icon to="/blog">
@@ -138,7 +139,7 @@ export default async function Post({params}: PostProps) {
             sharedStyles['page__descriptor--italic'],
             {
               [sharedStyles['page__descriptor--spaced']]: frontMatter.edited,
-            }
+            },
           )}
         >
           {formatDate(frontMatter.date)}
@@ -149,7 +150,7 @@ export default async function Post({params}: PostProps) {
             className={clsx(
               sharedStyles['page__descriptor'],
               sharedStyles['page__descriptor--small'],
-              sharedStyles['page__descriptor--italic']
+              sharedStyles['page__descriptor--italic'],
             )}
           >
             This post was edited on {formatDate(frontMatter.edited)}
@@ -197,18 +198,19 @@ export async function generateStaticParams(): Promise<PostParams[]> {
 }
 
 export async function generateMetadata({params}: PostProps): Promise<Metadata> {
-  const {frontMatter} = getPost(params.slug);
+  const {slug} = await params;
+  const {frontMatter} = getPost(slug);
 
   return {
     title: frontMatter.title,
     description: frontMatter.description,
     openGraph: openGraphMeta(
-      `/blog/${params.slug}`,
+      `/blog/${slug}`,
       frontMatter.shareAsset
         ? `/assets/${frontMatter.shareAsset}`
         : frontMatter.hero
-        ? `/assets/${frontMatter.hero}`
-        : '/default-share.png'
+          ? `/assets/${frontMatter.hero}`
+          : '/default-share.png',
     ),
   };
 }

@@ -17,11 +17,11 @@ export function AlanWakeSpoiler({children}: AlanWakeSpoilerProps) {
   const [beingPressed, setBeingPressed] = useState(false);
   const [videoFinished, setVideoFinished] = useState(false);
   const [audioFile, setAudioFile] = useState<HTMLAudioElement>();
-  const animationRef = useRef<number>();
-  const previousTimeRef = useRef<number>();
+  const animationRef = useRef<number>(undefined);
+  const previousTimeRef = useRef<number>(undefined);
   const videoRef = useRef<HTMLVideoElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const mainBodyRef = useRef<HTMLDivElement>();
+  const mainBodyRef = useRef<HTMLDivElement>(undefined);
   let elapsedTime = 0;
 
   useEffect(() => {

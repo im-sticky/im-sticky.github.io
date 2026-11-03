@@ -23,9 +23,9 @@ export function useGyroscope(frequency = 60, decimals = 2) {
 
     const onReading = () =>
       setGyro({
-        x: gyroscope.x?.toFixed(decimals) ?? 0,
-        y: gyroscope.y?.toFixed(decimals) ?? 0,
-        z: gyroscope.z?.toFixed(decimals) ?? 0,
+        x: Number((gyroscope.x ?? 0).toFixed(decimals)),
+        y: Number((gyroscope.y ?? 0).toFixed(decimals)),
+        z: Number((gyroscope.z ?? 0).toFixed(decimals)),
       });
     const onError = (e: Event) => setError((e as SensorErrorEvent).error.message);
 

@@ -14,7 +14,7 @@ $contents-width: math.div($container-width, 3) + 32px;
 
   @media (min-width: #{$tablet-landscape-width + $contents-width * 2}) {
     position: fixed;
-    transform: translateX(calc(-100% - #{$container-width / 6}));
+    transform: translateX(calc(-100% - #{math.div($container-width, 6)}));
     width: pxToRems($contents-width);
     margin: 0;
   }

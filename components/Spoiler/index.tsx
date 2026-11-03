@@ -16,7 +16,7 @@ interface SpoilerProps {
 
 export function Spoiler({inline = false, doConfetti = false, className, children}: SpoilerProps) {
   const [spoiled, setSpoiled] = useState(false);
-  const SpoilerTag = (inline ? 'span' : 'div') as keyof JSX.IntrinsicElements;
+  const SpoilerTag = (inline ? 'span' : 'div') as keyof React.JSX.IntrinsicElements;
 
   return (
     <SpoilerTag
